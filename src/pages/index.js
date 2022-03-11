@@ -1,47 +1,81 @@
-import React from 'react';
-import clsx from 'clsx';
+import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import HomePageWave from '../components/HomePageWave';
-import HomeSectionPicture from '../components/HomeSectionPicture';
+import LogoSvg from "@site/static/img/logo.svg";
+import HomepageFeature from '../components/HomepageFeature';
+import HomepageBanner from '../components/HomepageBanner';
+import HomepageIntro from '../components/HomepageIntro';
+import useWindowSize from '../hooks/useWindowSize';
+import { Button } from '@mui/material';
+import styled from '@emotion/styled';
 
-import summary from "@site/static/img/home/rw.svg";
+const ButtonGroup = styled("div")((props) => ({
+  display: "flex",
+  flexDirection: props.windoWidth < 768 ? "column" : "row",
+  alignItems: "center",
+  justifyContent: "center",
+}));
 
+const HeroBanner = styled("div")(() => ({
+  textAlign: "center",
+  position: "relative",
+  overflow: "hidden",
+  padding: "1rem",
+  height: "calc(100vh - 350px)",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center"
+}))
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
+
+  const windowSize = useWindowSize();
+
   return (
-    <header className={clsx(styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Rising Wave Tutorial - 5min ⏱️
-          </Link>
-        </div>
+    <HeroBanner>
+      <div>
+        <LogoSvg width={windowSize.height * 0.17} height={windowSize.height * 0.17} />
       </div>
-    </header>
+      <div style={{ fontSize: "2rem", fontWeight: "700", marginBottom: "1rem" }}>
+        <span>RisingWave</span>
+      </div>
+      <ButtonGroup windoWidth={windowSize.width}>
+        <Link
+          to="/docs/intro">
+          <Button variant="contained" sx={{ width: 200, margin: "5px" }}>Get Started</Button>
+        </Link>
+        <Link
+          to="/docs/intro">
+          <Button variant="outlined" sx={{ width: 200, margin: "5px" }}>Try Demo</Button>
+        </Link>
+      </ButtonGroup>
+    </HeroBanner>
   );
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
+
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      
+
       <main>
-        <HomePageWave />
-        <HomeSectionPicture src={summary} />
-        <HomepageFeatures/>
+        <div style={{ height: "100vh", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+          <div style={{zIndex: 5}}><HomepageHeader /></div>
+          <div style={{zIndex: 4}}><HomePageWave /></div>
+        </div>
+        <HomepageBanner content=" 🥇 The official RisingWave docs website v0.1 is now under construction!" />
+        <div style={{ marginLeft: "5vw", marginRight: "5vw" }}>
+          {/* <HomepageIntro /> */}
+          <HomepageFeature />
+        </div>
       </main>
     </Layout>
   );

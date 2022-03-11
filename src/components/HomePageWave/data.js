@@ -4,11 +4,20 @@ const color = [
   // "#6051fc",
   // "#6138ff",
   // "#6600ff"
+
+  // gradient
   "#b6c7f3",
   "#95adee",
   "#7493e9",
   "#6386e6",
   "#5577d6"
+
+  // colorful
+  // "#e23e2b",
+  // "#f0b400",
+  // "#4acfd2",
+  // "#3a7ceb",
+  // "#5577d6"
 ]
 
 const paths = [

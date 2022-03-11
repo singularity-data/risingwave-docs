@@ -7,14 +7,12 @@ let svg;
 
 export default function HomePageWave() {
 
-  console.log(data);
-
   const svgContainer = useRef(null);
 
   useEffect(() => {
-    console.log("?")
+    
     if (svgContainer.current) {
-
+      console.log("rerender wave")
       svg = d3
         .select(svgContainer.current)
         .attr("viewBox", [0, 200, 4096, 300]);
@@ -56,7 +54,7 @@ export default function HomePageWave() {
   return (
     <>
       <div style={{ overflow: "hidden"}}>
-        <svg width={4096} height={300} ref={svgContainer}>
+        <svg width={4096} height={350} ref={svgContainer}>
         </svg>
       </div>
     </>
