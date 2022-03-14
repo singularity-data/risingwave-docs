@@ -1,0 +1,25 @@
+name: Github Pages Production
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy-to-pages:
+    name: Deploy to gtihub pages
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          cache: 'yarn'
+      - name: Build
+        run: |
+          yarn
+          yarn build
+      - name: Deploy to github pages
+        run: |
+          GITHUB_USER=mikechesterwang yarn deploy
+          
