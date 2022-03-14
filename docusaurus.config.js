@@ -8,8 +8,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Rising Wave',
   tagline: 'Get started to Rising Wave in 5 minutes',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://singularity-data.com/risingwave-docs',
   baseUrl: '/',
+  trailingSlash: true,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
