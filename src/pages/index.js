@@ -35,7 +35,6 @@ function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
 
   const windowSize = useWindowSize();
-  console.log(windowSize)
 
   return (
     <HeroBanner>
