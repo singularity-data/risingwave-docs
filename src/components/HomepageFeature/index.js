@@ -80,7 +80,9 @@ export default function HomepageFeature() {
           </FeatureTextBox>
         </>
         : <>
-          <SvgSummaryMobile width={size.width * 0.8} height={size.width * 0.8 / 793 * 600} />
+          <div style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
+            <SvgSummaryMobile width={size.width * 0.8} height={size.width * 0.8 / 793 * 600} />
+          </div>
           <FeatureTextBoxMobile>
             {data.map((v, i) =>
               <FeatureContentBox key={i} icon={v.icon} title={v.title} text={v.text} />

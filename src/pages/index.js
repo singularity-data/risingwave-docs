@@ -35,6 +35,7 @@ function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
 
   const windowSize = useWindowSize();
+  console.log(windowSize)
 
   return (
     <HeroBanner>
@@ -67,9 +68,14 @@ export default function Home() {
       description="Description will go into a meta tag in <head />">
 
       <main>
-        <div style={{ height: "100vh", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-          <div style={{zIndex: 5}}><HomepageHeader /></div>
-          <div style={{zIndex: 4}}><HomePageWave /></div>
+        <div style={{
+          height: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between"
+        }}>
+          <div style={{ zIndex: 5 }}><HomepageHeader /></div>
+          <div style={{ zIndex: 4 }}><HomePageWave /></div>
         </div>
         <HomepageBanner content=" 🥇 The official RisingWave docs website v0.1 is now under construction!" />
         <div style={{ marginLeft: "5vw", marginRight: "5vw" }}>
