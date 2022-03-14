@@ -6,16 +6,16 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Rising Wave',
-  tagline: 'Get started to Rising Wave in 5 minutes',
+  title: 'RisingWave',
+  tagline: 'Get started to RisingWave in 5 minutes',
   url: 'https://singularity-data.com/risingwave-docs',
   baseUrl: '/',
   trailingSlash: true,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'Rising Wave Community', // Usually your GitHub org/user name.
-  projectName: 'Rising Wave', // Usually your repo name.
+  organizationName: 'RisingWave Community', // Usually your GitHub org/user name.
+  projectName: 'RisingWave', // Usually your repo name.
 
   presets: [
     [
