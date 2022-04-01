@@ -18,14 +18,14 @@ const sidebars = {
 
   // But you can create a sidebar manually
  
-  /*MainSidebar: [
-    {
-      type: 'category',
-      label: 'Main',
-      items: ['overview', 'getting_started', ],
-    },
-  ]
+  // MainSidebar: [
+  //   {
+  //     type: 'category',
+  //     label: 'Main',
+  //     items: ['overview', 'getting_started', ],
+  //   },
+  // ]
 };
-*/
+
 
 module.exports = sidebars;
