@@ -27,8 +27,8 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           versions: {
             current: {
-              label: 'Next',
-              path: '/next',
+              label: 'Latest',
+              path: '/latest',
             }
           },
           // Please change this to your repo.
@@ -43,10 +43,10 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        googleAnalytics: {
-          trackingID: 'myID',
-          anonymizeIP: true
-        }
+        // googleAnalytics: {
+        //   trackingID: 'myID',
+        //   anonymizeIP: true
+        // }
       }),
     ],
   ],
@@ -65,9 +65,9 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {to: '/blog', label: 'Blog', position: 'left'},
           {
             type: 'docsVersionDropdown',
             docsPluginId: 'default',
@@ -78,20 +78,19 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/singularity-data/risingwave-dev',
+            href: 'https://github.com/singularity-data/risingwave',
             label: 'GitHub',
             position: 'right',
           },
         ],
       },
       footer: {
-        style: 'dark',
         links: [
           {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Docs',
                 to: '/docs/intro',
               },
             ],
@@ -105,7 +104,7 @@ const config = {
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/SingularityDatas',
+                href: 'https://twitter.com/SingularityData',
               },
             ],
           },
@@ -118,49 +117,48 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/singularity-data/risingwave-dev',
+                href: 'https://github.com/singularity-data/risingwave',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} RisingWave Community.`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      algolia: {
-        // The application ID provided by Algolia
-        appId: 'app_id',
+      // algolia: {
+      //   // The application ID provided by Algolia
+      //   appId: 'app_id',
   
-        // Public API key: it is safe to commit it
-        apiKey: 'api_key',
+      //   // Public API key: it is safe to commit it
+      //   apiKey: 'api_key',
   
-        indexName: 'index_name',
+      //   indexName: 'index_name',
   
-        // Optional: see doc section below
-        contextualSearch: true,
+      //   // Optional: see doc section below
+      //   contextualSearch: true,
   
-        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        externalUrlRegex: 'external\\.com|domain\\.com',
+      //   // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+      //   externalUrlRegex: 'external\\.com|domain\\.com',
   
-        // Optional: Algolia search parameters
-        searchParameters: {},
+      //   // Optional: Algolia search parameters
+      //   searchParameters: {},
   
-        // Optional: path for search page that enabled by default (`false` to disable it)
-        searchPagePath: 'search',
+      //   // Optional: path for search page that enabled by default (`false` to disable it)
+      //   searchPagePath: 'search',
   
-        //... other Algolia params
-      },
-      metadata: [{name: 'keywords', content: 'doc, blog'}],
+      //   //... other Algolia params
+      // },
+      metadata: [{name: 'keywords', content: 'docs, blog, risingwave, streaming, database'}],
       items: [
-        { label: 'Next', to: 'docs/next/intro' },
-        { label: '1.0.0', to: 'docs/1.0.0/intro' }
+        { label: 'Latest', to: 'docs/latest/intro' },
       ],
     }),
     i18n: {
       defaultLocale: 'en',
-      locales: ['en', 'fr'],
+      locales: ['en'],
     },
 };
 

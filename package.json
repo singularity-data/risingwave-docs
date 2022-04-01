@@ -1,6 +1,6 @@
 {
   "name": "risingwave-docs",
-  "version": "next",
+  "version": "latest",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
