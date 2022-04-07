@@ -17,6 +17,62 @@
   --ifm-code-font-size: 90%;
   --ifm-font-size-base: 92%;
   --ifm-z-index-fixed: 200;
+
+
+  /* font */
+  --ifm-font-family-base: NotoSans;
+}
+
+h1{
+  font-family: Notosans-Thin !important;
+}
+
+h2{
+  font-family: NotoSans-Medium !important;
+}
+
+h3{
+  font-family: NotoSans-Medium !important;
+}
+
+h4{
+  font-family: NotoSans-SemiBold !important;
+}
+
+@font-face {
+  font-family: NotoSans;
+  src: local("NotoSans"),
+    url(/static/font/NotoSans-Regular.ttf) format("ttf"),
+    url(/static/font/NotoSans-Regular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: NotoSans-Medium;
+  src: local("NotoSans-Medium"),
+    url(/static/font/NotoSans-Medium.ttf) format("ttf"),
+    url(/static/font/NotoSans-Medium.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: NotoSans-Thin;
+  src: local("NotoSans-Thin"),
+    url(/static/font/NotoSans-Thin.ttf) format("ttf"),
+    url(/static/font/NotoSans-Thin.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: NotoSans-SemiBold;
+  src: local("NotoSans-SemiBold"),
+    url(/static/font/NotoSans-SemiBold.ttf) format("ttf"),
+    url(/static/font/NotoSans-SemiBold.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */

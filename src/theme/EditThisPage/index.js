@@ -25,8 +25,8 @@ export default function EditThisPage({editUrl}) {
     //   </Translate>
     // </a>
     <>
-      <a style={{ fontSize: "18px", fontWeight: "bold", marginLeft: "10px"}} href="https://github.com/singularity-data/risingwave-docs/issues/new" target="_blank" rel="noopener">
-        Subject an issue
+      <a style={{ fontSize: "13px", fontWeight: "bold", marginLeft: "10px"}} href="https://github.com/singularity-data/risingwave-docs/issues/new" target="_blank" rel="noopener">
+        Subject Issues
       </a>
       <FeedbackForm editUrl={editUrl}>
       </FeedbackForm>

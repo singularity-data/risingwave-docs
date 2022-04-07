@@ -61,18 +61,18 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Docs',
-          },
+          // {
+          //   type: 'doc',
+          //   docId: 'intro',
+          //   position: 'left',
+          //   label: 'Docs',
+          // },
           // {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            type: 'docsVersionDropdown',
-            docsPluginId: 'default',
-            position: 'right'
-          },
+          // {
+          //   type: 'docsVersionDropdown',
+          //   docsPluginId: 'default',
+          //   position: 'right'
+          // },
           {
             href: 'https://github.com/singularity-data/risingwave',
             label: 'GitHub',
