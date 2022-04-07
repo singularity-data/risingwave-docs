@@ -23,6 +23,12 @@
   --ifm-font-family-base: NotoSans;
 }
 
+
+/* hide home icon in breadcrumbs */
+.breadcrumbs li:first-child{
+  display: none !important;
+}
+
 h1{
   font-family: Notosans-Thin !important;
 }
