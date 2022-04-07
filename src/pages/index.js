@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -63,13 +63,18 @@ function HomepageHeader() {
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
 
+  useEffect(() => {
+    console.log(window.location.href)
+    window.location.href = window.location.href + "docs/latest/intro"
+  })
+
   return (
     <Layout
       title={`Home`}
       description="RisingWave Community and Docs">
 
       <main>
-        <div style={{
+        {/* <div style={{
           height: "100vh",
           minHeight: "700px",
           display: "flex",
@@ -81,9 +86,9 @@ export default function Home() {
         </div>
         <HomepageBanner content=" 🥇 The official RisingWave docs website v0.1 is now under construction!" />
         <div style={{ marginLeft: "5vw", marginRight: "5vw" }}>
-          {/* <HomepageIntro /> */}
+          <HomepageIntro />
           <HomepageFeature />
-        </div>
+        </div> */}
       </main>
     </Layout>
   );
