@@ -50,7 +50,7 @@ const sidebars = {
     label: `SQL`,
     collapsible: true,
     collapsed: false,
-    items: [`sql-ov`, `sql-date-types`, `sql-operators`, `sql-statements`,
+    items: [`sql-ov`, `sql-data-types`, `sql-operators`, `sql-statements`,
     ]
   }
  ]
