@@ -26,12 +26,12 @@ title: Operators and functions
 
 ## Mathematical functions and operators
 
-* neg
+* \- (negation)
 * \+ (addition)
 * \- (subtraction)
 * \* (multiplication)
 * / (division; results are truncated for integers)
-* % (remainder; valid for smallint/int/bigint)
+* % (remainder; valid for smallint/int/bigint/numeric)
 * ROUND(numeric, int) → numeric
 
 
@@ -43,7 +43,7 @@ title: Operators and functions
 |max|smallint, int, bigint, numeric, real, double precision, varchar|Same as argument type|
 |sum|smallint, int, bigint, numeric, real, double precision|bigint for smallint  or int arguments, numeric for bigint arguments, otherwise the same as the argument data type|
 |count|bool, smallint, int, bigint, numeric, real, double precision, varchar|bigint|
-|avg|	smallint, int, bigint, numeric, real, double precision|numeric for integer arguments; double precision for float point arguments; otherwise the same as the argument data type|
+|avg|	smallint, int, bigint, numeric, real, double precision|numeric for integer arguments; double precision for float point arguments|
 
 ## String functions
 
