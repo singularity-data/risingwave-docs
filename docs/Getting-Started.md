@@ -20,16 +20,16 @@ This guide will walk you through the installation of RisingWave.
 1. Download the pre-built library.
  
     ```
-    wget https://github.com/singularity-data/risingwave/releases/download/v0.1.4/risingwave-v0.1.4-unknown-linux.tar.gz
+    wget https://github.com/singularity-data/risingwave/releases/download/v0.1.5/risingwave-v0.1.5-x86_64-unknown-linux.tar.gz
     ```
 
-1. Unzip the library.
+2. Unzip the library.
 
     ```
-    tar xvf risingwave-v0.1.4-unknown-linux.tar.gz
+    tar xvf risingwave-v0.1.5-x86_64-unknown-linux.tar.gz
     ```
 
-1. Start RisingWave in the test mode.
+3. Start RisingWave in the test mode.
 
     ```
     ./risingwave playground
