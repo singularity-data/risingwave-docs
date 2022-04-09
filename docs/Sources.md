@@ -61,8 +61,8 @@ ROW FORMAT 'JSON | PROTOBUF MESSAGE 'main_message''
 |Field|	Default|	Type|	Description|	Required?|
 |---|---|---|---|---|
 |kafka.topic|None|String|Address of the Kafka topic. One source can only correspond to one topic.|True
-|kafka.bootstrap.servers	|None	|String	|Address of the Kafka broker. Format: 'ip:port,ip:port'	|True|
-|kafka.scan.startup.mode	|earliest	|String	|The Kafka consumer starts consuming data from the commit offset. This includes two values: 'earliest' and 'latest'.	|False
+|kafka.bootstrap.servers	|None	|String	|Address of the Kafka broker. Format: `'ip:port,ip:port'`.	|True|
+|kafka.scan.startup.mode	|earliest	|String	|The Kafka consumer starts consuming data from the commit offset. This includes two values: `'earliest'` and `'latest'`.	|False
 |kafka.time.offset	|None	|Int64	|Specify the offset in seconds from a certain point of time.	|False|
 |kafka.consumer.group	|None	|String	|Name of the Kafka consumer group	|True|
 
@@ -107,7 +107,7 @@ ROW FORMAT 'json|protobuf'
 |pulsar.topic	|None	|String	|Address of the Pulsar topic. One source can only correspond to one topic.	|True|
 |pulsar.service.url	|None	|String	|Address of the Pulsar service	|True|
 |pulsar.admin.url	|None	|String	|Address of the Pulsar admin	|True|
-|pulsar.scan.startup.mode	|earliest	|String	|The Pulsar consumer starts consuming data from the commit offset. This includes two values: 'earliest' and 'latest'.	|False|
+|pulsar.scan.startup.mode	|earliest	|String	|The Pulsar consumer starts consuming data from the commit offset. This includes two values: `'earliest'` and `'latest'`.	|False|
 |pulsar.time.offset	|None	|Int64	|Specify the offset in seconds from a certain point of time.	|False|
 
 #### Example
@@ -127,7 +127,7 @@ WITH (
    'pulsar.time.offset'='140000000'
 )
 ROW FORMAT 'protobuf' 
-ROW SCHEMA LOCATION 'https://[bucket_name].s3-us-west-2.amazonaws.com/demo.proto';
+ROW SCHEMA LOCATION 'https://demo_bucket_name.s3-us-west-2.amazonaws.com/demo.proto';
 ```
   </TabItem>
 
@@ -153,12 +153,12 @@ ROW FORMAT 'json|protobuf';
 |---|---|---|---|---|
 |kinesis.stream.name	|None	|String|	The stream name identifies the stream.	|True|
 |kinesis.stream.region	|None	|String|	AWS service region. For example, US East (N. Virginia).	|True|
-|kinesis.endpoint	|None	|String	|The URL of the entry point for the AWS Kinesis service| False|
+|kinesis.endpoint	|None	|String	|The URL of the entry point for the AWS Kinesis service.| False|
 |kinesis.credentials.access	|None	|String	|Indicates the Access key ID of AWS. Must appear in pairs with kinesis.credentials.secret.	|False|
 |kinesis.credentials.secret	|None	|String	|Indicates the secret access key of AWS. Must appear in pairs with kinesis.credentials.access.	|False|
 |kinesis.credentials.session_token	|None	|String	|The session token associated with the credentials. Temporary Session Credentials.	|False|
 |kinesis.assumerole.arn	|None	|String |The Amazon Resource Name (ARN) of the role to assume.		|False|
-|kinesis.assumerole.external_id	|None	|String	|The [external id](https://aws.amazon.com/blogs/security/how-to-use-external-id-when-granting-access-to-your-aws-resources/) used to authorize access to third-party resources	|False|
+|kinesis.assumerole.external_id	|None	|String	|The [external id](https://aws.amazon.com/blogs/security/how-to-use-external-id-when-granting-access-to-your-aws-resources/) used to authorize access to third-party resources.	|False|
 
 #### Example
 Here is an example of connecting RisingWave to Kinesis Data Streams to read data from individual streams.
@@ -209,8 +209,8 @@ ROW FORMAT 'debezium-json';
 |Field|	Default|	Type|	Description|	Required?|
 |---|---|---|---|---|
 |kafka.topic|None|String|Address of the Kafka topic. One source can only correspond to one topic.|True
-|kafka.bootstrap.servers	|None	|String	|Address of the Kafka broker. Format: 'ip:port,ip:port'	|True|
-|kafka.scan.startup.mode	|earliest	|String	|The Kafka consumer starts consuming data from the commit offset. This includes two values: 'earliest' and 'latest'.	|False
+|kafka.bootstrap.servers	|None	|String	|Address of the Kafka broker. Format: `'ip:port,ip:port'`.	|True|
+|kafka.scan.startup.mode	|earliest	|String	|The Kafka consumer starts consuming data from the commit offset. This includes two values: `'earliest'` and `'latest'`.	|False
 |kafka.time.offset	|None	|Int64	|Specify the offset in seconds from a certain point of time.	|False|
 |kafka.consumer.group	|None	|String	|Name of the Kafka consumer group	|True|
 
