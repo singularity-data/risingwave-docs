@@ -135,27 +135,26 @@ ol>li {
 
 ol>li::marker {
   content: counter(section);
-  z-index: 100;
   list-style: none;
-  padding-left:0;
+  font-size: 13px;
 }
 
 ol>li:before {
   content: " ";
   position: relative;
   float: left;
-  width: 15px;
-  height: 15px;
-  left: -12px;
-  top: 4px;
+  width: 12px;
+  height: 12px;
+  left: -10.5px;
+  top: 6px;
   text-align: center;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  background-color: white;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  background-color: none;
   border-width: 1px;
   border-style: solid;
-  opacity: 0.3;
+  border-color: gray;
 }
 
 
