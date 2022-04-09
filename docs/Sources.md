@@ -24,7 +24,7 @@ Please see below for the streaming sources that RisingWave supports.
 :::info
 
 The default stream connector frontend has a temporary limitation. It only accepts Amazon Kinesis. To connect to other sources, you need to use the legacy stream connector frontend. To run RisingWave with the legacy stream connector frontend, ensure that you have Java 11 installed in your environment, and run the following command in your terminal:
-```
+```shell
 ./risedev configure enable legacy-frontend
 ```
 

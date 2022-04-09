@@ -10,7 +10,7 @@ Docusaurus can manage multiple versions of your docs.
 
 Release a version 1.0 of your project:
 
-```bash
+```shell
 npm run docusaurus docs:version 1.0
 ```
 

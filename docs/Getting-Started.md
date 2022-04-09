@@ -9,7 +9,9 @@ sidebar_position: 2
 
 This guide will help you get started with RisingWave. We will cover: 
 
-- [Install and run RisingWave](#install-and-start-risingwave)
+- [Install and run RisingWave](#install-and-run-risingwave)
+  - [Use the pre-built library (Linux)](#use-the-pre-built-library-linux)
+  - [Build from source (Linux & macOS)](#build-from-source-linux--macos)
 - [Connect to a streaming source](#connect-to-a-streaming-source)
 - [Query and manage data](#query-and-manage-data)
 
@@ -19,19 +21,19 @@ This guide will help you get started with RisingWave. We will cover:
 
 1. Download the pre-built library.
  
-    ```
+    ```shell
     wget https://github.com/singularity-data/risingwave/releases/download/v0.1.5/risingwave-v0.1.5-x86_64-unknown-linux.tar.gz
     ```
 
 2. Unzip the library.
 
-    ```
+    ```shell
     tar xvf risingwave-v0.1.5-x86_64-unknown-linux.tar.gz
     ```
 
 3. Start RisingWave in the test mode.
 
-    ```
+    ```shell
     ./risingwave playground
     ```
 
@@ -39,7 +41,7 @@ This guide will help you get started with RisingWave. We will cover:
 
 1. Download the source code of RisingWave.
 
-    ```
+    ```shell
     git clone https://github.com/singularity-data/risingwave.git
     ```
 
@@ -64,37 +66,37 @@ import TabItem from '@theme/TabItem';
 <TabItem value="macos" label="macOS" default>
 
 
-```
+```shell
 brew install cmake protobuf openssl postgresql tmux
 ```
 Run one of the following cammands to install [rustup](https://rustup.rs):
-```
+```shell
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 or
-```
+```shell
 brew install rustup-init && rustup-init
 ```
 </TabItem>
 <TabItem value="linux" label="Linux">
 
-```
+```shell
 sudo apt update
 ```
 
-```
+```shell
 sudo apt upgrade
 ```
 
-```
+```shell
 sudo apt install make build-essential cmake protobuf-compiler curl openssl libssl-dev pkg-config
 ```
 
-```
+```shell
 sudo apt install postgresql-client
 ```
 
-```
+```shell
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 </TabItem>
@@ -104,11 +106,11 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 3. Run RisingWave.
 
     To run RisingWave, in the terminal, navigate to the directory where RisingWave is downloaded, and run the following command.
-    ```
+    ```shell
     ./risedev dev # Running RisingWave in the production mode
     ```
     or
-    ```
+    ```shell
     ./risedev playground # Running RisingWave in the test mode. 
     ```
     :::tip
@@ -122,19 +124,19 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     :::info
 
     The default stream connector frontend has a temporary limitation. It only accepts Amazon Kinesis. To connect to other sources, you need to use the legacy stream connector frontend. To run RisingWave with the legacy stream connector frontend, ensure that you have Java 11 installed in your environment, and run the following command in your terminal:
-    ```
+    ```shell
     ./risedev configure enable legacy-frontend
     ```
 
     :::
 
     You can stop RisingWave with the following command.
-    ```
+    ```shell
     ./risedev kill
     ```
 
 4. After RisingWave services are started, run the PostgreSQL interactive terminal.
-    ```
+    ```shell
     psql -h localhost -p 4566 -d dev
     ```
     You can now issue SQL statements to manage your streams and data. 

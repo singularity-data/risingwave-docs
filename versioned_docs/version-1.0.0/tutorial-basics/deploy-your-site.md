@@ -12,7 +12,7 @@ It builds your site as simple **static HTML, JavaScript and CSS files**.
 
 Build your site **for production**:
 
-```bash
+```shell
 npm run build
 ```
 
@@ -22,7 +22,7 @@ The static files are generated in the `build` folder.
 
 Test your production build locally:
 
-```bash
+```shell
 npm run serve
 ```
 

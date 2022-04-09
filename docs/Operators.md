@@ -61,7 +61,7 @@ title: Operators and functions
 
 ## String matching operators
 
-```
+```sql
 string NOT LIKE pattern
 String LIKE pattern
 ```
@@ -72,7 +72,7 @@ If the pattern does not contain percent signs or underscores, then the pattern o
 
 Examples:
 
-```
+```sql
 'abc' LIKE 'abc'           true
 'abc' LIKE 'a%'            true
 'abc' LIKE '_b_'           true
