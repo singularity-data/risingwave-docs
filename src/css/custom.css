@@ -30,11 +30,11 @@
 }
 
 h1{
-  font-family: Noto Sans ExtraLight !important;
+  font-family: NotoSans-ExtraLight !important;
 }
 
 h2{
-  font-family: Noto Sans Regular !important;
+  font-family: NotoSans-Regular !important;
 }
 
 h3{
@@ -46,7 +46,7 @@ h4{
 }
 
 @font-face {
-  font-family: NotoSans;
+  font-family: NotoSans-Regular;
   src: local("NotoSans"),
     url(/static/font/NotoSans-Regular.ttf) format("ttf"),
     url(/static/font/NotoSans-Regular.woff) format("woff");
@@ -77,6 +77,15 @@ h4{
   src: local("NotoSans-SemiBold"),
     url(/static/font/NotoSans-SemiBold.ttf) format("ttf"),
     url(/static/font/NotoSans-SemiBold.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: NotoSans-ExtraLight;
+  src: local("NotoSans-ExtraLight"),
+    url(/static/font/NotoSans-ExtraLight.ttf) format("ttf"),
+    url(/static/font/NotoSans-ExtraLight.woff) format("woff");
   font-weight: normal;
   font-style: normal;
 }
