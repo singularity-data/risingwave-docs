@@ -35,6 +35,9 @@
     align-items: center;
 }
 
+.linkDesc{
+    display: none;
+}
 
 @media screen and (max-width: 1440px) {
     .container{
@@ -42,6 +45,12 @@
     }
     .rightGroup{
         margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 996px) {
+    .linkDesc{
+        display: block;
     }
 }
 
