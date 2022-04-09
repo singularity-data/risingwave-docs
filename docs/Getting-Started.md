@@ -10,8 +10,6 @@ sidebar_position: 2
 This guide will help you get started with RisingWave. We will cover: 
 
 - [Install and run RisingWave](#install-and-run-risingwave)
-  - [Use the pre-built library (Linux)](#use-the-pre-built-library-linux)
-  - [Build from source (Linux & macOS)](#build-from-source-linux--macos)
 - [Connect to a streaming source](#connect-to-a-streaming-source)
 - [Query and manage data](#query-and-manage-data)
 
