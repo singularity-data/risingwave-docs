@@ -21,6 +21,10 @@
   /* font */
   --ifm-font-family-base: NotoSans;
 
+
+  --ifm-paragraph-margin-bottom: 0.5rem;
+  --ifm-list-paragraph-margin: 0.2rem;
+
   letter-spacing: 0px;
 }
 
@@ -125,7 +129,7 @@ h2 {
   border-bottom: 1px solid #DBDBDB;
 }
 
-ol {
+/* ol{
   counter-reset: section;      
 }
 
@@ -137,8 +141,8 @@ ol>li::marker {
   content: counter(section);
   list-style: none;
   font-size: 13px;
-}
-
+}  */
+/* 
 ol>li:before {
   content: " ";
   position: relative;
@@ -155,6 +159,6 @@ ol>li:before {
   border-width: 1px;
   border-style: solid;
   border-color: gray;
-}
+} */
 
 
