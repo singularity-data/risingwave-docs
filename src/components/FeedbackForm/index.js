@@ -124,7 +124,7 @@ export default function FeedbackForm(props) {
       >
         <div className={styles.container}>
           {/* left group */}
-          <div className={styles.leftGroup}>
+          {/* <div className={styles.leftGroup}>
             <div className={styles.leftGroupContainer}>
               <Stack direction="row" spacing={1} alignItems="center">
                 <FormHeaderTitle>Was the doc helpful?</FormHeaderTitle>
@@ -163,7 +163,7 @@ export default function FeedbackForm(props) {
                 </Collapse>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* right group */}
           <div className={styles.rightGroup}>
