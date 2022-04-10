@@ -147,7 +147,8 @@ export default function FeedbackForm(props) {
                         placeholder={!formData.like && !formData.unlike ? "" : (formData.like
                           ? "(Optional) Share your thoughts about using RisingWave with us"
                           : "(Optional) Got feedback? We'd love to hear it!")}
-                        sx={{ marginY: "10px" }}
+                        sx={{ marginY: "10px"}}
+                        inputProps={{ style: { color: "gray" } }}
                         name="description"
                       />
                       <Stack direction="row" spacing={1}>
