@@ -83,7 +83,7 @@ WITH (
    'kafka.time.offset'='140000000',
    'kafka.consumer.group'='demo_consumer_name'
 )
-ROW FORMAT json
+ROW FORMAT JSON
 ```
   </TabItem>
 
@@ -129,7 +129,7 @@ WITH (
    'pulsar.scan.startup.mode'='latest',
    'pulsar.time.offset'='140000000'
 )
-ROW FORMAT 'protobuf' 
+ROW FORMAT PROTOBUF MESSAGE 'FooMessage'
 ROW SCHEMA LOCATION 'https://demo_bucket_name.s3-us-west-2.amazonaws.com/demo.proto';
 ```
   </TabItem>
@@ -148,7 +148,7 @@ WITH (
    'connector'='kinesis',
    'field_name'='value', ...
 ) 
-ROW FORMAT 'json|protobuf';
+ROW FORMAT JSON | PROTOBUF MESSAGE 'main_message'
 ```
 #### `WITH` options
 
@@ -180,7 +180,7 @@ WITH (
    'kinesis.assumerole.arn'='arn:aws-cn:iam::602389639824:role/demo_role',
    'kinesis.assumerole.external_id'='demo_external_id'
 ) 
-ROW FORMAT 'json';
+ROW FORMAT JSON;
 ```
   </TabItem>
 
