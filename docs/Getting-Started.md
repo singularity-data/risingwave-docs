@@ -29,7 +29,7 @@ This guide will help you get started with RisingWave. We will cover:
     tar xvf risingwave-v0.1.5-x86_64-unknown-linux.tar.gz
     ```
 
-3. Start RisingWave in the test mode.
+3. Start RisingWave in the light mode.
 
     ```shell
     ./risingwave playground
@@ -105,15 +105,15 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
     To run RisingWave, in the terminal, navigate to the directory where RisingWave is downloaded, and run the following command.
     ```shell
-    ./risedev dev # Running RisingWave in the production mode
+    ./risedev dev # Running RisingWave in the standard mode
     ```
     or
     ```shell
-    ./risedev playground # Running RisingWave in the test mode. 
+    ./risedev playground # Running RisingWave in the light mode. 
     ```
     :::tip
 
-    RisingWave has two running modes: test mode and production mode. In the test mode, all nodes will be started in one process. Use the test mode if need to do some quick tests. In the production mode, the meta node, compute node, and the serving node are started in three separate processes. 
+    RisingWave has two running modes: standard mode and light mode. In the light mode, all nodes will be started in one process. Use the light mode if you need to do some quick tests. In the standard mode, the meta node, compute node, and the serving node are started in three separate processes. 
 
     :::
 
