@@ -12,6 +12,10 @@ RisingWave supports the following SQL statements.
 * `DROP TABLE`
 * `INSERT INTO`
 * `DELETE`
+* `SHOW TABLES`
+* `SHOW SCHEMAS`
+* `SHOW DATABASES`
+* `SHOW MATERIALIZED VIEWS`
 
 ## Notes about CREATE MATERIALIZED VIEW
 
