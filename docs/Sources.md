@@ -5,7 +5,6 @@ description: Supported data sources and how to connect RisingWave to the sources
 slug: /sources
 ---
 
-
 Sources are resources that RisingWave can read data from. You use [`CREATE SOURCE`](#connect-to-a-source) to establish the connection to a source. Once a connection is established, RisingWave will start to process the received data.
 
 ## Supported sources
@@ -45,6 +44,7 @@ import TabItem from '@theme/TabItem';
 You can use the SQL statement below to connect RisingWave to a Kafka/Redpanda broker.
 
 #### Syntax
+
 ```sql
 CREATE [MATERIALIZED] SOURCE [IF NOT EXISTS] source_name (
    column_name data_type,...
@@ -53,7 +53,7 @@ WITH (
    'connector'='kafka',
    'field_name'='value', ...
 )
-ROW FORMAT 'JSON | PROTOBUF MESSAGE 'main_message'' 
+ROW FORMAT JSON | PROTOBUF MESSAGE 'main_message'
 [ROW SCHEMA LOCATION 's3://path'];
 ```
 #### `WITH` options
@@ -67,7 +67,9 @@ ROW FORMAT 'JSON | PROTOBUF MESSAGE 'main_message''
 |kafka.consumer.group	|None	|String	|Name of the Kafka consumer group	|True|
 
 #### Example
+
 Here is an example of connecting RisingWave to a Kafka broker to read data from individual topics.
+
 ```sql
 CREATE MATERIALIZED SOURCE IF NOT EXISTS source_abc (
    column1 varchar,
@@ -81,7 +83,7 @@ WITH (
    'kafka.time.offset'='140000000',
    'kafka.consumer.group'='demo_consumer_name'
 )
-ROW FORMAT 'json' 
+ROW FORMAT json
 ```
   </TabItem>
 
@@ -90,6 +92,7 @@ ROW FORMAT 'json'
 You can use the SQL statement below to connect RisingWave to a Pulsa broker.
 
 #### Syntax
+
 ```sql
 CREATE [MATERIALIZED] SOURCE [IF NOT EXISTS] source_name (
    column_name data_type, ...
@@ -98,7 +101,7 @@ WITH (
    'connector'='pulsar',
    'field_name'='value', ...
 )
-ROW FORMAT 'json|protobuf' 
+ROW FORMAT JSON | PROTOBUF MESSAGE 'main_message'
 ```
 #### `WITH` options
 
@@ -192,6 +195,7 @@ Currently, RisingWave only supports materialized CDC sources with primary keys.
 :::
 
 #### Syntax
+
 ```sql
 CREATE MATERIALIZED SOURCE [IF NOT EXISTS] source_name (
    column_name data_type [PRIMARY KEY], ...
@@ -201,8 +205,9 @@ WITH (
    'connector'='kafka',
    'field_name'='value', ...
 ) 
-ROW FORMAT 'debezium-json';
+ROW FORMAT DEBEZIUM JSON;
 ```
+
 #### `WITH` options
 
 
@@ -231,7 +236,7 @@ WITH (
    'kafka.scan.startup.mode'='earliest',
    'kafka.consumer.group'='demo_consumer_name'
 ) 
-ROW FORMAT 'debezium-json';
+ROW FORMAT DEBEZIUM JSON;
 ```
   </TabItem>
 
