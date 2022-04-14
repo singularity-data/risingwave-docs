@@ -112,7 +112,6 @@ export default function FeedbackForm(props) {
     <>
       <BreakLine />
       <div className={styles.communityLinkContainer}>
-        <FormHeaderTitle className={styles.linkDesc} style={{marginRight: "5px"}}>Can't wait to see you on</FormHeaderTitle>
         <CommunityLinkGroup />
       </div>
 

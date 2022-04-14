@@ -44,65 +44,42 @@ const LinkImg = styled("img")({
   height: "20px"
 })
 
+const LinkItem = (props) => {
+  return (<div style={{ position: "relative" }} onMouseEnter={() => props.setFocus(true)} onMouseLeave={() => props.setFocus(false)}>
+    <FoldedTabContainer className={styles.foldedTab} orientation="horizontal" in={props.focusing}>
+      <FoldedTab>
+        <FoldedTextSpan>
+          <a href={props.link} target="_blank">
+            {props.label}
+          </a>
+        </FoldedTextSpan>
+      </FoldedTab>
+    </FoldedTabContainer>
+    <LinkButton className={styles.button}>
+      <a href={props.link} target="_blank">
+        <LinkImg src={props.imgUrl} />
+      </a>
+    </LinkButton>
+  </div>)
+}
+
 export default function LinkGroup(props) {
 
   const [slackFocus, setSlackFocus] = useState(false)
   const [twitterFocus, setTwitterFocus] = useState(false)
   const [githubFocus, setGithubFocus] = useState(false)
+  const [s9yFocus, setS9yFocus] = useState(false);
 
   return (
     <>
       <div className={styles.container}>
         <div className={styles.flexBox}>
-          <div style={{ position: "relative" }} onMouseEnter={() => setGithubFocus(true)} onMouseLeave={() => setGithubFocus(false)}>
-            <FoldedTabContainer className={styles.foldedTab} orientation="horizontal" in={githubFocus}>
-              <FoldedTab>
-                <FoldedTextSpan>
-                  <a href="https://github.com/singularity-data" target="_blank">
-                    Github/RisingWave
-                  </a>
-                </FoldedTextSpan>
-              </FoldedTab>
-            </FoldedTabContainer>
-            <LinkButton className={styles.button}>
-              <a href="https://github.com/singularity-data" target="_blank">
-                <LinkImg src={useBaseUrl("/img/home/github.png")} />
-              </a>
-            </LinkButton>
-          </div>
-          <div style={{ position: "relative" }} onMouseEnter={() => setTwitterFocus(true)} onMouseLeave={() => setTwitterFocus(false)}>
-            <FoldedTabContainer className={styles.foldedTab}  orientation="horizontal" in={twitterFocus}>
-              <FoldedTab>
-                <FoldedTextSpan>
-                  <a href="https://twitter.com/SingularityData" target="_blank">
-                    Follow us on Twitter
-                  </a></FoldedTextSpan>
-              </FoldedTab>
-            </FoldedTabContainer>
-            <LinkButton className={styles.button}>
-              <a href="https://twitter.com/SingularityData" target="_blank">
-                <LinkImg src={useBaseUrl("/img/home/twitter.png")} />
-              </a>
-            </LinkButton>
-          </div>
-          <div style={{ position: "relative" }} onMouseEnter={() => setSlackFocus(true)} onMouseLeave={() => setSlackFocus(false)}>
-            <FoldedTabContainer className={styles.foldedTab}  orientation="horizontal" in={slackFocus}>
-              <FoldedTab>
-                <FoldedTextSpan>
-                  <a href="https://join.slack.com/t/risingwave-community/shared_invite/zt-120rft0mr-d8uGk3d~NZiZAQWPnElOfw" target="_blank">
-                    Let's chat on Slack
-                  </a></FoldedTextSpan>
-              </FoldedTab>
-            </FoldedTabContainer>
-            <LinkButton className={styles.button}>
-              <a href="https://join.slack.com/t/risingwave-community/shared_invite/zt-120rft0mr-d8uGk3d~NZiZAQWPnElOfw" target="_blank">
-                <LinkImg src={useBaseUrl("/img/home/slack.png")} />
-              </a>
-            </LinkButton>
-          </div>
+          <LinkItem link="https://www.singularity-data.com" focusing={s9yFocus} setFocus={setS9yFocus} label="Singularity Data" imgUrl={useBaseUrl("/img/home/logo.svg")}/>
+          <LinkItem link="https://github.com/singularity-data" focusing={githubFocus} setFocus={setGithubFocus} label="Github/RisingWave" imgUrl={useBaseUrl("/img/home/github.png")}/>
+          <LinkItem link="https://twitter.com/SingularityData" focusing={twitterFocus} setFocus={setTwitterFocus} label="Follow us on Twitter" imgUrl={useBaseUrl("/img/home/twitter.png")}/>
+          <LinkItem link="https://join.slack.com/t/risingwave-community/shared_invite/zt-120rft0mr-d8uGk3d~NZiZAQWPnElOfw" focusing={slackFocus} setFocus={setSlackFocus} label="Let's chat on Slack" imgUrl={useBaseUrl("/img/home/slack.png")}/>
         </div>
       </div>
-
     </>
   )
 }
