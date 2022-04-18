@@ -180,7 +180,7 @@ export default function FeedbackForm(props) {
               <Button
                 sx={{ margin: "2px" }}
                 variant="outlined"
-                onClick={() => window.open("https://github.com/singularity-data/risingwave-docs/pulls")}
+                onClick={() => window.open(props.editUrl)}
                 startIcon={<PullRequestIcon />}
               >
                 Edit this page

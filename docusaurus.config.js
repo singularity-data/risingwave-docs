@@ -32,13 +32,12 @@ const config = {
             }
           },
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/singularity-data/risingwave-docs/blob/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/singularity-data/risingwave-docs/blob/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -127,27 +126,27 @@ const config = {
       // algolia: {
       //   // The application ID provided by Algolia
       //   appId: 'app_id',
-  
+
       //   // Public API key: it is safe to commit it
       //   apiKey: 'api_key',
-  
+
       //   indexName: 'index_name',
-  
+
       //   // Optional: see doc section below
       //   contextualSearch: true,
-  
+
       //   // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
       //   externalUrlRegex: 'external\\.com|domain\\.com',
-  
+
       //   // Optional: Algolia search parameters
       //   searchParameters: {},
-  
+
       //   // Optional: path for search page that enabled by default (`false` to disable it)
       //   searchPagePath: 'search',
-  
+
       //   //... other Algolia params
       // },
-      metadata: [{name: 'keywords', content: 'docs, blog, risingwave, streaming, database'}],
+      metadata: [{ name: 'keywords', content: 'docs, blog, risingwave, streaming, database' }],
       items: [
         { label: 'Latest', to: 'docs/latest/intro' },
       ],

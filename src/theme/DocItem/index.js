@@ -15,12 +15,12 @@ import TOC from '@theme/TOC';
 import TOCCollapsible from '@theme/TOCCollapsible';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
-import {ThemeClassNames, useWindowSize} from '@docusaurus/theme-common';
+import { ThemeClassNames, useWindowSize } from '@docusaurus/theme-common';
 import DocBreadcrumbs from '@theme/DocBreadcrumbs';
 import FeedbackForm from '@site/src/components/FeedbackForm';
 export default function DocItem(props) {
-  const {content: DocContent} = props;
-  const {metadata, frontMatter, assets} = DocContent;
+  const { content: DocContent } = props;
+  const { metadata, frontMatter, assets } = DocContent;
   const {
     keywords,
     hide_title: hideTitle,
@@ -97,7 +97,7 @@ export default function DocItem(props) {
             <DocPaginator previous={metadata.previous} next={metadata.next} />
 
             {metadata.editUrl && (
-              <div className="col margin-top--sm" style={{padding: "0!mportant"}}>
+              <div className="col margin-top--sm" style={{ padding: "0!mportant" }}>
                 <FeedbackForm editUrl={metadata.editUrl} />
               </div>
             )}
