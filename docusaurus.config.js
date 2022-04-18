@@ -31,13 +31,11 @@ const config = {
               path: '/latest',
             }
           },
-          // Please change this to your repo.
-          editUrl: 'https://github.com/singularity-data/risingwave-docs/blob/main/',
+          editUrl: 'https://github.com/singularity-data/risingwave-docs/edit/main/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl: 'https://github.com/singularity-data/risingwave-docs/blob/main/',
+          editUrl: 'https://github.com/singularity-data/risingwave-docs/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
