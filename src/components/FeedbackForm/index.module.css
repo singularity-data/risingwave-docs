@@ -44,6 +44,7 @@ button.footerButton {
 }
 
 p.rightText {
+  font-weight: 100;
   margin-right: 20px;
   color: #999;
 }

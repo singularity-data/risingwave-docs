@@ -12,13 +12,6 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styles from "./index.module.css";
 
-const FormHeaderTitle = styled("span")({
-  fontSize: "13px",
-  fontWeight: 100,
-  color: "#999999",
-  width: "max-content",
-});
-
 const BreakLine = styled("div")({
   width: "100%",
   height: "1px",
