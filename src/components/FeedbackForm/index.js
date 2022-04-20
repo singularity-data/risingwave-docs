@@ -22,8 +22,9 @@ const FormHeaderTitle = styled("span")({
 const BreakLine = styled("div")({
   width: "100%",
   height: "1px",
-  backgroundColor: "#999999",
-  marginTop: "70px",
+  backgroundColor: "var(--ifm-color-emphasis-300)",
+  padding: "0",
+  marginTop: "30px",
   marginBottom: "20px",
 });
 

@@ -121,10 +121,7 @@ export default function DocItem(props) {
 
             <DocPaginator previous={metadata.previous} next={metadata.next} />
             {metadata.editUrl && (
-              <div
-                className="col margin-top--sm"
-                style={{ padding: "0!mportant" }}
-              >
+              <div className="col margin-top--sm" style={{ padding: "0" }}>
                 <FeedbackForm editUrl={metadata.editUrl} />
               </div>
             )}
