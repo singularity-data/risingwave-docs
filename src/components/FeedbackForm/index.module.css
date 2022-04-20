@@ -1,9 +1,3 @@
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
 .leftGroup {
   display: flex;
   flex-direction: row;
@@ -21,8 +15,10 @@
 }
 
 .rightGroupButtonGroup {
+  margin-top: 4px !important;
   display: flex;
   flex-direction: row;
+  margin-left: 0 !important;
 }
 
 .rightGroupButton {
@@ -39,12 +35,29 @@
   display: none;
 }
 
+button.footerButton {
+  color: #7798ef;
+  font-family: NotoSans;
+  font-size: 14px;
+  text-transform: none;
+  border: 1px solid #7798ef;
+}
+
+p.rightText {
+  margin-right: 20px;
+  color: #999;
+}
+
 @media screen and (max-width: 1440px) {
   .container {
     flex-direction: column;
   }
-  .rightGroup {
+
+  div.rightGroup {
     margin-top: 10px;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-start;
   }
 }
 
@@ -52,11 +65,21 @@
   .linkDesc {
     display: block;
   }
+
+  .rightGroupButtonGroup {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
 
 @media screen and (max-width: 540px) {
-  .rightGroup {
+  div.rightGroup {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rightGroupButtonGroup {
+    flex-direction: row;
     align-items: flex-start;
   }
 
@@ -68,9 +91,7 @@
 
 @media screen and (max-width: 350px) {
   .rightGroupButtonGroup {
-    flex-direction: column;
-  }
-  .rightGroupButton {
-    margin-top: 5px;
+    flex-direction: row;
+    align-items: flex-start;
   }
 }

@@ -4,7 +4,7 @@ import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import ThumbDownOffAltIcon from "@mui/icons-material/ThumbDownOffAlt";
 import PullRequestIcon from "@site/static/img/github_pr.svg";
 import IssueIcon from "@site/static/img/github_issue.svg";
-import { Button, TextField, Stack, Collapse } from "@mui/material";
+import { Button, Typography, TextField, Stack, Collapse } from "@mui/material";
 import CommunityLinkGroup from "@site/src/components/LinkGroup";
 import { sendFeedback } from "@site/src/api/feedback";
 import { toast } from "react-toastify";
@@ -119,7 +119,7 @@ export default function FeedbackForm(props) {
           marginTop: "15px",
         }}
       >
-        <div className={styles.container}>
+        <Stack direction="row" spacing={2}>
           {/* left group */}
           {/* <div className={styles.leftGroup}>
             <div className={styles.leftGroupContainer}>
@@ -164,11 +164,22 @@ export default function FeedbackForm(props) {
           </div> */}
 
           {/* right group */}
-          <div className={styles.rightGroup}>
-            <FormHeaderTitle>Help us make this doc better!</FormHeaderTitle>
-            <div className={styles.rightGroupButtonGroup}>
+          <Stack
+            spacing={2}
+            className={styles.rightGroup}
+            direction="row"
+            alignItems="baseline"
+          >
+            <Typography className={styles.rightText}>
+              Help us make this doc better!
+            </Typography>
+            <Stack
+              direction="row"
+              spacing={2}
+              className={styles.rightGroupButtonGroup}
+            >
               <Button
-                sx={{ margin: "2px" }}
+                className={styles.footerButton}
                 variant="outlined"
                 onClick={() =>
                   window.open(
@@ -180,16 +191,16 @@ export default function FeedbackForm(props) {
                 File an issue
               </Button>
               <Button
-                sx={{ margin: "2px" }}
+                className={styles.footerButton}
                 variant="outlined"
                 onClick={() => window.open(props.editUrl)}
-                startIcon={<PullRequestIcon />}
+                startIcon={<PullRequestIcon style={{ color: "red" }} />}
               >
                 Edit this page
               </Button>
-            </div>
-          </div>
-        </div>
+            </Stack>
+          </Stack>
+        </Stack>
 
         <ToastContainer
           position="top-center"

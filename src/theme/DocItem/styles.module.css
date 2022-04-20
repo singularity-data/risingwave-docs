@@ -11,9 +11,10 @@
 }
 
 button.requestButton {
+  font-family: NotoSans;
   text-transform: none;
   font-size: 14px;
-  /* color: #95adee; */
+  color: #7798ef;
 }
 
 button.requestButton:hover {
