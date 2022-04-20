@@ -21,7 +21,6 @@
   /* font */
   --ifm-font-family-base: NotoSans;
 
-
   --ifm-paragraph-margin-bottom: 0.5rem;
   --ifm-list-paragraph-margin: 0.2rem;
 
@@ -29,30 +28,29 @@
 }
 
 /* hide home icon in breadcrumbs */
-.breadcrumbs li:first-child{
+.breadcrumbs li:first-child {
   display: none !important;
 }
 
-h1{
+h1 {
   font-family: NotoSans-ExtraLight !important;
 }
 
-h2{
+h2 {
   font-family: NotoSans !important;
 }
 
-h3{
+h3 {
   font-family: NotoSans-Medium !important;
 }
 
-h4{
+h4 {
   font-family: NotoSans-SemiBold !important;
 }
 
 @font-face {
   font-family: NotoSans;
-  src: local("NotoSans"),
-    url(/static/font/NotoSans-Regular.ttf) format("ttf"),
+  src: local("NotoSans"), url(/static/font/NotoSans-Regular.ttf) format("ttf"),
     url(/static/font/NotoSans-Regular.woff) format("woff");
   font-weight: normal;
   font-style: normal;
@@ -69,8 +67,7 @@ h4{
 
 @font-face {
   font-family: NotoSans-Thin;
-  src: local("NotoSans-Thin"),
-    url(/static/font/NotoSans-Thin.ttf) format("ttf"),
+  src: local("NotoSans-Thin"), url(/static/font/NotoSans-Thin.ttf) format("ttf"),
     url(/static/font/NotoSans-Thin.woff) format("woff");
   font-weight: normal;
   font-style: normal;
@@ -95,7 +92,7 @@ h4{
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #95adee;
   --ifm-color-primary-dark: #7493e9;
   --ifm-color-primary-darker: #6386e6;
@@ -120,13 +117,13 @@ h4{
   padding: 0 var(--ifm-pre-padding);
 }
 
-[data-theme='dark'] .docusaurus-highlight-code-line {
+[data-theme="dark"] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
 h2 {
   padding-bottom: 10px;
-  border-bottom: 1px solid #DBDBDB;
+  border-bottom: 1px solid #dbdbdb;
 }
 
 /* ol{
@@ -160,5 +157,3 @@ ol>li:before {
   border-style: solid;
   border-color: gray;
 } */
-
-

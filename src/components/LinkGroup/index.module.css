@@ -1,34 +1,34 @@
-.container{
-    position: fixed;
-    bottom: 80px;
-    right: 1.5px;
-    padding: 10px;
+.container {
+  position: fixed;
+  bottom: 80px;
+  right: 1.5px;
+  padding: 10px;
 }
 
-.flexBox{
-    display: flex;
-    flex-direction: column;
+.flexBox {
+  display: flex;
+  flex-direction: column;
 }
 
-.button{
-    margin: 10px;
+.button {
+  margin: 10px;
 }
 @media (max-width: 996px) {
-    .container{
-        position: static;
-        padding: 0px;
-    }
+  .container {
+    position: static;
+    padding: 0px;
+  }
 
-    .flexBox{
-        flex-direction: row;
-    }
+  .flexBox {
+    flex-direction: row;
+  }
 
-    .foldedTab{
-        display: none;
-    }
+  .foldedTab {
+    display: none;
+  }
 
-    .button{
-        margin: 0px;
-        margin-right: 10px;
-    }
+  .button {
+    margin: 0px;
+    margin-right: 10px;
+  }
 }

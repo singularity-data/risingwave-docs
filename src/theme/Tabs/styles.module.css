@@ -12,9 +12,9 @@
 
 .tabs {
   /* border-bottom: var(--ifm-tabs-color-active-border) !important; */
-  border-bottom: 3px solid var(--ifm-tabs-color-active-border) !important
+  border-bottom: 3px solid var(--ifm-tabs-color-active-border) !important;
 }
 
-.tabsActive{
+.tabsActive {
   background-color: rgb(242, 242, 242) !important;
 }
