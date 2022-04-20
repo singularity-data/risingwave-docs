@@ -13,6 +13,15 @@
 button.requestButton {
   text-transform: none;
   font-size: 14px;
+  /* color: #95adee; */
+}
+
+button.requestButton:hover {
+  box-shadow: none;
+}
+
+.docItemFooter {
+  margin-top: 30px;
 }
 
 @media (min-width: 997px) {

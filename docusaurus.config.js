@@ -25,6 +25,8 @@ const config = {
         docs: {
           lastVersion: "current",
           sidebarPath: require.resolve("./sidebars.js"),
+          showLastUpdateAuthor: false,
+          showLastUpdateTime: true,
           versions: {
             current: {
               label: "Latest",
