@@ -10,6 +10,11 @@
   margin-top: 0;
 }
 
+button.requestButton {
+  text-transform: none;
+  font-size: 14px;
+}
+
 @media (min-width: 997px) {
   .docItemCol {
     max-width: 75% !important;

@@ -1,24 +1,22 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
-import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
-import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
+import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
+import ThumbDownOffAltIcon from "@mui/icons-material/ThumbDownOffAlt";
 import PullRequestIcon from "@site/static/img/github_pr.svg";
 import IssueIcon from "@site/static/img/github_issue.svg";
-import { Button, TextField, Stack, Collapse } from '@mui/material';
-
-import CommunityLinkGroup from '@site/src/components/LinkGroup';
-
+import { Button, TextField, Stack, Collapse } from "@mui/material";
+import CommunityLinkGroup from "@site/src/components/LinkGroup";
 import { sendFeedback } from "@site/src/api/feedback";
-import { toast } from 'react-toastify';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import styles from "./index.module.css";
 
 const FormHeaderTitle = styled("span")({
   fontSize: "13px",
   fontWeight: 100,
   color: "#999999",
-  width: "max-content"
+  width: "max-content",
 });
 
 const BreakLine = styled("div")({
@@ -26,46 +24,46 @@ const BreakLine = styled("div")({
   height: "1px",
   backgroundColor: "#999999",
   marginTop: "70px",
-  marginBottom: "20px"
-})
+  marginBottom: "20px",
+});
 
 export default function FeedbackForm(props) {
   const [formData, setFormData] = useState({
     description: "",
     like: false,
-    unlike: false
+    unlike: false,
   });
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
-  }
+  };
   const handleLike = (e) => {
     setFormData({
       ...formData,
       like: !formData.like,
-      unlike: false
+      unlike: false,
     });
-  }
+  };
   const handleUnLike = (e) => {
     setFormData({
       ...formData,
       unlike: !formData.unlike,
-      like: false
+      like: false,
     });
-  }
+  };
   const validation = () => {
     if (!formData.description) {
       return {
         success: false,
-        msg: 'Please fill out all required fields 😥'
+        msg: "Please fill out all required fields 😥",
       };
     }
     return {
-      success: true
+      success: true,
     };
-  }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -73,8 +71,7 @@ export default function FeedbackForm(props) {
       const valid = validation();
       if (valid.success) {
         await sendFeedback(formData.description, Number(formData.like));
-      }
-      else {
+      } else {
         toast.error(valid.msg, {
           position: "top-center",
           autoClose: 2000,
@@ -86,7 +83,7 @@ export default function FeedbackForm(props) {
         });
       }
     } catch (e) {
-      toast.error('Someting went wrong 😥', {
+      toast.error("Someting went wrong 😥", {
         position: "top-center",
         autoClose: 2000,
         hideProgressBar: true,
@@ -95,8 +92,8 @@ export default function FeedbackForm(props) {
         draggable: true,
         progress: undefined,
       });
-    };
-  }
+    }
+  };
 
   const handleCancel = (e) => {
     e.preventDefault();
@@ -106,7 +103,7 @@ export default function FeedbackForm(props) {
       like: false,
       unlike: false,
     });
-  }
+  };
 
   return (
     <>
@@ -118,7 +115,7 @@ export default function FeedbackForm(props) {
       <form
         style={{
           width: "100%",
-          marginTop: "15px"
+          marginTop: "15px",
         }}
       >
         <div className={styles.container}>
@@ -168,11 +165,15 @@ export default function FeedbackForm(props) {
           {/* right group */}
           <div className={styles.rightGroup}>
             <FormHeaderTitle>Help us make this doc better!</FormHeaderTitle>
-            <div classnAME={styles.rightGroupButtonGroup}>
+            <div className={styles.rightGroupButtonGroup}>
               <Button
                 sx={{ margin: "2px" }}
                 variant="outlined"
-                onClick={() => window.open("https://github.com/singularity-data/risingwave-docs/issues/new")}
+                onClick={() =>
+                  window.open(
+                    "https://github.com/singularity-data/risingwave-docs/issues/new"
+                  )
+                }
                 startIcon={<IssueIcon />}
               >
                 File an issue
@@ -203,4 +204,4 @@ export default function FeedbackForm(props) {
       </form>
     </>
   );
-};
+}
