@@ -152,7 +152,7 @@ CREATE SOURCE KAFKA_TOPIC_1 (
 with (
    'connector'='kafka',
    'kafka.topic'='demo_topic',
-   'kafka.bootstrap.servers'='172.10.1.1:9090,172.10.1.2:9090',
+   'kafka.brokers'='172.10.1.1:9090,172.10.1.2:9090',
    'kafka.scan.startup.mode'='earliest|latest',
    'kafka.time.offset'='140000000',
    'kafka.consumer.group'='XXX_CONSUMER_NAME'
