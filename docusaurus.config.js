@@ -33,13 +33,11 @@ const config = {
               path: "/latest",
             },
           },
-          editUrl:
-            "https://github.com/singularity-data/risingwave-docs/blob/main/",
+          editUrl: "https://github.com/singularity-data/risingwave-docs/blob/main/",
         },
         blog: {
           showReadingTime: true,
-          editUrl:
-            "https://github.com/singularity-data/risingwave-docs/blob/main/",
+          editUrl: "https://github.com/singularity-data/risingwave-docs/blob/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -158,8 +156,7 @@ const config = {
     }),
   customFields: {
     docsUrl: "https://www.risingwave.dev",
-    requestUrl:
-      "https://github.com/singularity-data/risingwave-docs/issues/new?body=",
+    requestUrl: "https://github.com/singularity-data/risingwave-docs/issues/new?body=",
   },
 };
 
