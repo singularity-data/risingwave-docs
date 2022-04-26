@@ -187,7 +187,7 @@ CREATE TABLE t2 (
 CREATE MATERIALIZED VIEW mv2 
 AS 
     SELECT
-        (AVG(v1), 1) AS avg_v1, 
+        ROUND(AVG(v1), 1) AS avg_v1, 
         SUM(v2) AS sum_v2, 
         COUNT(v3) AS count_v3 
     FROM t1;
@@ -204,7 +204,7 @@ AS
 ```sql title="To create a materialized view from existing materialized views:"
 CREATE MATERIALIZED VIEW m4 
 AS 
-    SELECT m1.v1, m1.v2, m2.v1, m2.v2 
+    SELECT m1.v1 as m1v1, m1.v2 as m1v2, m2.v1, m2.v2 
     FROM m1 
     JOIN m2 ON m1.v1 = m2.v1;
 ```
