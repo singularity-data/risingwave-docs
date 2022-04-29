@@ -34,6 +34,46 @@ This guide will help you get started with RisingWave. We will cover:
     ```shell
     ./risingwave playground
     ```
+4. Connect to the PostgreSQL interactive terminal.
+
+    ```sh
+    psql -h localhost -p 4566 -d dev
+
+### Install and run from a docker container
+
+You can use Docker and Docker Compose to set up a local cluster of RisingWave.
+
+#### Prerequisites
+
+    Ensure you have Docker and Docker Compose intalled on your machine. For installation instructions, see [Install Docker](https://docs.docker.com/get-docker/) and [Install Docker-Compose](https://docs.docker.com/compose/install/).
+
+1. Download the `docker-compose.yml` file.
+
+    ```sh
+    wget https://raw.githubusercontent.com/singularity-data/risingwave/main/docker/docker-compose.yml
+    ```
+
+2. Start a RisingWave cluster.
+
+    ```sh
+    docker-compose up -d
+    ```
+
+    By default this command will start these components:
+    - [MinIO](https://min.io/): Used as a local S3 service.
+    - 1 metadata server node
+    - 1 compute node
+    - 1 frontend node
+    - 1 Redpanda instance
+
+3. Connect to the PostgreSQL interactive terminal.
+
+    ```sh
+    psql -h localhost -p 4566 -d dev
+    ```
+
+    If you want to change the parameters of the cluster, please edit the docker-compose file and run `docker-compose up -d` again.
+
 
 ### Build from source (Linux & macOS)
 
@@ -113,7 +153,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     ```
     :::tip
 
-    RisingWave has two running modes: standard mode and light mode. In the light mode, all nodes will be started in one process. Use the light mode if you need to do some quick tests. In the standard mode, the meta node, compute node, and the serving node are started in three separate processes. 
+    RisingWave has two running modes: standard mode and light mode. In the light mode, all nodes will be started in one process. If you need to do some quick tests, use the light mode. In the standard mode, the meta node, compute node, and the frontend node are started in three separate processes. 
 
     :::
 
@@ -133,7 +173,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     ./risedev kill
     ```
 
-4. After RisingWave services are started, run the PostgreSQL interactive terminal.
+4. Connect to the PostgreSQL interactive terminal.
+
     ```shell
     psql -h localhost -p 4566 -d dev
     ```
