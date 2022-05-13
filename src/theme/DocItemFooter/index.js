@@ -57,6 +57,11 @@ export default function DocItemFooter(props) {
   const canDisplayEditMetaRow = !!(editUrl || lastUpdatedAt || lastUpdatedBy);
   const canDisplayFooter = canDisplayTagsRow || canDisplayEditMetaRow;
 
+  const dateOptions = { day: 'numeric', month: 'long', year: 'numeric'};
+  
+  let formattedDate = new Date(formattedLastUpdatedAt);
+  formattedDate = formattedDate.toLocaleDateString('en-US', dateOptions);
+
   if (!canDisplayFooter) {
     return null;
   }
@@ -70,7 +75,7 @@ export default function DocItemFooter(props) {
         <EditMetaRow
           lastUpdatedAt={lastUpdatedAt}
           lastUpdatedBy={lastUpdatedBy}
-          formattedLastUpdatedAt={formattedLastUpdatedAt}
+          formattedLastUpdatedAt={formattedDate}
         />
       )}
     </footer>
