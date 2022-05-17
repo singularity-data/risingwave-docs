@@ -1,6 +1,6 @@
 ---
 id: getting-started
-title: Getting started
+title: Get started
 description: Install and start RisingWave.
 slug: /getting-started
 sidebar_position: 2
@@ -10,70 +10,57 @@ sidebar_position: 2
 This guide will help you get started with RisingWave. We will cover: 
 
 - [Install and run RisingWave](#install-and-run-risingwave)
-- [Connect to a streaming source](#connect-to-a-streaming-source)
+- [Connect to RisingWave](#connect-to-risingwave)
+- [Stop RisingWave](#stop-risingwave)
+- [Connect to a stream source](#connect-to-a-streaming-source)
 - [Query and manage data](#query-and-manage-data)
 
 ## Install and run RisingWave
+
+RisingWave has two running modes: playground mode and development mode. The playground mode is intended to be used for quick tests. In the playground mode, all nodes (metadata server node, frontend node, and compute node) will be started in one process. In the development mode, RisingWave is deployed as a full cluster, in which the three types of nodes (metadata server node, compute node, and frontend node) are started in three separate processes. In the development mode, you can also configure the components to use.
+
+You can run RisingWave in three ways:
+
+- Use the pre-built library (only for Linux)
+- Install and run from a Docker image (Linux & macOS)
+- Build from the source code (Linux & macOS)
 
 ### Use the pre-built library (Linux)
 
 1. Download the pre-built library.
  
     ```shell
-    wget https://github.com/singularity-data/risingwave/releases/download/v0.1.5/risingwave-v0.1.5-x86_64-unknown-linux.tar.gz
+    wget https://github.com/singularity-data/risingwave/releases/download/v0.1.7/risingwave-v0.1.7-x86_64-unknown-linux.tar.gz
     ```
 
 2. Unzip the library.
 
     ```shell
-    tar xvf risingwave-v0.1.5-x86_64-unknown-linux.tar.gz
+    tar xvf risingwave-v0.1.6-x86_64-unknown-linux.tar.gz
     ```
 
-3. Start RisingWave in the light mode.
+3. Start RisingWave in the playground mode. The pre-build library can only be started in the playground mode.
 
     ```shell
-    ./risingwave playground
-    ```
-4. Connect to the PostgreSQL interactive terminal.
-
-    ```sh
-    psql -h localhost -p 4566 -d dev
-
-### Install and run from a docker container
-
-You can use Docker and Docker Compose to set up a local cluster of RisingWave.
-
-#### Prerequisites
-
-    Ensure you have Docker and Docker Compose intalled on your machine. For installation instructions, see [Install Docker](https://docs.docker.com/get-docker/) and [Install Docker-Compose](https://docs.docker.com/compose/install/).
-
-1. Download the `docker-compose.yml` file.
-
-    ```sh
-    wget https://raw.githubusercontent.com/singularity-data/risingwave/main/docker/docker-compose.yml
+    ./risedev playground
     ```
 
-2. Start a RisingWave cluster.
 
+### Install and run from a Docker image (Linux & macOS)
+
+You can install and run RisingWave from a Docker image. Currently, only x86-64 platforms are supported.
+
+Ensure you have Docker intalled on your machine. For installation instructions, see [Install Docker](https://docs.docker.com/get-docker/).
+
+1. Download the docker ccontainer image of latest nightly build of RisingWave. 
+    
     ```sh
-    docker-compose up -d
+    docker run -it ghcr.io/singularity-data/risingwave:latest playground
     ```
-
-    By default this command will start these components:
-    - [MinIO](https://min.io/): Used as a local S3 service.
-    - 1 metadata server node
-    - 1 compute node
-    - 1 frontend node
-    - 1 Redpanda instance
-
-3. Connect to the PostgreSQL interactive terminal.
-
+2. Run RisingWave in the single-binary playground mode from the docker image.
     ```sh
-    psql -h localhost -p 4566 -d dev
+    docker run -it ghcr.io/singularity-data/risingwave:latest playground
     ```
-
-    If you want to change the parameters of the cluster, please edit the docker-compose file and run `docker-compose up -d` again.
-
 
 ### Build from source (Linux & macOS)
 
@@ -145,17 +132,12 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
     To run RisingWave, in the terminal, navigate to the directory where RisingWave is downloaded, and run the following command.
     ```shell
-    ./risedev dev # Running RisingWave in the standard mode
+    ./risedev dev # Running RisingWave in the development mode
     ```
     or
     ```shell
-    ./risedev playground # Running RisingWave in the light mode. 
+    ./risedev playground # Running RisingWave in the playground mode. 
     ```
-    :::tip
-
-    RisingWave has two running modes: standard mode and light mode. In the light mode, all nodes will be started in one process. If you need to do some quick tests, use the light mode. In the standard mode, the meta node, compute node, and the frontend node are started in three separate processes. 
-
-    :::
 
     All services in RisingWave will be started. In the current version, all nodes are hosted in your local environment.
 
@@ -168,19 +150,24 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
     :::
 
-    You can stop RisingWave with the following command.
+
+## Connect to RisingWave
+
+After RisingWave is started, you can connect to it via the Postgres interactive terminal `psql`.
+
+    ```sh
+    psql -h localhost -p 4566
+
+You can now issue SQL queries to manage your streams and data.
+
+## Stop RisingWave
+
+You can stop RisingWave with the following command.
     ```shell
     ./risedev kill
     ```
 
-4. Connect to the PostgreSQL interactive terminal.
-
-    ```shell
-    psql -h localhost -p 4566 -d dev
-    ```
-    You can now issue SQL statements to manage your streams and data. 
-
-## Connect to a streaming source
+## Connect to a stream source
 
 Use `CREATE SOURCE` statement to connect to a streaming source.
 
@@ -206,55 +193,95 @@ For supported streaming sources and SQL examples, please see [Sources](Sources.m
 
 ## Query and manage data
 
-RisingWave uses Postgres-compatible SQL as the interface to manage and query data. Let's see a few examples:
+RisingWave uses Postgres-compatible SQL as the interface to manage and query data.
 
-* Create a table
-* Create a materialized view from tables
-* Create a materialized view from a source
-* Create a materialized view from an existing materialized view
-* Get values of a materialized view
+Before start, ensure that you have connected to RisingWave via `psql`. 
 
+Now let us create a table to store data about taxi trips.
 
-```sql title="To create a table:"
-CREATE TABLE t2 (
-    v1 INT NOT NULL, 
-    v2 INT NOT NULL, 
-    v3 INT NOT NULL
+```sql
+CREATE TABLE taxi_trips(
+    id VARCHAR NOT NULL,
+    distance DOUBLE PRECISION NOT NULL,
+    duration DOUBLE PRECISION NOT NULL
 );
 ```
 
+We want to create a materialized view to dynamically calculate the average speed of all trips.
 
-```sql title="To create a materialized view from tables:"
-CREATE MATERIALIZED VIEW mv2 
-AS 
-    SELECT
-        ROUND(AVG(v1), 1) AS avg_v1, 
-        SUM(v2) AS sum_v2, 
-        COUNT(v3) AS count_v3 
-    FROM t1;
+```sql
+CREATE MATERIALIZED VIEW mv_avg_speed
+AS
+    SELECT COUNT(id) as no_of_trips,
+    SUM(distance) as total_distance,
+    SUM(duration) as total_duration,
+    SUM(distance) / SUM(duration) as avg_speed,
+    FROM taxi_trips;
 ```
 
+Now let us add some data to the table.
+
+```sql
+INSERT INTO taxi_trips
+VALUES
+    ('1', 4, 10)
+```
+
+We can now query the average speed.
+
+```sql
+SELECT * FROM mv_avg_speed;
+```
+
+Here is the result we get. 
+
+```sql
+ no_of_trips | total_distance | total_duration | avg_speed      
+-------------+----------------+----------------+------------
+           1 |             5 |             10 | 0.4
+```
+
+Now let us add a new record.
+
+```sql
+INSERT INTO taxi_trips
+VALUES
+    ('2', 6, 10)
+```
+
+As soon as we insert the new record, the materialied view `mv_avg_speed` will be refreshed to re-calculate the results. Let us see if the results are updated.
+
+```sql
+SELECT * FROM mv_avg_speed;
+```
+Here is the result we get. 
+```sql
+ no_of_trips | total_distance | total_duration | avg_speed      
+-------------+----------------+----------------+------------
+           2 |             10 |             20 | 0.5
+
+```
+
+You can see that the results are based on the two rows of data. The calculation is performed automatically behind the scene. No matter how many more rows of data we insert, we can always get the latest results by querying the values of the materialized view.
+
+Creating a materialized view from a source is similar. 
 
 ```sql title="To create a materialized view from a source:"
 CREATE MATERIALIZED VIEW debezium_json_mysql_mv 
 AS 
-    SELECT * FROM debezium_json_mysql_source;
+    SELECT COLUMN1, COLUMN2, COLUMN3 FROM debezium_json_mysql_source;
 ```
 
+With RisingWave, you can also create a materialized view from an existing materialized view. 
 
 ```sql title="To create a materialized view from existing materialized views:"
-CREATE MATERIALIZED VIEW m4 
+CREATE MATERIALIZED VIEW m3
 AS 
     SELECT m1.v1 as m1v1, m1.v2 as m1v2, m2.v1, m2.v2 
     FROM m1 
     JOIN m2 ON m1.v1 = m2.v1;
 ```
 
-
-```sql title="To get the latest values of a materialized view:"
-FLUSH;
-SELECT * FROM m4;
-```
 
 For the complete list of supported SQL statements, see [Statements](Statements.md).
 
