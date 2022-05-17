@@ -58,8 +58,7 @@ h4 {
 
 @font-face {
   font-family: NotoSans-Medium;
-  src: local("NotoSans-Medium"),
-    url(/static/font/NotoSans-Medium.ttf) format("ttf"),
+  src: local("NotoSans-Medium"), url(/static/font/NotoSans-Medium.ttf) format("ttf"),
     url(/static/font/NotoSans-Medium.woff) format("woff");
   font-weight: normal;
   font-style: normal;
@@ -75,8 +74,7 @@ h4 {
 
 @font-face {
   font-family: NotoSans-SemiBold;
-  src: local("NotoSans-SemiBold"),
-    url(/static/font/NotoSans-SemiBold.ttf) format("ttf"),
+  src: local("NotoSans-SemiBold"), url(/static/font/NotoSans-SemiBold.ttf) format("ttf"),
     url(/static/font/NotoSans-SemiBold.woff) format("woff");
   font-weight: normal;
   font-style: normal;
@@ -84,8 +82,7 @@ h4 {
 
 @font-face {
   font-family: NotoSans-ExtraLight;
-  src: local("NotoSans-ExtraLight"),
-    url(/static/font/NotoSans-ExtraLight.ttf) format("ttf"),
+  src: local("NotoSans-ExtraLight"), url(/static/font/NotoSans-ExtraLight.ttf) format("ttf"),
     url(/static/font/NotoSans-ExtraLight.woff) format("woff");
   font-weight: normal;
   font-style: normal;
@@ -124,6 +121,29 @@ h4 {
 h2 {
   padding-bottom: 10px;
   border-bottom: 1px solid #dbdbdb;
+}
+
+@media (max-width: 1000px) {
+  table {
+    position: relative;
+  }
+
+  [data-theme="dark"] table thead th {
+    background-color: #474748;
+  }
+
+  table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: #d0d0d0;
+    border: 1px solid transparent;
+  }
+
+  table {
+    height: 50vh;
+    overflow: auto;
+  }
 }
 
 /* ol{
