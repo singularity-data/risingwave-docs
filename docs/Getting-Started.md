@@ -11,13 +11,10 @@ This guide will help you get started with RisingWave. We will cover:
 
 - [Install and run RisingWave](#install-and-run-risingwave)
 - [Connect to RisingWave](#connect-to-risingwave)
-- [Stop RisingWave](#stop-risingwave)
 - [Connect to a stream source](#connect-to-a-streaming-source)
 - [Query and manage data](#query-and-manage-data)
 
 ## Install and run RisingWave
-
-RisingWave has two running modes: playground mode and development mode. The playground mode is intended to be used for quick tests. In the playground mode, all nodes (metadata server node, frontend node, and compute node) will be started in one process. In the development mode, RisingWave is deployed as a full cluster, in which the three types of nodes (metadata server node, compute node, and frontend node) are started in three separate processes. In the development mode, you can also configure the components to use.
 
 You can run RisingWave in three ways:
 
@@ -36,14 +33,17 @@ You can run RisingWave in three ways:
 2. Unzip the library.
 
     ```shell
-    tar xvf risingwave-v0.1.6-x86_64-unknown-linux.tar.gz
+    tar xvf risingwave-v0.1.7-x86_64-unknown-linux.tar.gz
     ```
 
-3. Start RisingWave in the playground mode. The pre-build library can only be started in the playground mode.
+3. Run RisingWave.
 
     ```shell
-    ./risedev playground
+    ./risingwave playground
     ```
+    RisingWave is now started.
+
+
 
 
 ### Install and run from a Docker image (Linux & macOS)
@@ -52,12 +52,13 @@ You can install and run RisingWave from a Docker image. Currently, only x86-64 p
 
 Ensure you have Docker intalled on your machine. For installation instructions, see [Install Docker](https://docs.docker.com/get-docker/).
 
-1. Download the docker ccontainer image of latest nightly build of RisingWave. 
+1. Download the docker ccontainer image of the latest nightly build of RisingWave. 
     
     ```sh
-    docker run -it ghcr.io/singularity-data/risingwave:latest playground
+    docker pull ghcr.io/singularity-data/risingwave:latest
     ```
-2. Run RisingWave in the single-binary playground mode from the docker image.
+
+2. Run RisingWave from the docker image.
     ```sh
     docker run -it ghcr.io/singularity-data/risingwave:latest playground
     ```
@@ -72,7 +73,7 @@ Ensure you have Docker intalled on your machine. For installation instructions, 
 
 2. Install dependencies.
 
-    RisingWave has the following dependencies. Please ensure all the dependencies have been installed before starting RisingWave.
+    RisingWave has the following dependencies. Please ensure all the dependencies have been installed before running RisingWave.
 
     * Rust
     * CMake
@@ -131,24 +132,13 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 3. Run RisingWave.
 
     To run RisingWave, in the terminal, navigate to the directory where RisingWave is downloaded, and run the following command.
+  
     ```shell
-    ./risedev dev # Running RisingWave in the development mode
-    ```
-    or
-    ```shell
-    ./risedev playground # Running RisingWave in the playground mode. 
+    ./risingwave playground
     ```
 
-    All services in RisingWave will be started. In the current version, all nodes are hosted in your local environment.
+    All services in RisingWave will be started.
 
-    :::info
-
-    The default stream connector frontend has a temporary limitation. It only accepts Amazon Kinesis. To connect to other sources, you need to use the legacy stream connector frontend. To run RisingWave with the legacy stream connector frontend, ensure that you have Java 11 installed in your environment, and run the following command in your terminal:
-    ```shell
-    ./risedev configure enable legacy-frontend
-    ```
-
-    :::
 
 
 ## Connect to RisingWave
@@ -160,14 +150,9 @@ After RisingWave is started, you can connect to it via the Postgres interactive 
 
 You can now issue SQL queries to manage your streams and data.
 
-## Stop RisingWave
 
-You can stop RisingWave with the following command.
-    ```shell
-    ./risedev kill
-    ```
 
-## Connect to a stream source
+## Connect to a streaming source
 
 Use `CREATE SOURCE` statement to connect to a streaming source.
 
@@ -201,9 +186,9 @@ Now let us create a table to store data about taxi trips.
 
 ```sql
 CREATE TABLE taxi_trips(
-    id VARCHAR NOT NULL,
-    distance DOUBLE PRECISION NOT NULL,
-    duration DOUBLE PRECISION NOT NULL
+    id VARCHAR,
+    distance DOUBLE PRECISION,
+    duration DOUBLE PRECISION
 );
 ```
 
@@ -279,7 +264,7 @@ CREATE MATERIALIZED VIEW m3
 AS 
     SELECT m1.v1 as m1v1, m1.v2 as m1v2, m2.v1, m2.v2 
     FROM m1 
-    JOIN m2 ON m1.v1 = m2.v1;
+    INNER JOIN m2 ON m1.v1 = m2.v1;
 ```
 
 
