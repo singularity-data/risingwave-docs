@@ -1,5 +1,5 @@
 ---
-id: getting-started
+id: get-started
 title: Get started
 description: Install and run RisingWave.
 slug: /get-started

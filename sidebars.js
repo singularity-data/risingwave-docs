@@ -27,8 +27,8 @@ const sidebars = {
    },
    {
     type: `doc`,
-    id: `getting-started`,
-    label: `Getting started`,
+    id: `get-started`,
+    label: `Get started`,
   },
    {
      type: `doc`,
