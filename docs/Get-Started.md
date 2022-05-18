@@ -1,5 +1,5 @@
 ---
-id: getting-started
+id: get-started
 title: Get started
 description: Install and run RisingWave.
 slug: /get-started
@@ -145,10 +145,10 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 After RisingWave is started, you can connect to it via the Postgres interactive terminal `psql`.
 
-```shell
-psql -h localhost -p 4566
-```
-
+    ```sh
+    psql -h localhost -p 4566
+    ```
+    
 You can now issue SQL queries to manage your streams and data.
 
 
