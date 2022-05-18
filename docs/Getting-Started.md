@@ -1,8 +1,8 @@
 ---
-id: getting-started
+id: get-started
 title: Get started
-description: Install and start RisingWave.
-slug: /getting-started
+description: Install and run RisingWave.
+slug: /get-started
 sidebar_position: 2
 ---
 
@@ -11,7 +11,7 @@ This guide will help you get started with RisingWave. We will cover:
 
 - [Install and run RisingWave](#install-and-run-risingwave)
 - [Connect to RisingWave](#connect-to-risingwave)
-- [Connect to a stream source](#connect-to-a-streaming-source)
+- [Connect to a streaming source](#connect-to-a-streaming-source)
 - [Query and manage data](#query-and-manage-data)
 
 ## Install and run RisingWave
@@ -147,7 +147,8 @@ After RisingWave is started, you can connect to it via the Postgres interactive 
 
     ```sh
     psql -h localhost -p 4566
-
+    ```
+    
 You can now issue SQL queries to manage your streams and data.
 
 
@@ -223,7 +224,7 @@ Here is the result we get.
 ```sql
  no_of_trips | total_distance | total_duration | avg_speed      
 -------------+----------------+----------------+------------
-           1 |             5 |             10 | 0.4
+           1 |              5 |             10 | 0.4
 ```
 
 Now let us add a new record.
