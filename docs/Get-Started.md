@@ -60,7 +60,7 @@ Ensure you have Docker intalled on your machine. For installation instructions, 
 
 2. Run RisingWave from the docker image.
     ```sh
-    docker run -it ghcr.io/singularity-data/risingwave:latest playground
+    docker run -it --network host ghcr.io/singularity-data/risingwave:latest playground
     ```
 
 ### Build from source (Linux & macOS)
