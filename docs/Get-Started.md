@@ -134,7 +134,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     To run RisingWave, in the terminal, navigate to the directory where RisingWave is downloaded, and run the following command.
   
     ```shell
-    ./risingwave playground
+    ./risedev playground
     ```
 
     All services in RisingWave will be started.
