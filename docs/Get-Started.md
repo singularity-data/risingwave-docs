@@ -155,7 +155,7 @@ You can now issue SQL queries to manage your streams and data.
 
 ## Connect to a streaming source
 
-Use `CREATE SOURCE` statement to connect to a streaming source.
+Use `CREATE SOURCE` command to connect to a streaming source.
 
 To connect to a Kafka topic: 
 
@@ -269,7 +269,7 @@ AS
 ```
 
 
-For the complete list of supported SQL statements, see [Statements](Statements.md).
+For the complete list of supported SQL commands, see [Commands](Commands.md).
 
 
 

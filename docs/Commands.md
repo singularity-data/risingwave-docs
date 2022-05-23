@@ -1,10 +1,10 @@
 ---
-id: sql-statements
-slug: /sql-statements
-title: Statements
+id: sql-commands
+slug: /sql-commands
+title: Commands
 ---
 
-RisingWave supports the following SQL statements.
+RisingWave supports the following SQL commands.
 
 * `CREATE SOURCE`
 * `CREATE MATERIALIZED VIEW`
