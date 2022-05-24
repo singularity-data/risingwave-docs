@@ -24,6 +24,12 @@ title: Operators and functions
 * BETWEEN
 * IS [NOT] NULL
 
+## Conditional expressions
+
+* CASE WHEN ... THEN ... [ ELSE ... ] returns the value of first true branch
+* COALESCE(value [, ...]) returns the first non-null value
+* NULLIF(value1, value2) returns null if value1 == value2, otherwise returns value1
+
 ## Mathematical functions and operators
 
 * \- (negation)

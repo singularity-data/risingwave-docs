@@ -23,8 +23,7 @@ RisingWave supports the following SQL commands.
 * `LATERAL` subqueries are not supported yet.
 * `JOIN USING` and `NATURAL JOIN` are not supported yet.
 * The `GROUP BY` clause only supports grouping by input column names now.
-* The `HAVING` clause is not supported yet.
 * The `UNION` / `INTERSECT` / `EXCEPT` are not supported yet.
 * The `ORDER BY` clause only supports ordering by output column names now.
-* The `LIMIT` clause is not supported yet.
+* The `LIMIT` clause has to be used together with `ORDER BY`.
 
