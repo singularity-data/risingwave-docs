@@ -3,11 +3,14 @@ import "./style.css";
 
 export default function Drawer(props) {
   return (
-    <svg
-      style={{ marginTop: "20px" }}
-      ref={(element) => {
-        element && element.appendChild(props.SVG.toSVG());
-      }}
-    ></svg>
+    <div className="svg-box">
+      <svg
+        className="svg-container"
+        style={{ marginTop: "20px" }}
+        ref={(element) => {
+          element && element.appendChild(props.SVG.toSVG());
+        }}
+      ></svg>
+    </div>
   );
 }
