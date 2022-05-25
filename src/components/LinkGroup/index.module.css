@@ -13,6 +13,7 @@
 .button {
   margin: 10px;
 }
+
 @media (max-width: 996px) {
   .container {
     position: static;
