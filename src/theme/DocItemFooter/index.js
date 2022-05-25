@@ -14,12 +14,7 @@ import { ThemeClassNames } from "@docusaurus/theme-common";
 
 function TagsRow(props) {
   return (
-    <div
-      className={clsx(
-        ThemeClassNames.docs.docFooterTagsRow,
-        "row margin-bottom--sm"
-      )}
-    >
+    <div className={clsx(ThemeClassNames.docs.docFooterTagsRow, "row margin-bottom--sm")}>
       <div className="col">
         <TagsListInline {...props} />
       </div>
@@ -46,30 +41,22 @@ function EditMetaRow({ lastUpdatedAt, lastUpdatedBy, formattedLastUpdatedAt }) {
 export default function DocItemFooter(props) {
   const { content: DocContent } = props;
   const { metadata } = DocContent;
-  const {
-    editUrl,
-    lastUpdatedAt,
-    formattedLastUpdatedAt,
-    lastUpdatedBy,
-    tags,
-  } = metadata;
+  const { editUrl, lastUpdatedAt, formattedLastUpdatedAt, lastUpdatedBy, tags } = metadata;
   const canDisplayTagsRow = tags.length > 0;
   const canDisplayEditMetaRow = !!(editUrl || lastUpdatedAt || lastUpdatedBy);
   const canDisplayFooter = canDisplayTagsRow || canDisplayEditMetaRow;
 
-  const dateOptions = { day: 'numeric', month: 'long', year: 'numeric'};
-  
+  const dateOptions = { day: "numeric", month: "long", year: "numeric" };
+
   let formattedDate = new Date(formattedLastUpdatedAt);
-  formattedDate = formattedDate.toLocaleDateString('en-US', dateOptions);
+  formattedDate = formattedDate.toLocaleDateString("en-US", dateOptions);
 
   if (!canDisplayFooter) {
     return null;
   }
 
   return (
-    <footer
-      className={clsx(ThemeClassNames.docs.docFooter, "docusaurus-mt-lg")}
-    >
+    <footer className={clsx(ThemeClassNames.docs.docFooter, "docusaurus-mt-lg")}>
       {canDisplayTagsRow && <TagsRow tags={tags} />}
       {canDisplayEditMetaRow && (
         <EditMetaRow

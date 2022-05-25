@@ -1,29 +1,27 @@
-import React, { useState } from 'react';
-import styled from '@emotion/styled';
-import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
-import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
-import PullRequestIcon from '@site/static/img/github_pr.svg';
-import IssueIcon from '@site/static/img/github_issue.svg';
-import { Button, Typography, TextField, Stack, Collapse } from '@mui/material';
-import CommunityLinkGroup from '@site/src/components/LinkGroup';
-import { sendFeedback } from '@site/src/api/feedback';
-import { toast } from 'react-toastify';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import styles from './index.module.css';
+import React, { useState } from "react";
+import styled from "@emotion/styled";
+import PullRequestIcon from "@site/static/img/github_pr.svg";
+import IssueIcon from "@site/static/img/github_issue.svg";
+import { Button, Typography, Stack } from "@mui/material";
+import CommunityLinkGroup from "@site/src/components/LinkGroup";
+import { sendFeedback } from "@site/src/api/feedback";
+import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import styles from "./index.module.css";
 
-const BreakLine = styled('div')({
-  width: '100%',
-  height: '1px',
-  backgroundColor: 'var(--ifm-color-emphasis-300)',
-  padding: '0',
-  marginTop: '30px',
-  marginBottom: '20px',
+const BreakLine = styled("div")({
+  width: "100%",
+  height: "1px",
+  backgroundColor: "var(--ifm-color-emphasis-300)",
+  padding: "0",
+  marginTop: "30px",
+  marginBottom: "20px",
 });
 
 export default function FeedbackForm(props) {
   const [formData, setFormData] = useState({
-    description: '',
+    description: "",
     like: false,
     unlike: false,
   });
@@ -55,7 +53,7 @@ export default function FeedbackForm(props) {
     if (!formData.description) {
       return {
         success: false,
-        msg: 'Please fill out all required fields 😥',
+        msg: "Please fill out all required fields 😥",
       };
     }
     return {
@@ -71,7 +69,7 @@ export default function FeedbackForm(props) {
         await sendFeedback(formData.description, Number(formData.like));
       } else {
         toast.error(valid.msg, {
-          position: 'top-center',
+          position: "top-center",
           autoClose: 2000,
           hideProgressBar: true,
           closeOnClick: true,
@@ -81,8 +79,8 @@ export default function FeedbackForm(props) {
         });
       }
     } catch (e) {
-      toast.error('Someting went wrong 😥', {
-        position: 'top-center',
+      toast.error("Someting went wrong 😥", {
+        position: "top-center",
         autoClose: 2000,
         hideProgressBar: true,
         closeOnClick: true,
@@ -97,7 +95,7 @@ export default function FeedbackForm(props) {
     e.preventDefault();
     // setStatus("");
     setFormData({
-      description: '',
+      description: "",
       like: false,
       unlike: false,
     });
@@ -112,8 +110,8 @@ export default function FeedbackForm(props) {
 
       <form
         style={{
-          width: '100%',
-          marginTop: '15px',
+          width: "100%",
+          marginTop: "15px",
         }}
       >
         <Stack direction="row" spacing={2}>
@@ -176,7 +174,7 @@ export default function FeedbackForm(props) {
                 className={styles.footerButton}
                 variant="outlined"
                 onClick={() => window.open(props.editUrl)}
-                startIcon={<PullRequestIcon style={{ color: 'red' }} />}
+                startIcon={<PullRequestIcon style={{ color: "red" }} />}
               >
                 Edit this page
               </Button>

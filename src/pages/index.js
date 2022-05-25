@@ -1,17 +1,15 @@
-import React, { useEffect } from 'react';
-import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-// import styles from './index.module.css';
-import HomePageWave from '../components/HomePageWave';
+import React, { useEffect } from "react";
+import Layout from "@theme/Layout";
+import Link from "@docusaurus/Link";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import HomePageWave from "../components/HomePageWave";
 import LogoSvg from "@site/static/img/logo.svg";
-import HomepageFeature from '../components/HomepageFeature';
-import HomepageBanner from '../components/HomepageBanner';
-// import HomepageIntro from '../components/HomepageIntro';
-import useWindowSize from '../hooks/useWindowSize';
-import { Button } from '@mui/material';
-import styled from '@emotion/styled';
-import Translate from '@docusaurus/Translate';
+import HomepageFeature from "../components/HomepageFeature";
+import HomepageBanner from "../components/HomepageBanner";
+import useWindowSize from "../hooks/useWindowSize";
+import { Button } from "@mui/material";
+import styled from "@emotion/styled";
+import Translate from "@docusaurus/Translate";
 
 const ButtonGroup = styled("div")((props) => ({
   display: "flex",
@@ -26,17 +24,16 @@ const HeroBanner = styled("div")(() => ({
   overflow: "hidden",
   padding: "1rem",
   height: "calc(100vh - 350px)",
-  minHeight: '350px',
+  minHeight: "350px",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-}))
+}));
 
 function HomepageHeader() {
-  const { siteMetadata } = useDocusaurusContext();
-
   const windowSize = useWindowSize();
+  const { siteMetadata } = useDocusaurusContext();
 
   return (
     <HeroBanner>
@@ -47,13 +44,15 @@ function HomepageHeader() {
         <span>RisingWave</span>
       </div>
       <ButtonGroup windoWidth={windowSize.width}>
-        <Link
-          to={`/docs/${siteMetadata.siteVersion}/intro`}>
-          <Button variant="contained" sx={{ width: 200, margin: "5px" }}><Translate>Get Started</Translate></Button>
+        <Link to={`/docs/${siteMetadata.siteVersion}/intro`}>
+          <Button variant="contained" sx={{ width: 200, margin: "5px" }}>
+            <Translate>Get Started</Translate>
+          </Button>
         </Link>
-        <Link
-          to={`/docs/${siteMetadata.siteVersion}/intro`}>
-          <Button variant="outlined" sx={{ width: 200, margin: "5px" }}><Translate>Try Demo</Translate></Button>
+        <Link to={`/docs/${siteMetadata.siteVersion}/intro`}>
+          <Button variant="outlined" sx={{ width: 200, margin: "5px" }}>
+            <Translate>Try Demo</Translate>
+          </Button>
         </Link>
       </ButtonGroup>
     </HeroBanner>
@@ -64,15 +63,12 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
 
   useEffect(() => {
-    console.log(window.location.href)
-    window.location.href = window.location.href + "docs/latest/intro"
-  })
+    console.log(window.location.href);
+    window.location.href = window.location.href + "docs/latest/intro";
+  });
 
   return (
-    <Layout
-      title={`Home`}
-      description="RisingWave Community and Docs">
-
+    <Layout title={`Home`} description="RisingWave Community and Docs">
       <main>
         {/* <div style={{
           height: "100vh",
