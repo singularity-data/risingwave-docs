@@ -140,7 +140,7 @@ table thead th {
 }
 
 table {
-  height: 50vh;
+  max-height: 50vh;
   overflow: auto;
 }
 
