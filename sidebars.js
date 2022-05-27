@@ -49,11 +49,10 @@ const sidebars = {
   },
   {
     type: `category`,
-    id: `sql-ov`,
     label: `SQL reference`,
     collapsible: true,
     collapsed: false,
-    items: [`sql-data-types`, `sql-operators`, `sql-commands`,
+    items: [`sql-ov`, `sql-data-types`, `sql-operators`, `sql-commands`,
     ]
   }
  ]
