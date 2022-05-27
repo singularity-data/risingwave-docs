@@ -48,7 +48,7 @@ const sidebars = {
     label: `Sources`,
   },
   {
-    type: `doc`,
+    type: `category`,
     id: `sql-ov`,
     label: `SQL reference`,
     collapsible: true,
