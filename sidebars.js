@@ -19,33 +19,41 @@ const sidebars = {
   // But you can create a sidebar manually
  
   MainSidebar: [
-
-   {
-     type: `doc`,
-     id: `intro`,
-     label: `Introduction`,
-   },
-   {
-    type: `doc`,
-    id: `get-started`,
-    label: `Get started`,
-  },
-   {
-     type: `doc`,
-     id: `architecture`,
-     label: `Architecture`,
-   },
+    {
+      type: 'category',
+      label: `Introduction`,
+      collapsible: true,
+      collapsed: false,
+      items: [
+        {
+          type: `doc`,
+          id: `intro`,
+          label: `What is RisingWave?`,
+        },
+        {
+         type: `doc`,
+         id: `get-started`,
+         label: `Get started`,
+       },
+        {
+          type: `doc`,
+          id: `architecture`,
+          label: `Architecture`,
+        }
+      ]
+    },
    {
     type: `doc`,
     id: `sources`,
     label: `Sources`,
   },
   {
-    type: `category`,
-    label: `SQL`,
+    type: `doc`,
+    id: `sql-ov`,
+    label: `SQL reference`,
     collapsible: true,
     collapsed: false,
-    items: [`sql-ov`, `sql-data-types`, `sql-operators`, `sql-commands`,
+    items: [`sql-data-types`, `sql-operators`, `sql-commands`,
     ]
   }
  ]

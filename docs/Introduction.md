@@ -1,6 +1,6 @@
 ---
 id: intro
-title: Introduction
+title: What is RisingWave?
 slug: /intro
 sidebar_position: 1
 ---
