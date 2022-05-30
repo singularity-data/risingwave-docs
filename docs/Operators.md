@@ -64,6 +64,9 @@ title: Operators and functions
 |lower ( varchar )|varchar|Converts the string to all lower case.|`lower('TOM')`|`tom`|
 |position ( string varchar, substring varchar )|integer	|Returns first starting index of the specified substring within string, or zero if it is not present.|`position('high', 'ig')`|`2`|
 |length ( varchar )	|integer|Returns the number of characters in the string.|`length('jose')`|`4`|
+| concat_ws ( sep varchar, val1 any [, val2 any [, ...] ] ) | varchar | Concatenates all but the first argument, with separator string. The first argument is used as the separator string, and should not be `NULL`. Other `NULL` arguments are ignored. | `concat_ws(',', 'abcde', 2, NULL, 22)` | `abcde,2,22`  |
+|  split_part ( string varchar, delimiter varchar, n int )  | varchar | Splits string at occurrences of delimiter and returns the n'th field (counting from one), or when n is negative, returns the \|n\|'th-from-last field; when n is zero, returns `InvalidParameterValue` error. When input separator is empty string, returns input string if querying the first or last field, else returns empty string. | `split_part('abc~@~def~@~ghi', '~@~', 2)` | `def` |
+
 
 ## String matching operators
 
