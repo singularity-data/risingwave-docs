@@ -108,7 +108,7 @@ CREATE SOURCE ad_click (
 :::
 
 Now we have connected RisingWave to the streams, but RisingWave has not started to consume data yet. For data to be processed, we need to define materialized views. After a materialized view is created, RisingWave will start to consume data from the specified offset.
-* * *
+
 
 ## Step 3: Define materialized views and query the results
 
