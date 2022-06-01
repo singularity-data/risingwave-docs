@@ -74,7 +74,7 @@ The schema of ad click events is like this:
 }
 ```
 
-For the same ad ID, `impression_timestamp` should always be smaller (earlier) than `click_timestamp`.
+For the same bid ID, `impression_timestamp` should always be smaller (earlier) than `click_timestamp`.
 
 Now that we already set up these two data streams in Kafka (in JSON) using the demo cluster, we can connect to these two streams with the following SQL statements.
 
@@ -149,6 +149,11 @@ You will then be able to find out the performance of an ad by querying the mater
 
 ```sql
 SELECT * FROM ad_ctr WHERE ad_id = 9;
+```
+
+Here is the result.
+
+```
 
  ad_id |              ctr
 -------+--------------------------------
