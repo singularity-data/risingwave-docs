@@ -45,14 +45,14 @@ const sidebars = {
 
     {
       type: 'category',
-      label: `Tutorial`,
+      label: `Tutorials`,
       collapsible: true,
       collapsed: false,
       items: [
         {
           type: `doc`,
           id: `perform-real-time-ad-performance-analysis`,
-          label: `Perform real-time ad performance analysi`,
+          label: `Perform real-time ad performance analysis`,
         },
       ]
     },
