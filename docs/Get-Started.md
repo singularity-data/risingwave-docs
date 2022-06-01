@@ -210,7 +210,7 @@ Now let us add some data to the table.
 ```sql
 INSERT INTO taxi_trips
 VALUES
-    ('1', 4, 10)
+    ('1', 4, 10);
 ```
 
 We can now query the average speed.
@@ -232,7 +232,7 @@ Now let us add a new record.
 ```sql
 INSERT INTO taxi_trips
 VALUES
-    ('2', 6, 10)
+    ('2', 6, 10);
 ```
 
 As soon as we insert the new record, the materialied view `mv_avg_speed` will be refreshed to re-calculate the results. Let us see if the results are updated.
