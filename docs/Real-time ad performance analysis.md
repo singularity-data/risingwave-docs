@@ -135,7 +135,7 @@ FROM
     ) AS ad_impressions
     JOIN (
         SELECT
-            ai.ad_id AS ad_id,
+            ai.ad_id,
             COUNT(*) AS clicks_count
         FROM
             ad_click AS ac
@@ -151,7 +151,7 @@ You will then be able to find out the performance of an ad by querying the mater
 SELECT * FROM ad_ctr WHERE ad_id = 9;
 ```
 
-Here is the result.
+Here is an example result.
 
 ```
 
@@ -160,7 +160,7 @@ Here is the result.
      9 | 0.9256055363321799307958477509
 ```
 
-### 5-minute windowed CTR
+### Set up a materialized view for 5-minute windowed CTR
 
 Things will become a little complicated if we want the CTR of **every 5 minutes**. We need to use the "tumble" function to map every event in the stream into a 5-minute window. We'll create a materialized view, `ad_ctr_5min`, to calculate the time-windowed CTR. This view will distribute the impression events into time windows and aggregate the impression count for each ad in each time window. You can replace 5 minutes with whatever time window that works for you.
 
@@ -188,7 +188,7 @@ FROM
     ) AS ai
     JOIN (
         SELECT
-            ai.ad_id AS ad_id,
+            ai.ad_id,
             COUNT(*) AS clicks_count,
             ai.window_end AS window_end
         FROM
@@ -210,7 +210,7 @@ FROM
 You can easily build a CTR live dashboard on top of `ad_ctr_5min`. The CTR value is dynamically changing and every ad CTR in a given window can be drawn as a plot in the line chart. Eventually, we are able to analyze how CTR changes over time.
 :::
 
-Now let us see the results.
+Now let us see an example results.
 
 ```sql
 SELECT * FROM ad_ctr_5min;
