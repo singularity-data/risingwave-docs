@@ -13,9 +13,9 @@ Please see below for the streaming sources that RisingWave supports.
 
 | Source | Version | Data format | Materialized? | Limitations |
 |---------|---------|---------|---------|---------|
-|Kafka|0.11.0 or higher	|JSON, protobuf|	Materialized & non-materialized|-
+|Kafka|3.1.0 or later versions	|JSON, protobuf|	Materialized & non-materialized|-
 |Redpanda|Latest|JSON, protobuf	|Materialized & non-materialized|	-
-|Pulsar|	2.8.0 or higher|	JSON, protobuf|	Materialized & non-materialized|	-
+|Pulsar|	2.8.0 or later versions|	JSON, protobuf|	Materialized & non-materialized|	-
 |Kinesis|	Latest|	JSON, protobuf|	Materialized & non-materialized|	-
 |PostgreSQL CDC|	10, 11, 12, 13, 14|	JSON|	Materialized only|	Must have primary key|
 |MySQL CDC|	5.7, 8.0|	JSON|	Materialized only|	Must have primary key|
