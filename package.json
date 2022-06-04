@@ -4,14 +4,15 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
+    "start": "yarn run load-glossary && docusaurus start",
+    "build": "yarn run load-glossary && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "load-glossary": "node ./src/package/glossary-builder"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.17",

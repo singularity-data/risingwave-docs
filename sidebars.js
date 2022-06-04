@@ -69,7 +69,12 @@ const sidebars = {
     collapsed: false,
     items: [`sql-ov`, `sql-data-types`, `sql-operators`, `sql-commands`,
     ]
-  }
+  },
+  {
+    type: `doc`,
+    id: `glossary`,
+    label: `Glossary`,
+  },
  ]
 };
 
