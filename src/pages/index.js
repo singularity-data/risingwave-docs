@@ -29,6 +29,7 @@ const HeroBanner = styled("div")(() => ({
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
+  textAlign: "center",
 }));
 
 function HomepageHeader() {

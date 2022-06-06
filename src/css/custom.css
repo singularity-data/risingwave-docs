@@ -6,6 +6,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  --test: #5577d6;
   --ifm-color-primary: #95adee;
   --ifm-color-primary-dark: #7493e9;
   --ifm-color-primary-darker: #6386e6;
@@ -13,17 +14,12 @@
   --ifm-color-primary-light: #b6c7f3;
   --ifm-color-primary-lighter: #c7d4f6;
   --ifm-color-primary-lightest: #f9fafe;
-  --test: #5577d6;
   --ifm-code-font-size: 90%;
   --ifm-font-size-base: 92%;
   --ifm-z-index-fixed: 200;
-
-  /* font */
   --ifm-font-family-base: NotoSans;
-
   --ifm-paragraph-margin-bottom: 0.5rem;
   --ifm-list-paragraph-margin: 0.2rem;
-
   letter-spacing: 0px;
 }
 
@@ -123,28 +119,29 @@ h2 {
   border-bottom: 1px solid #dbdbdb;
 }
 
-table {
-  position: relative;
-}
-
 [data-theme="dark"] table thead th {
   background-color: #474748;
 }
 
-table thead th {
+table {
+  position: relative;
+  overflow: initial;
+}
+
+thead {
+  top: 55px;
+
   position: sticky;
-  top: 0;
+}
+
+thead th {
   z-index: 10;
   background-color: #d0d0d0;
   border: 1px solid transparent;
 }
 
-table {
-  max-height: 50vh;
-  overflow: auto;
-}
-
-table::-webkit-scrollbar {
+/* TODO: Deprecated */
+/* table::-webkit-scrollbar {
   width: 5px;
   height: 5px;
   background-color: #f5f5f5;
@@ -179,7 +176,7 @@ table::-webkit-scrollbar-thumb:window-inactive {
 [data-theme="dark"] table::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #707070;
-}
+} */
 
 /* ol{
   counter-reset: section;      
