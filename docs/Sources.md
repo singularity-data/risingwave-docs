@@ -17,8 +17,8 @@ Please see below for the streaming sources that RisingWave supports.
 |Redpanda|Latest|JSON, protobuf	|Materialized & non-materialized|	-
 |Pulsar|	2.8.0 or later versions|	JSON, protobuf|	Materialized & non-materialized|	-
 |Kinesis|	Latest|	JSON, protobuf|	Materialized & non-materialized|	-
-|PostgreSQL CDC|	10, 11, 12, 13, 14|	JSON|	Materialized only|	Must have primary key|
-|MySQL CDC|	5.7, 8.0|	JSON|	Materialized only|	Must have primary key|
+|PostgreSQL CDC|	10, 11, 12, 13, 14|Debezium JSON|	Materialized only|	Must have primary key|
+|MySQL CDC |	5.7, 8.0|Debezium JSON|	Materialized only|	Must have primary key|
 
 
 
@@ -182,7 +182,7 @@ You can use the SQL statement below to connect RisingWave to a CDC source.
 
 :::note
 
-Currently, RisingWave only supports materialized CDC sources with primary keys.
+Currently, RisingWave only supports materialized CDC sources with primary keys, and the data format must be Debezium JSON.
 
 :::
 
