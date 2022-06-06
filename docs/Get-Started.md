@@ -27,13 +27,13 @@ You can run RisingWave in three ways:
 1. Download the pre-built library.
  
     ```shell
-    wget https://github.com/singularity-data/risingwave/releases/download/v0.1.7/risingwave-v0.1.7-x86_64-unknown-linux.tar.gz
+    wget https://github.com/singularity-data/risingwave/releases/download/v0.1.8/risingwave-v0.1.8-x86_64-unknown-linux.tar.gz
     ```
 
 2. Unzip the library.
 
     ```shell
-    tar xvf risingwave-v0.1.7-x86_64-unknown-linux.tar.gz
+    tar xvf risingwave-v0.1.8-x86_64-unknown-linux.tar.gz
     ```
 
 3. Run RisingWave.
@@ -93,7 +93,7 @@ import TabItem from '@theme/TabItem';
 
 
 ```shell
-brew install cmake protobuf openssl postgresql tmux
+brew install postgresql cmake protobuf openssl tmux
 ```
 Run one of the following cammands to install [rustup](https://rustup.rs):
 ```shell
@@ -108,23 +108,11 @@ brew install rustup-init && rustup-init
 
 ```shell
 sudo apt update
-```
-
-```shell
 sudo apt upgrade
-```
-
-```shell
-sudo apt install make build-essential cmake protobuf-compiler curl openssl libssl-dev pkg-config
-```
-
-```shell
-sudo apt install postgresql-client
-```
-
-```shell
+sudo apt install make build-essential cmake protobuf-compiler curl openssl libssl-dev libcurl4-openssl-dev pkg-config postgresql-client tmux lld
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
+
 </TabItem>
 </Tabs>
 </div>
