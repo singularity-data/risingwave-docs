@@ -75,7 +75,7 @@ WITH (
    'kafka.time.offset'='140000000',
    'kafka.consumer.group'='demo_consumer_name'
 )
-ROW FORMAT JSON
+ROW FORMAT JSON;
 ```
   </TabItem>
 
@@ -93,7 +93,7 @@ WITH (
    'connector'='pulsar',
    'field_name'='value', ...
 )
-ROW FORMAT JSON | PROTOBUF MESSAGE 'main_message'
+ROW FORMAT JSON | PROTOBUF MESSAGE 'main_message';
 ```
 #### `WITH` options
 
@@ -140,7 +140,7 @@ WITH (
    'connector'='kinesis',
    'field_name'='value', ...
 ) 
-ROW FORMAT JSON | PROTOBUF MESSAGE 'main_message'
+ROW FORMAT JSON | PROTOBUF MESSAGE 'main_message';
 ```
 #### `WITH` options
 
