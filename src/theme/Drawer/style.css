@@ -61,10 +61,6 @@ div.svg-box {
   overflow: auto;
 }
 
-svg.svg-container {
-  width: 100%;
-}
-
 [data-theme="dark"] svg.railroad-diagram path {
   stroke-width: 3;
   stroke: #474748;
