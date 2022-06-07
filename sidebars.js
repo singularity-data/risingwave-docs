@@ -51,7 +51,7 @@ const sidebars = {
       items: [
         {
           type: `doc`,
-          id: `perform-real-time-ad-performance-analysis`,
+          id: `tutorials/perform-real-time-ad-performance-analysis`,
           label: `Perform real-time ad performance analysis`,
         },
       ]
@@ -75,7 +75,7 @@ const sidebars = {
     collapsible: true,
     collapsed: false,
     items: 
-    [`sql-overview`, `sql-data-types`, `sql-operators`, 
+    [`sql/sql-overview`, `sql/sql-data-types`, `sql/sql-operators`, 
       {
       type: 'category',
       label: 'Commands',
