@@ -43,7 +43,7 @@ title: Operators and functions
 * ~ (bitwise not)
 * &amp; (bitwise and)
 * | (bitwise or)
-* # (bitwise xor)
+* &num; (bitwise xor)
 * &lt;&lt; (bitwise left shift)
 * &gt;&gt; (bitwise right shift)
 * ABS
