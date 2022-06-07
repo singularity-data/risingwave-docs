@@ -59,7 +59,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'How to guides',
+      label: 'How-to guides',
       collapsible: true,
       collapsed: false,
       items: 
