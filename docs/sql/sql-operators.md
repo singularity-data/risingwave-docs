@@ -21,7 +21,9 @@ title: Operators and functions
 * &lt;= (less than or equal to)
 * &gt;= (greater than or equal to)
 * &lt;&gt; / != (not equal)
+* IS [NOT] DISTINCT FROM
 * BETWEEN
+* IN
 * IS [NOT] NULL
 
 ## Conditional expressions
@@ -38,7 +40,20 @@ title: Operators and functions
 * \* (multiplication)
 * / (division; results are truncated for integers)
 * % (remainder; valid for smallint/int/bigint/numeric)
+* ~ (bitwise not)
+* &amp; (bitwise and)
+* | (bitwise or)
+* # (bitwise xor)
+* &lt;&lt; (bitwise left shift)
+* &gt;&gt; (bitwise right shift)
+* ABS
 * ROUND(numeric, int) → numeric
+* ROUND(numeric) → numeric
+* ROUND(double precision) → double precision
+* FLOOR(numeric) → numeric
+* FLOOR(double precision) → double precision
+* CEIL(numeric) → numeric
+* CEIL(double precision) → double precision
 
 
 ## Aggregation functions
