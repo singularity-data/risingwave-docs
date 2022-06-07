@@ -21,66 +21,67 @@ const sidebars = {
   MainSidebar: [
     {
       type: 'category',
-      label: `Introduction`,
+      label: 'Introduction',
       collapsible: true,
       collapsed: false,
       items: [
         {
-          type: `doc`,
-          id: `intro`,
-          label: `What is RisingWave?`,
+          type: 'doc',
+          id: 'intro',
+          label: 'What is RisingWave?',
         },
         {
-         type: `doc`,
-         id: `get-started`,
-         label: `Get started`,
+         type: 'doc',
+         id: 'get-started',
+         label: 'Get started',
        },
         {
-          type: `doc`,
-          id: `architecture`,
-          label: `Architecture`,
+          type: 'doc',
+          id: 'architecture',
+          label: 'Architecture',
         }
       ]
     },
 
     {
       type: 'category',
-      label: `Tutorials`,
+      label: 'Tutorials',
       collapsible: true,
       collapsed: false,
       items: [
         {
-          type: `doc`,
-          id: `tutorials/perform-real-time-ad-performance-analysis`,
-          label: `Perform real-time ad performance analysis`,
+          type: 'doc',
+          id: 'tutorials/perform-real-time-ad-performance-analysis',
+          label: 'Perform real-time ad performance analysis',
         },
       ]
     },
 
     {
-      type: `category`,
-      label: `How to guides`,
+      type: 'category',
+      label: 'How to guides',
       collapsible: true,
       collapsed: false,
       items: 
       [ 
         {type: 'category', 
         label: 'Connect to a streaming source', 
-        id: 'sql/commands/create-source',
+        link: {type: 'doc', id: 'sql/commands/create-source'},
         items: [
-          'sql/commands/create-source-kafka-redpanda', 'sql/commands/create-source-pulsar', 'sql/commands/create-source-kinesis', 'sql/commands/create-source-cdc']
+          'sql/commands/create-source-kafka-redpanda', 'sql/commands/create-source-pulsar', 'sql/commands/create-source-kinesis', 'sql/commands/create-source-cdc'
+        ]
         }
       
       ]
     },
 
   {
-    type: `category`,
-    label: `SQL reference`,
+    type: 'category',
+    label: 'SQL reference',
     collapsible: true,
     collapsed: false,
     items: 
-    [`sql/sql-overview`, `sql/sql-data-types`, `sql/sql-operators`, 
+    ['sql/sql-overview', 'sql/sql-data-types', 'sql/sql-operators', 
       {
       type: 'category',
       label: 'Commands',
@@ -95,11 +96,9 @@ const sidebars = {
         ]
         },
       ],
-      },
-    
+    },
     ]
-  }
- ]
+    
 };
 
 
