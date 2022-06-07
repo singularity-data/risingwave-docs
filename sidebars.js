@@ -64,11 +64,7 @@ const sidebars = {
       collapsed: false,
       items: 
       [ 
-        {
-        type: 'category',
-        label: 'Connect to a streaming source',
-        link: {type: 'ref', id: 'sql/commands/create-source'},
-        },
+        {type: 'ref', label: 'Connect to a streaming source', id: 'sql/commands/create-source'}
       
       ]
     },
