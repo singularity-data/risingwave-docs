@@ -163,7 +163,7 @@ ROW FORMAT 'json'
 [ROW SCHEMA LOCATION 's3://path'];
 ```
 
-For supported streaming sources and SQL examples, please see [Sources](Sources.md).
+For supported streaming sources and SQL examples, please see [CREATE SOURCE](/sql/commands/create-source.md).
 
 ## Query and manage data
 
@@ -257,7 +257,7 @@ AS
 ```
 
 
-For the complete list of supported SQL commands, see [Commands](Commands.md).
+For the complete list of supported SQL commands, see [Commands](/sql/sql-commands.md).
 
 
 

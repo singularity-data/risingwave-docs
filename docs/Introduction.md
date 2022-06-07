@@ -28,8 +28,8 @@ Everything you do in RisingWave is via Postgres-compatible SQL. You can:
 
 - See [Get started](Get-Started.md) to learn about how to get started with RisingWave. 
 - For the architecture of RisingWave, see [Architecture](Architecture.md).
-- To learn about the supported stream sources and how to connect to the sources, see [Sources](Sources.md).
-- For the supported SQL data types, operators, and commands, see [SQL overview](SQL-Overview.md).
+- To learn about the supported stream sources and how to connect to the sources, see [CREATE SOURCE](/sql/commands/create-source.md).
+- For the supported SQL data types, operators, and commands, see [SQL overview](/sql/sql-overview.md).
 
 
 ### SQL as the interface
