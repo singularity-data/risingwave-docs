@@ -143,7 +143,7 @@ You can now issue SQL queries to manage your streams and data.
 
 ## Connect to a streaming source
 
-Use `CREATE SOURCE` command to connect to a streaming source.
+Use the `CREATE SOURCE` command to connect RisingWave to a streaming source.
 
 To connect to a Kafka topic: 
 
@@ -163,7 +163,7 @@ ROW FORMAT 'json'
 [ROW SCHEMA LOCATION 's3://path'];
 ```
 
-For supported streaming sources and SQL examples, please see [CREATE SOURCE](/sql/commands/create-source.md).
+For supported streaming sources and sample SQL statements, see [CREATE SOURCE](/sql/commands/create-source.md).
 
 ## Query and manage data
 

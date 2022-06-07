@@ -59,12 +59,17 @@ const sidebars = {
 
     {
       type: `category`,
-      label: `How to`,
+      label: `How to guides`,
       collapsible: true,
       collapsed: false,
       items: 
       [ 
-        {type: 'ref', label: 'Connect to a streaming source', id: 'sql/commands/create-source'}
+        {type: 'category', 
+        label: 'Connect to a streaming source', 
+        id: 'sql/commands/create-source',
+        items: [
+          'sql/commands/create-source-kafka-redpanda', 'sql/commands/create-source-pulsar', 'sql/commands/create-source-kinesis', 'sql/commands/create-source-cdc']
+        }
       
       ]
     },
@@ -80,17 +85,14 @@ const sidebars = {
       type: 'category',
       label: 'Commands',
       link: {type: 'doc', id: 'sql/sql-commands'},
-      items: [
+      items: 
+        [
         {
-          type: 'category',
+          type: 'ref',
           label: 'CREATE SOURCE',
-          link: {
-            type: 'doc',
-            id: 'sql/commands/create-source',
-          },
-          items: [
-            'sql/commands/create-source-kafka-redpanda', 'sql/commands/create-source-pulsar', 'sql/commands/create-source-kinesis', 'sql/commands/create-source-cdc'
-          ],
+          id: 'sql/commands/create-source',
+          }
+        ]
         },
       ],
       },
