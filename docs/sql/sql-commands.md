@@ -6,7 +6,7 @@ title: Commands
 
 RisingWave supports the following SQL commands.
 
-* [`CREATE SOURCE`](/commands/create-source.md)
+* [`CREATE SOURCE`](commands/create-source.md)
 * `CREATE MATERIALIZED VIEW`
 * `CREATE TABLE`
 * `DROP TABLE`

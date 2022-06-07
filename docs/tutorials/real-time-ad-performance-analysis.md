@@ -14,7 +14,7 @@ Ad platforms and advertisers alike want to measure the performance of their ads.
 Click-through rate (CTR) is one of the key metrics used in digital advertising to gauge the effectiveness of ads. It is calculated as the number of clicks divided by the number of impressions. Impressions are the number of times a digital ad displays on someone's screen in an app or on a website. A high CTR means that users find the ads displayed to them useful and relevant.
 
 <img
-  src={require('./images/ctr_explained.png').default}
+  src={require('../images/ctr_explained.png').default}
   alt="Relations between click events and impressions"
 />
 

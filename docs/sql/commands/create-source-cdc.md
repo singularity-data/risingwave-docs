@@ -58,6 +58,3 @@ WITH (
 ) 
 ROW FORMAT DEBEZIUM JSON;
 ```
-  </TabItem>
-
-</Tabs>
