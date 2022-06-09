@@ -16,7 +16,7 @@ CREATE TABLE <table> (<col> <data_type> [, <col> <data_type>...]
 
 ## Parameters
 
-### \<table\>
+### <table>
 
 The name of the table.
 
@@ -24,7 +24,7 @@ The name of the table.
 
 The name of a column.
 
-### \<data_type\>
+### <data\_type>
 
 The data type of a column. 
 
