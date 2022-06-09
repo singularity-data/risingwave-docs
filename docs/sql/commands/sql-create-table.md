@@ -16,15 +16,15 @@ CREATE TABLE <table> (<col> <data_type> [, <col> <data_type>...]
 
 ## Parameters
 
-### \<table\>
+### <table\>
 
 The name of the table.
 
-### \<col\>
+### <col\>
 
 The name of a column.
 
-### \<data_type\>
+### <data_type\>
 
 The data type of a column. 
 
