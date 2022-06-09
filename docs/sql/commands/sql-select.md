@@ -19,7 +19,7 @@ SELECT [ ALL | DISTINCT] [ * | <expression> [ AS <output_name> ] [, <expression>
     [ LIMIT { count | ALL } ]
     [ OFFSET start [ ROW | ROWS ] ]
 ```
-Where <from_item> is:
+Where \<from_item\> is:
 ```sql
 <table>
      [ [ AS ] <alias> [ ( <column_alias_list> ) ] ] |
@@ -30,11 +30,11 @@ Where <from_item> is:
 
 ## Parameters
 
-### <alias>
+### \<alias\>
 
 An alias is a temporary alternative name for columns, tables, views, materialized views, etc. in a query.
 
-### <table>
+### \<table\>
 
 The name of a table or materialized view.
 
@@ -67,7 +67,7 @@ The values can be:
 
 This clause returns a subset of the rows.
 
-- <count>: Returns the specified number of rows at maximum.
+- \<count\>: Returns the specified number of rows at maximum.
 - **ALL**: Returns all rows.
 
 When the ORDER BY clause is not present, the LIMIT clause cannot be used as part of a materialized view.
@@ -76,12 +76,12 @@ When the ORDER BY clause is not present, the LIMIT clause cannot be used as part
 
 The OFFSET clause can only be used with the LIMIT and ORDER BY clauses.
 
-### <select>
+### \<select\>
 
 A SELECT command. You must enclose the subquery in parentheses, and specify an alias.
 When you include a subquery in the FROM clause, the output of the subquery is used as a temporary view that is only valid in the query.
 
-### <join_type>
+### \<join_type\>
 
 The values can be: 
 - [INNER] JOIN
@@ -91,7 +91,7 @@ The values can be:
 
 Currently, only the ON clause is supported for joins.
 
-### <join_condition>
+### \<join_condition\>
 
 Conditions for the ON clause that must be met before the two from_items can be joined.
 
