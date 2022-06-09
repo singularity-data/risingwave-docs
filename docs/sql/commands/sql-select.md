@@ -19,7 +19,7 @@ SELECT [ ALL | DISTINCT] [ * | <expression> [ AS <output_name> ] [, <expression>
     [ LIMIT { count | ALL } ]
     [ OFFSET start [ ROW | ROWS ] ]
 ```
-Where \<from_item\> is:
+Where <from_item\> is:
 ```sql
 <table>
      [ [ AS ] <alias> [ ( <column_alias_list> ) ] ] |
