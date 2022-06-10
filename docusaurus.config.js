@@ -145,6 +145,12 @@ const config = {
     docsUrl: "https://www.risingwave.dev",
     requestUrl: "https://github.com/singularity-data/risingwave-docs/issues/new?body=",
   },
+  scripts: [
+    {
+      src: "https://asvd.github.io/syncscroll/syncscroll.js",
+      async: true,
+    },
+  ],
 };
 
 module.exports = config;

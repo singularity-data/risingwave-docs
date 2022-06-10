@@ -64,25 +64,24 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
 
   useEffect(() => {
-    console.log(window.location.href);
     window.location.href = window.location.href + "docs/latest/intro";
-  });
+  }, []);
 
   return (
     <Layout title={`Home`} description="RisingWave Community and Docs">
       <main>
         {/* <div style={{
-          height: "100vh",
-          minHeight: "700px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between"
-        }}>
+            height: "100vh",
+            minHeight: "700px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between"
+          }}>
           <div style={{ zIndex: 2 }}><HomepageHeader /></div>
           <div style={{ zIndex: 1 }}><HomePageWave /></div>
-        </div>
-        <HomepageBanner content=" 🥇 The official RisingWave docs website v0.1 is now under construction!" />
-        <div style={{ marginLeft: "5vw", marginRight: "5vw" }}>
+          </div>
+          <HomepageBanner content=" 🥇 The official RisingWave docs website v0.1 is now under construction!" />
+          <div style={{ marginLeft: "5vw", marginRight: "5vw" }}>
           <HomepageIntro />
           <HomepageFeature />
         </div> */}
