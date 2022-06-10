@@ -38,15 +38,15 @@ An alias is a temporary alternative name for columns, tables, views, materialize
 
 The name of a table or materialized view.
 
-### `expression`
+### <expression\>
 
 A column or an expression.
 
-### `from_item`
+### <from_item\>
 
 It can be a table, materialized view, subquery, or join clause.
 
-### GROUP BY
+### GROUP BY clause
 
 `grouping_expression` can be:
 - Input column names
@@ -56,14 +56,14 @@ It can be a table, materialized view, subquery, or join clause.
 **GROUPING SETS** are not supported.
 
 
-### `ordering_expression` 
+### <ordering_expression\>
 
 The values can be:
 - Output column names
 - Output column ordinal numbers
 - Hidden select expressions
 
-### LIMIT
+### LIMIT clause
 
 This clause returns a subset of the rows.
 
@@ -72,7 +72,7 @@ This clause returns a subset of the rows.
 
 When the ORDER BY clause is not present, the LIMIT clause cannot be used as part of a materialized view.
 
-### OFFSET
+### OFFSET clause
 
 The OFFSET clause can only be used with the LIMIT and ORDER BY clauses.
 
