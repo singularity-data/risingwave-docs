@@ -99,5 +99,5 @@ The type of the time window function. Possible values are `HOP` and `TUMBLE`.
 
 ### `interval_expression`
 
-The interval expression, in the format of <pre>INTERVAL '<count\>' <timeunit></pre>. For example: <pre>INTERVAL '1' DAYS</pre>.
+The interval expression, in the format of `INTERVAL '<count>' <timeunit>`. For example: `INTERVAL '1' DAYS`.
 
