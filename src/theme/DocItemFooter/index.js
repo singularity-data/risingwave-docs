@@ -11,6 +11,7 @@ import EditThisPage from "@theme/EditThisPage";
 import TagsListInline from "@theme/TagsListInline";
 import styles from "./styles.module.css";
 import { ThemeClassNames } from "@docusaurus/theme-common";
+import { useEffect } from "react";
 
 function TagsRow(props) {
   return (
@@ -50,6 +51,26 @@ export default function DocItemFooter(props) {
 
   let formattedDate = new Date(formattedLastUpdatedAt);
   formattedDate = formattedDate.toLocaleDateString("en-US", dateOptions);
+
+  useEffect(() => {
+    const theads = document.querySelectorAll("thead>tr");
+    const tbodys = document.querySelectorAll("tbody");
+    if (theads.length) {
+      for (let i = 0; i < theads.length; ++i) {
+        theads[i].classList.add("syncscroll");
+        theads[i].setAttribute("name", "table" + i);
+        tbodys[i].classList.add("syncscroll");
+        tbodys[i].setAttribute("name", "table" + i);
+      }
+    }
+    const script = document.createElement("script");
+    script.src = "https://asvd.github.io/syncscroll/syncscroll.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   if (!canDisplayFooter) {
     return null;

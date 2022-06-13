@@ -22,7 +22,6 @@ import { ThemeClassNames, useWindowSize } from "@docusaurus/theme-common";
 import DocBreadcrumbs from "@theme/DocBreadcrumbs";
 import FeedbackForm from "@site/src/components/FeedbackForm";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import { useEffect } from "react";
 
 export default function DocItem(props) {
   const { siteConfig } = useDocusaurusContext();
@@ -52,28 +51,6 @@ export default function DocItem(props) {
   const requestIssueUrl = `${requestUrl}File: [/main/${fileUrl[fileUrl.length - 1]}](${docsUrl}${
     metadata.permalink
   })`;
-
-  useEffect(() => {
-    const theads = document.querySelectorAll("thead>tr");
-    const tbodys = document.querySelectorAll("tbody");
-    if (theads.length) {
-      theads.forEach((thead) => {
-        thead.classList.add("syncscroll");
-        thead.setAttribute("name", "myElements");
-      });
-      tbodys.forEach((tbody) => {
-        tbody.classList.add("syncscroll");
-        tbody.setAttribute("name", "myElements");
-      });
-    }
-    const script = document.createElement("script");
-    script.src = "https://asvd.github.io/syncscroll/syncscroll.js";
-    script.async = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
 
   return (
     <>
