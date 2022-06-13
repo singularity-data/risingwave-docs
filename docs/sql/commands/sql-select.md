@@ -12,37 +12,35 @@ Use the `SELECT` command to retrieve rows from a table or materialized view. It 
 SELECT [ ALL | DISTINCT] [ * | <expression> [ AS <output_name> ] [, <expression> [ AS <output_name> ]...] ]
     [ FROM <from_item> [, <from_item> ...] ]
     [ WHERE <condition> ]
-    [ GROUP BY grouping_element [, grouping_element... ]
+    [ GROUP BY <grouping_expression> [, <grouping_expression>... ]
     [ HAVING condition ]
-    [ WINDOW window_name AS ( window_definition ) [, ...] ]
     [ ORDER BY ordering_expression [ ASC | DESC | USING operator ] [ NULLS { FIRST | LAST } ] [, ...] ]
     [ LIMIT { count | ALL } ]
     [ OFFSET start [ ROW | ROWS ] ]
 ```
-Where <from_item\> is:
+Where `from_item` can be:
 ```sql
-<table>
-     [ [ AS ] <alias> [ ( <column_alias_list> ) ] ] |
-     ( <select> ) [ AS ] <alias> [ ( <column_alias_list> ) ] |
-      <from_item>  <join_type> <from_item>
-         [ ON <join_condition> ]
+    <table>  [ [ AS ] <alias> [ ( <column_alias_list> ) ]]
+    <window_type> <table> <col> <interval_expression> [ [ AS ] <alias> [ ( <column_alias_list> ) ] ] 
+    (<select>) [ [ AS ] <alias> [ ( <column_alias_list> ) ] ] 
+    <from_item>  <join_type> <from_item> [ ON <join_condition> ]
 ```
 
 ## Parameters
 
-### <alias\>
+### `alias`
 
 An alias is a temporary alternative name for columns, tables, views, materialized views, etc. in a query.
 
-### <table\>
+### `table`
 
 The name of a table or materialized view.
 
-### <expression\>
+### `expression`
 
 A column or an expression.
 
-### <from_item\>
+### `from_item`
 
 It can be a table, materialized view, subquery, or join clause.
 
@@ -56,7 +54,7 @@ It can be a table, materialized view, subquery, or join clause.
 **GROUPING SETS** are not supported.
 
 
-### <ordering_expression\>
+### `ordering_expression`
 
 The values can be:
 - Output column names
@@ -67,7 +65,7 @@ The values can be:
 
 This clause returns a subset of the rows.
 
-- <count\>: Returns the specified number of rows at maximum.
+- `count`: Returns the specified number of rows at maximum.
 - **ALL**: Returns all rows.
 
 When the ORDER BY clause is not present, the LIMIT clause cannot be used as part of a materialized view.
@@ -76,12 +74,12 @@ When the ORDER BY clause is not present, the LIMIT clause cannot be used as part
 
 The OFFSET clause can only be used with the LIMIT and ORDER BY clauses.
 
-### <select\>
+### `select`
 
 A SELECT command. You must enclose the subquery in parentheses, and specify an alias.
 When you include a subquery in the FROM clause, the output of the subquery is used as a temporary view that is only valid in the query.
 
-### <join_type\>
+### `join_type`
 
 The values can be: 
 - [INNER] JOIN
@@ -91,7 +89,15 @@ The values can be:
 
 Currently, only the ON clause is supported for joins.
 
-### <join_condition\>
+### `join_condition`
 
 Conditions for the ON clause that must be met before the two from_items can be joined.
+
+### `window_type`
+
+The type of the time window function. Possible values are `HOP` and `TUMBLE`.
+
+### `interval_expression`
+
+The interval expression, in the format of <pre>INTERVAL '<count\>' <timeunit></pre>. For example: <pre>INTERVAL '1' DAYS</pre>.
 
