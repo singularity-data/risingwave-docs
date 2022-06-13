@@ -10,8 +10,7 @@ Use this command to create a new table.
 ## Syntax
 
 ```sql
-CREATE TABLE <table> (<col> <data_type> [, <col> <data_type>...]
-);
+CREATE TABLE <table> (<col> <data_type> [, <col> <data_type>...]);
 ```
 
 ## Parameters

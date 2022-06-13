@@ -13,8 +13,8 @@ SELECT [ ALL | DISTINCT] [ * | <expression> [ AS <output_name> ] [, <expression>
     [ FROM <from_item> [, <from_item> ...] ]
     [ WHERE <condition> ]
     [ GROUP BY <grouping_expression> [, <grouping_expression>... ]
-    [ HAVING condition ]
-    [ ORDER BY ordering_expression [ ASC | DESC | USING operator ] [ NULLS { FIRST | LAST } ] [, ...] ]
+    [ HAVING <condition> ]
+    [ ORDER BY <ordering_expression> [ ASC | DESC ] [ NULLS { FIRST | LAST } ] [, ...] ]
     [ LIMIT { count | ALL } ]
     [ OFFSET start [ ROW | ROWS ] ]
 ```
