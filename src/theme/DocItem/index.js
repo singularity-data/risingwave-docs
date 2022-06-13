@@ -54,6 +54,18 @@ export default function DocItem(props) {
   })`;
 
   useEffect(() => {
+    const theads = document.querySelectorAll("thead>tr");
+    const tbodys = document.querySelectorAll("tbody");
+    if (theads.length) {
+      theads.forEach((thead) => {
+        thead.classList.add("syncscroll");
+        thead.setAttribute("name", "myElements");
+      });
+      tbodys.forEach((tbody) => {
+        tbody.classList.add("syncscroll");
+        tbody.setAttribute("name", "myElements");
+      });
+    }
     const script = document.createElement("script");
     script.src = "https://asvd.github.io/syncscroll/syncscroll.js";
     script.async = true;
