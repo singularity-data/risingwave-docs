@@ -5,7 +5,7 @@ description: Create a table
 slug: /sql-create-table
 ---
 
-Use this command to create a new table.
+Use `CREATE TABLE` to create a new table.
 
 ## Syntax
 
@@ -15,15 +15,15 @@ CREATE TABLE <table> (<col> <data_type> [, <col> <data_type>...]);
 
 ## Parameters
 
-### `table`
+### *table*
 
 The name of the table.
 
-### `col`
+### *col*
 
 The name of a column.
 
-### `data_type`
+### *data_type*
 
 The data type of a column. 
 
