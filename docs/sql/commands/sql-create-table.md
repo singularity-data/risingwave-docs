@@ -15,19 +15,16 @@ CREATE TABLE <table> (<col> <data_type> [, <col> <data_type>...]);
 
 ## Parameters
 
-### *table*
+| Parameter| Descriptiion|
+|-----------|-------------|
+|*table*    |The name of the table.|
+|*col*      |The name of a column.|
+|*data_type*|The data type of a column. |
 
-The name of the table.
+## Examples
 
-### *col*
+The statement below creates a table that has three columns.
 
-The name of a column.
-
-### *data_type*
-
-The data type of a column. 
-
-## Example
 ```sql
 CREATE TABLE taxi_trips(
     id VARCHAR,
