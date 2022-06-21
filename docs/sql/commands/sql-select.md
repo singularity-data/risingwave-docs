@@ -17,7 +17,7 @@ SELECT [ ALL | DISTINCT] [ * | <expression> [ AS <output_name> ] [, <expression>
     [ HAVING <condition> ]
     [ ORDER BY <sort_expression> [ ASC | DESC ] [, ...] ]
     [ LIMIT <count> ]
-    [ OFFSET start [ ROW | ROWS ] ]
+    [ OFFSET start [ ROW | ROWS ] ];
 ```
 Where `from_item` can be:
 ```sql
