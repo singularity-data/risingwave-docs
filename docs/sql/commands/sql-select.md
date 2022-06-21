@@ -1,7 +1,7 @@
 ---
 id: sql-select
 title: SELECT
-description: Retrieve rows
+description: Retrieve data from a table or a materialized view. 
 slug: /sql-select
 ---
 
@@ -33,7 +33,7 @@ Where `from_item` can be:
 |---------------------------|-----------------------|
 |*expression*               |A column or an expression.|
 |*alias*                    |A temporary alternative name for a table or materialized view in a query.|
-|*table*                    |A table or materialized view|
+|*table*                    |A table or materialized view.|
 |*grouping_expression*      |<p>Values can be:</p><ul><li>Input column names</li><li>Input column expressions without subqueries or correlated columns</li></ul>|
 |**ORDER BY** clause        | The default sort order is **ASC**. Nulls options are not supported now. If the sort order is **ASC** or unspecified, nulls will be placed in front of non-null values. If the sort order is **DESC**, nulls will be placed after non-null values. This is different from the sort logic in PostgreSQL.|
 |*sort_expression*          |<p>Values can be:</p><ul><li>Output column names</li><li>Output column ordinal numbers</li><li>Hidden select expressions</li></ul>|

@@ -1,7 +1,7 @@
 ---
 id: sql-create-index
 title: CREATE INDEX
-description: Create an index
+description: Create an index on a column of a table or materialized view to speed up data retrieval.
 slug: /sql-create-index
 ---
 

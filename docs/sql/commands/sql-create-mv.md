@@ -1,11 +1,11 @@
 ---
 id: sql-create-mv
 title: CREATE MATERIALIZED VIEW
-description: Create a materialized view
+description: Create a materialized view.
 slug: /sql-create-mv
 ---
 
-Use the `CREATE MATERIALIZED VIEW` command to create a materialized view. A materialized view can be created based on tables or materialized views.
+Use the `CREATE MATERIALIZED VIEW` command to create a materialized view. A materialized view can be created based on tables, materialized views, or indexes.
 
 ## Syntax
 

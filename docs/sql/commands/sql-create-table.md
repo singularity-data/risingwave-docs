@@ -1,7 +1,7 @@
 ---
 id: sql-create-table
 title: CREATE TABLE
-description: Create a table
+description: Create a table.
 slug: /sql-create-table
 ---
 
