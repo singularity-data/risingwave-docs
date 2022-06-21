@@ -5,7 +5,7 @@ description: Create an index on a column of a table or materialized view to spee
 slug: /sql-create-index
 ---
 
-Use `CREATE INDEX` to construct an index on a column of a table or materialized view. The main purpose of creating indexes is to improve data retrieval performance. Indexes can also be used to create materialized views.
+Use the `CREATE INDEX` command to construct an index on a column of a table or materialized view. The main purpose of creating indexes is to improve data retrieval performance. Indexes can also be used to create materialized views.
 
 
 ## Syntax

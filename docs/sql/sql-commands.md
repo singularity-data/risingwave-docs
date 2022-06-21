@@ -18,16 +18,6 @@ RisingWave supports the following SQL commands.
 * `SHOW MATERIALIZED VIEWS`
 * `EXPLAIN`
 
-## Notes about CREATE MATERIALIZED VIEW
-
-* Materialized views can be created from tables or existing materialized views.
-* `LATERAL` subqueries are not supported yet.
-* `JOIN USING` and `NATURAL JOIN` are not supported yet.
-* The `GROUP BY` clause only supports grouping by input column names now.
-* The `UNION` / `INTERSECT` / `EXCEPT` are not supported yet.
-* The `ORDER BY` clause only supports ordering by output column names now.
-* The `LIMIT` clause has to be used together with `ORDER BY`.
-
 ## Notes about EXPLAIN
 
 `EXPLAIN` prints an execution plan of query to help you understand how it runs internally. It's useful to explain a batch query (`SELECT`) or a streaming query (`CREATE MATERIALIZED VIEW`).
