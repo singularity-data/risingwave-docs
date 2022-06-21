@@ -68,7 +68,7 @@ const sidebars = {
         label: 'Connect to a streaming source', 
         link: {type: 'doc', id: 'sql/commands/create-source'},
         items: [
-          'sql/commands/create-source/create-source-kafka-redpanda', 'sql/commands/create-source/create-source-pulsar', 'sql/commands/create-source/create-source-kinesis', 'sql/commands/create-source/create-source-cdc'
+          'sql/create-source/create-source-kafka-redpanda', 'sql/create-source/create-source-pulsar', 'sql/create-source/create-source-kinesis', 'sql/create-source/create-source-cdc'
         ]
         }
       

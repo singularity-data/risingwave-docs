@@ -14,12 +14,12 @@ Click the source name to see the SQL syntax, options, and sample statement of co
 
 | Source | Version | Data format | Materialized? | Limitations |
 |---------|---------|---------|---------|---------|
-|[Kafka](create-source-kafka-redpanda.md)|3.1.0 or later versions	|JSON, protobuf|	Materialized & non-materialized|-
-|[Redpanda](create-source-kafka-redpanda.md)|Latest|JSON, protobuf	|Materialized & non-materialized|	-
-|[Pulsar](create-source-pulsar.md)|	2.8.0 or later versions|	JSON, protobuf|	Materialized & non-materialized|	-
-|[Kinesis](create-source-kinesis.md)|	Latest|	JSON, protobuf|	Materialized & non-materialized|	-
-|[PostgreSQL CDC](create-source-cdc.md)|	10, 11, 12, 13, 14|Debezium JSON|	Materialized only|	Must have primary key|
-|[MySQL CDC](create-source-cdc.md)|	5.7, 8.0|Debezium JSON|	Materialized only|	Must have primary key|
+|[Kafka](../create-source/create-source-kafka-redpanda.md)|3.1.0 or later versions	|JSON, protobuf|	Materialized & non-materialized|-
+|[Redpanda](../create-source/create-source-kafka-redpanda.md)|Latest|JSON, protobuf	|Materialized & non-materialized|	-
+|[Pulsar](../create-source/create-source-pulsar.md)|	2.8.0 or later versions|	JSON, protobuf|	Materialized & non-materialized|	-
+|[Kinesis](../create-source/create-source-kinesis.md)|	Latest|	JSON, protobuf|	Materialized & non-materialized|	-
+|[PostgreSQL CDC](../create-source/create-source-cdc.md)|	10, 11, 12, 13, 14|Debezium JSON|	Materialized only|	Must have primary key|
+|[MySQL CDC](../create-source/create-source-cdc.md)|	5.7, 8.0|Debezium JSON|	Materialized only|	Must have primary key|
 
 :::note
 After connecting to a streaming source, RisingWave will not ingest data until a materialized view is created. After a materialized view is created, RisingWave will start to consume and analyze the data.
