@@ -18,9 +18,9 @@ CREATE INDEX <index> ON <table>(<col>);
 
 | Parameter| Descriptiion|
 |-----------|-------------|
-|*index*    |The name of the index. |
-|*table*    |The name of a table or materialized view|
-|*col*      |The name of a column|
+|*index*    |The name of the index to be created.|
+|*table*    |The name of the table or materialized view for which the index is created.|
+|*col*      |The name of the column on which the index is created.|
 
 ## Examples
 
