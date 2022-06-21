@@ -19,7 +19,7 @@ DROP SCHEMA [ IF EXISTS ] [<database>.]<schema>;
 
 ## Parameters
 
-|Parameter and clause                 | Description           |
+|Parameter or clause                 | Description           |
 |---------------------------|-----------------------|
 |**IF EXISTS** clause       |Do not return an error if the specified schema does not exist.|
 |*database*                 |Specify the name of a database to remove the schema in that database. You can use [`SHOW  DATABASES`](sql-show-databases.md) to get a list of all available databases. If you don't specify a database, the specified schema in the default database will be removed.|
