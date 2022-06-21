@@ -50,7 +50,7 @@ Necessary RisingWave components, including frontend node, compute node, metadata
 Now let's connect to RisingWave so that we can manage data streams and perform data analysis.
 
 ```shell
-psql -h localhost -p 4566
+psql -h localhost -p 4566 -d dev -U root
 ```
 
 We'll treat ad impressions and ad click events as separate streams and use simplified schemas so that you can get the gist easily.

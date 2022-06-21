@@ -134,7 +134,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 After RisingWave is started, you can connect to it via the Postgres interactive terminal `psql`.
 
 ```sh
-psql -h localhost -p 4566
+psql -h localhost -p 4566 -d dev -U root
 ```
     
 You can now issue SQL queries to manage your streams and data.
