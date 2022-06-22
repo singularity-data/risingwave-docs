@@ -1,8 +1,8 @@
 ---
-id: show-schemas
+id: sql-show-schemas
 title: SHOW SCHEMAS
 description: Show existing schemas.
-slug: /show-schemas
+slug: /sql-show-schemas
 ---
 
 Use the `SHOW SCHEMAS` command to show schemas in the "dev" database.
