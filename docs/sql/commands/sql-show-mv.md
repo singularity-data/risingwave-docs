@@ -1,8 +1,8 @@
 ---
 id: show-materizalized-views
 title: SHOW MATERIALIZED-VIEWS
-description: Shows existing materialized views
-slug: /show-materialized-views
+description: Show existing materialized views.
+slug: /show-mv
 ---
 
 Use the `SHOW MATERIALZED VIEWS` command to show existing materialized views.

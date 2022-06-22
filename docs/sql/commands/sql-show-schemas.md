@@ -1,7 +1,7 @@
 ---
 id: show-schemas
 title: SHOW SCHEMAS
-description: Shows existing schemas
+description: Show existing schemas.
 slug: /show-schemas
 ---
 

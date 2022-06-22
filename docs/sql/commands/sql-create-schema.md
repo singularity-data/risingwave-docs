@@ -1,7 +1,7 @@
 ---
 id: create-schema
 title: CREATE SCHEMA
-description: Creates a new schema
+description: Create a new schema.
 slug: /create-schema
 ---
 

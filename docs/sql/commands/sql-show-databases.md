@@ -1,7 +1,7 @@
 ---
 id: show-databases
 title: SHOW DATABASES
-description: Shows existing databases
+description: Show existing databases.
 slug: /show-databases
 ---
 

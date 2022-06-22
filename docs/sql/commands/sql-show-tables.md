@@ -1,7 +1,7 @@
 ---
 id: show-tables
 title: SHOW TABLES
-description: Shows existing tables
+description: Show existing tables.
 slug: /show-tables
 ---
 
