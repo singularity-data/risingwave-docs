@@ -20,6 +20,6 @@ DROP SOURCE [<schema>.]<source>;
 
 |Parameter                  | Description           |
 |---------------------------|-----------------------|
-|*schema*                   |Specify the name of a schema to remove the source in that schema. You can use [`SHOW SCHEMAS`](sql-show-schemas.md) to get a list of all available schemas. If you don't specify a schema, the specified source in the default schema "public" will be removed.|
+|*schema*                   |The schema of the source that you want to remove. You can use [`SHOW SCHEMAS`](sql-show-schemas.md) to get a list of all available schemas. If you don't specify a schema, the specified source in the default schema "public" will be removed.|
 |*source*                   |The name of the source to remove.|
 
