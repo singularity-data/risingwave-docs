@@ -22,8 +22,24 @@ DROP DATABASE [ IF EXISTS ] <database>;
 
 ## Parameters
 
-|Parameter or clause                 | Description           |
+|Parameter or clause        | Description           |
 |---------------------------|-----------------------|
 |**IF EXISTS** clause       |Do not return an error if the specified database does not exist.|
 |*database*                 |The name of the database you want to remove. You can use [`SHOW DATABASES`](sql-show-databases.md) to get a list of all available databases.|
 
+
+## Examples
+
+This statement removes the "rw_db" database which contains two schemas, "rw_schema" and "public" (default schema):
+
+```sql
+DROP SCHEMA rw_db.rw_schema;
+DROP SCHEMA rw_db.public;
+DROP DATABASE rw_db;
+```
+
+Use this statement if you don't want RisingWave to return an error if the database you want to remove does not exist:
+
+```sql
+DROP DATABASE IF EXISTS rw_db;
+```

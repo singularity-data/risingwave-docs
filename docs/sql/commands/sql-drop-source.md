@@ -23,3 +23,19 @@ DROP SOURCE [<schema>.]<source>;
 |*schema*                   |Specify the name of a schema to remove the source in that schema. You can use [`SHOW SCHEMAS`](sql-show-schemas.md) to get a list of all available schemas. If you don't specify a schema, the specified source in the default schema "public" will be removed.|
 |*source*                   |The name of the source to remove.|
 
+
+
+## Examples
+
+This statement removes the "rw_source" source in the default schema ("public") from the database:
+
+```sql
+DROP SOURCE rw_source;
+```
+
+
+This statement removes the "rw_source" source in the "rw_schema" schema from the database:
+
+```sql
+DROP SOURCE rw_schema.rw_source;
+```
