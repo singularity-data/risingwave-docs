@@ -10,7 +10,7 @@ Use the `CREATE DATABASE` command to create a new database.
 ## Syntax
 
 ```sql
-CREATE DATABASE [IF NOT EXISTS] <database>;
+CREATE DATABASE [ IF NOT EXISTS ] <database>;
 ```
 ## Parameters
 |Parameter or clause            | Description           |

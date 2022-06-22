@@ -10,7 +10,7 @@ Use the `SHOW SOURCES` command to show existing sources.
 ## Syntax
 
 ```sql
-SHOW [MATERIALIZED] SOURCES [FROM <schema>];
+SHOW [ MATERIALIZED ] SOURCES [ FROM <schema> ];
 ```
 ## Parameters
 |Parameter or clause        | Description           |
