@@ -36,3 +36,4 @@ This statement removes the "ad_id_index" index from the "ad_ctr_5min" materializ
 ```sql
 DROP INDEX rw_schema.id_index;
 ```
+
