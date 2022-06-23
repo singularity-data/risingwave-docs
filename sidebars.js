@@ -85,7 +85,6 @@ const sidebars = {
       {
       type: 'category',
       label: 'Commands',
-      link: {type: 'doc', id: 'sql/sql-commands'},
       items: 
         [
         {
