@@ -1,28 +1,28 @@
 ---
 id: sql-explain
 title: EXPLAIN
-description: Show the execution plan of a query.
+description: Show the execution plan of a statement.
 slug: /sql-explain
 ---
 
-Use the `EXPLAIN` command to show the execution plan of a query. 
+Use the `EXPLAIN` command to show the execution plan of a statement. 
 
 ## Syntax
 
 ```sql
-EXPLAIN <query>;
+EXPLAIN <statement>;
 ```
 
 ## Parameters
 
 |Parameter      | Description|
 |---------------|------------|
-|*query*        | A query that is executable in RisingWave.          |
+|*statement*        | A statement that is executable in RisingWave.          |
 
 
 ## Examples
 
-Use the following query to see the execution plan of a `SELECT` query.
+Use the following statement to see the execution plan of a `SELECT` statement.
 
 ```sql
 EXPLAIN SELECT P.name, P.city, P.state, A.id
@@ -47,7 +47,7 @@ The execution plan looks like this:
            BatchScan { table: person, columns: [id, name, city, state] }
 ```
 
-Use this query to see the execution plan of a `CREATE MATERIALIZED VIEW` query.
+Use this statement to see the execution plan of a `CREATE MATERIALIZED VIEW` statement.
 
 ```sql
 EXPLAIN CREATE MATERIALIZED VIEW nexmark_q3 AS
@@ -57,9 +57,10 @@ EXPLAIN CREATE MATERIALIZED VIEW nexmark_q3 AS
                                                           
 ```
 
-The execution plan of the query above looks like this:
+The execution plan of the statement above looks like this:
 
-```                                                                                 QUERY PLAN
+```
+                      QUERY PLAN
 -----------------------------------------------------------
  StreamMaterialize { columns: [name, city, state, id, _row_id(hidden), _row_id#1(hidden)], pk_columns: [_row_id, _row_id#1] }
    StreamExchange { dist: HashShard([4, 5]) }
