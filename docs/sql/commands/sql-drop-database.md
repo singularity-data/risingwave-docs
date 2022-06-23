@@ -24,7 +24,6 @@ DROP DATABASE [ IF EXISTS ] <database>;
 
 
 |Parameter or clause        | Description           |
-
 |---------------------------|-----------------------|
 |**IF EXISTS** clause       |Do not return an error if the specified database does not exist.|
 |*database*                 |The name of the database you want to remove. You can use [`SHOW DATABASES`](sql-show-databases.md) to get a list of all available databases.|
