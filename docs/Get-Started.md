@@ -257,8 +257,6 @@ AS
 ```
 
 
-For the complete list of supported SQL commands, see [Commands](/sql/sql-commands.md).
-
 
 
 
