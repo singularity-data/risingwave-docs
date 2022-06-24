@@ -256,6 +256,7 @@ AS
     INNER JOIN m2 ON m1.v1 = m2.v1;
 ```
 
+For the complete list of supported SQL commands, please navigate to SQL reference → Commands. 
 
 
 
