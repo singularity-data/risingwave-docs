@@ -18,7 +18,7 @@ This version was released on May 14, 2022.
 * Support SQL functions: `concat_ws()`, `abs()`, `round()`, `ceil()`, `floor()`. ([#2589](https://github.com/singularity-data/risingwave/pull/2589), [#2531](https://github.com/singularity-data/risingwave/pull/2531), [#2716](https://github.com/singularity-data/risingwave/pull/2716))
 * Support casts from number types (`smallint`, `integer`, `bigint`, `numeric`, `real`, and `double precision`) to `varchar` using the `to_string` method. ([#2522](https://github.com/singularity-data/risingwave/pull/2522))
 * Support creating a table with nested columns. ([#2434](https://github.com/singularity-data/risingwave/pull/2434)) 
-* Supports non-literals in the `IN` operator. ([#2588](https://github.com/singularity-data/risingwave/pull/2588))
+* Support non-literals in the `IN` operator. ([#2588](https://github.com/singularity-data/risingwave/pull/2588))
 * Support the `IS [NOT] DISTINCT FROM` expression. ([#2582](https://github.com/singularity-data/risingwave/pull/2582))
 * Support the `UPDATE` command. Subqueries on the right side of multi-value assignments are not supported yet. ([#2602](https://github.com/singularity-data/risingwave/pull/2602))
 * Support table alias in window table functions. ([#2633](https://github.com/singularity-data/risingwave/pull/2633))
