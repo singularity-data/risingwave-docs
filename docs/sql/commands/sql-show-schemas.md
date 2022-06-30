@@ -12,3 +12,9 @@ Use the `SHOW SCHEMAS` command to show schemas in the "dev" database.
 ```sql
 SHOW SCHEMAS;
 ```
+
+## Example
+
+```sql
+SHOW SCHEMAS;
+```
