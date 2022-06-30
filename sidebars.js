@@ -30,11 +30,7 @@ const sidebars = {
           id: 'intro',
           label: 'What is RisingWave?',
         },
-        {
-         type: 'doc',
-         id: 'get-started',
-         label: 'Get started',
-       },
+        
         {
           type: 'doc',
           id: 'architecture',
@@ -43,6 +39,12 @@ const sidebars = {
       ]
     },
 
+    {
+      type: 'doc',
+      id: 'get-started',
+      label: 'Get started',
+    },
+    
     {
       type: 'category',
       label: 'Tutorials',
