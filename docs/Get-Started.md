@@ -27,13 +27,13 @@ You can run RisingWave in three ways:
 1. Download the pre-built library.
  
     ```shell
-    wget https://github.com/singularity-data/risingwave/releases/download/v0.1.8/risingwave-v0.1.8-x86_64-unknown-linux.tar.gz
+    wget https://github.com/singularity-data/risingwave/releases/download/v0.1.9/risingwave-v0.1.9-x86_64-unknown-linux.tar.gz
     ```
 
 2. Unzip the library.
 
     ```shell
-    tar xvf risingwave-v0.1.8-x86_64-unknown-linux.tar.gz
+    tar xvf risingwave-v0.1.9-x86_64-unknown-linux.tar.gz
     ```
 
 3. Run RisingWave.
