@@ -86,7 +86,7 @@ CREATE SOURCE ad_impression (
 ) WITH (
     'connector' = 'kafka',
     'kafka.topic' = 'ad_impression',
-    'kafka.brokers' = 'message_queue:9092',
+    'kafka.brokers' = 'message_queue:29092',
     'kafka.scan.startup.mode' = 'earliest'
 ) ROW FORMAT JSON;
 ```
@@ -98,7 +98,7 @@ CREATE SOURCE ad_click (
 ) WITH (
     'connector' = 'kafka',
     'kafka.topic' = 'ad_click',
-    'kafka.brokers' = 'message_queue:9092',
+    'kafka.brokers' = 'message_queue:29092',
     'kafka.scan.startup.mode' = 'earliest'
 ) ROW FORMAT JSON;
 ```
