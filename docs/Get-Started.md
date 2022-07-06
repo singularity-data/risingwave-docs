@@ -27,13 +27,13 @@ You can run RisingWave in three ways:
 1. Download the pre-built library.
  
     ```shell
-    wget https://github.com/singularity-data/risingwave/releases/download/v0.1.9/risingwave-v0.1.9-x86_64-unknown-linux.tar.gz
+    wget https://github.com/singularity-data/risingwave/releases/download/v0.1.10/risingwave-v0.1.10-x86_64-unknown-linux.tar.gz
     ```
 
 2. Unzip the library.
 
     ```shell
-    tar xvf risingwave-v0.1.9-x86_64-unknown-linux.tar.gz
+    tar xvf risingwave-v0.1.10-x86_64-unknown-linux.tar.gz
     ```
 
 3. Run RisingWave.
@@ -52,16 +52,11 @@ You can install and run RisingWave from a Docker image. Currently, only x86-64 p
 
 Ensure you have Docker intalled on your machine. For installation instructions, see [Install Docker](https://docs.docker.com/get-docker/).
 
-1. Download the docker container image of the latest nightly build of RisingWave. 
+Start RisingWave in single-binary playground mode
     
-    ```sh
-    docker pull ghcr.io/singularity-data/risingwave:latest
-    ```
-
-2. Run RisingWave from the Docker image.
-    ```sh
-    docker run -it --network host ghcr.io/singularity-data/risingwave:latest playground
-    ```
+```sh
+docker run -it --pull=always -p 4566:4566 -p 5691:5691 ghcr.io/singularity-data/risingwave:v0.1.10 playground
+```
 
 ### Build from source (Linux & macOS)
 
