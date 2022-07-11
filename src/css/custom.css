@@ -196,7 +196,8 @@ thead {
 
 thead th {
   text-align: left;
-  padding: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 /* TODO: Deprecated */
