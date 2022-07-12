@@ -193,9 +193,12 @@ thead {
   z-index: 20;
   position: sticky;
 }
-/* thead th {
-  min-width: 20px;
-} */
+
+thead th {
+  text-align: left;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
 
 /* TODO: Deprecated */
 /* table::-webkit-scrollbar {
