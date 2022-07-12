@@ -58,6 +58,39 @@ Start RisingWave in single-binary playground mode
 docker run -it --pull=always -p 4566:4566 -p 5691:5691 ghcr.io/singularity-data/risingwave:v0.1.10 playground
 ```
 
+### Set up a multi-node cluster via Docker Compose (Linux & macOS)
+
+You can set up a full-feathered RisingWave cluster via Docker Compose. The cluster will be composed of multiple RisingWave components, including:
+
+* 1 Frontend,
+* 1 Compute Node,
+* 1 MetaServer,
+* 1 Compactor Node
+
+In addition, it also rely on some third-party components, including:
+
+* Grafana,
+* Etcd,
+* MinIO,
+* Prometheus,
+
+Therefore, eventually it will start 8 processes.
+
+To begin with, you need to install [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) in your environment. Note that Docker Compose is included in Docker Desktop for Windows and macOS. If you use Docker Desktop, ensure that it is running before launching the demo cluster.
+
+Then clone the [risingwave-demo](https://github.com/singularity-data/risingwave-demo) repository:
+
+```shell
+git clone https://github.com/singularity-data/risingwave-demo.git
+```
+
+Now navigate to the `docker` directory and start the cluster from the docker compose file.
+
+```shell
+cd ad-ctr
+docker-compose up -d
+```
+
 ### Build from source (Linux & macOS)
 
 1. Download the source code of RisingWave.
