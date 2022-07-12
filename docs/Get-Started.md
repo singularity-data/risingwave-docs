@@ -87,7 +87,7 @@ git clone https://github.com/singularity-data/risingwave-demo.git
 Now navigate to the `docker` directory and start the cluster from the docker compose file.
 
 ```shell
-cd ad-ctr
+cd docker
 docker-compose up -d
 ```
 
