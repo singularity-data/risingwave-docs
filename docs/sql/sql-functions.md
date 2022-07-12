@@ -1,41 +1,30 @@
 ---
-id: sql-operators
-slug: /sql-operators
-title: Operators
+id: sql-functions
+slug: /sql-functions
+title: Functions
 ---
 
 
 
 ## Logical operators
 
-| Operator | Description | 
-| ----------- | ----------- |
-| AND | Text |
-| OR | Text |
-| NOT | Text |
-
+* AND
+* OR
+* NOT
+* IS [NOT] {TRUE | FALSE}
 
 ## Comparison operators
 
-| Operator | Description | Expression |
-| ----------- | ----------- | ----------- |
-| `=` | Equal <br /> TRUE if  | `expression = value` <br />  <details><summary>Examples</summary><div>1 = 1 → t <br /> '1' = 1 → t <br /> 'a' = 'b' → f <br /> (1, 0) = (1, 1) → f <br /> ('a', 'b') = ('a', 'b') → t <br /></div></details>|
-| `<>` <br/> `!=` | Not equal | `expression <> value` or `expression != value` <br /> 1 <> 1 → f <br /> '1' != 1 → f <br /> 'a' != 'b' → t <br /> (1, 0) <> (1, 1) → t <br /> ('a', 'b') != ('a', 'b') → f|
-| `<` | Less than | `expression < value` <br /> 0 < 1 → t <br /> 1 < 1 → f|
-| `<=` | Less than or equal to | `expression <= value` <br /> 1 <= 1 → t <br /> 1 <= 0 → f |
-| `>` | Greater than | `expression > value` <br /> 1 > 0 → t <br /> 1 > 1 → f |
-| `>=` | Greater than or equal to | `expression >= value` <br /> 1 >= 1 → t <br /> 0 >= 1 → f |
-| `IS DISTINCT FROM` | Equal (null comparible) | `expression IS DISTINCT FROM value` <br /> 1 IS DISTINCT FROM NULL → t <br /> 1 IS DISTINCT FROM 1 → f  |
-| `IS NOT DISTINCT FROM` | Not equal (null comparible) | `expression IS NOT DISTINCT FROM value` <br /> 1 IS NOT DISTINCT FROM NULL → f <br /> |
-| `BETWEEN ... AND ...` | Between (inclusive range) | `expression BETWEEN min AND max` <br /> 1 BETWEEN 0 AND 1 → t <br /> 'c' BETWEEN 'a' AND 'b' → f |
-| `NOT BETWEEN ... AND ...` | Not between (inclusive range) | `expression NOT BETWEEN min AND max` <br /> 1 NOT BETWEEN 0 AND 1 → f |
-| `IN()` | Whether a value is equal to any of the values you specify | `expression IN (value,...)` <br /> 1 IN (0,1,2,3) → t <br /> 'a' IN ('ab','b','c','d') → f|
-| `NOT IN()` | Whether a value is not equal to any of the values you specify | `expression NOT IN (value,...)` <br /> 1 NOT IN (0,1,2,3) → f |
-| `IS TRUE` | Text | `boolean IS TRUE` |
-| `IS NOT TRUE` | Text |  |
-| `IS FALSE` | Text |  |
-| `IS NOT FALSE` | Text |  |
-| IS [NOT] NULL | Text | *** IS NULL causes a crash. Should we show this to users?  |
+* &lt; (less than)
+* &gt; (greater than)
+* = (equal)
+* &lt;= (less than or equal to)
+* &gt;= (greater than or equal to)
+* &lt;&gt; / != (not equal)
+* IS [NOT] DISTINCT FROM
+* BETWEEN
+* IN
+* IS [NOT] NULL
 
 ## Conditional expressions
 
