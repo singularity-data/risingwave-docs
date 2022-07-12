@@ -19,7 +19,7 @@ title: Operators
 
 | Operator | Description | Expression |
 | ----------- | ----------- | ----------- |
-| `=` | Equal <br /> TRUE if  | `expression = value` <br /> 1 = 1 → t <br /> '1' = 1 → t <br /> 'a' = 'b' → f <br /> (1, 0) = (1, 1) → f <br /> ('a', 'b') = ('a', 'b') → t |
+| `=` | Equal <br /> TRUE if  | `expression = value` <br /> <details><summary>Examples</summary><div>1 = 1 → t <br /> '1' = 1 → t <br /> 'a' = 'b' → f <br /> (1, 0) = (1, 1) → f <br /> ('a', 'b') = ('a', 'b') → t</div></details> |
 | `<>` <br/> `!=` | Not equal | `expression <> value` or `expression != value` <br /> 1 &lt;&gt; 1 → f <br /> '1' != 1 → f <br /> 'a' != 'b' → t <br /> (1, 0) &lt;&gt; (1, 1) → t <br /> ('a', 'b') != ('a', 'b') → f|
 | `<` | Less than | `expression < value` <br /> 0 &lt; 1 → t <br /> 1 &lt; 1 → f|
 | `<=` | Less than or equal to | `expression <= value` <br /> 1 &lt;= 1 → t <br /> 1 &lt;= 0 → f |
