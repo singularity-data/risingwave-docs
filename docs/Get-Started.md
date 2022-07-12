@@ -18,9 +18,10 @@ This guide will help you get started with RisingWave. We will cover:
 
 You can run RisingWave in three ways:
 
-- Use the pre-built library (only for Linux)
-- Install and run from a Docker image (Linux & macOS)
-- Build from the source code (Linux & macOS)
+- [Use the pre-built library (Linux)](#use-the-pre-built-library-linux)
+- [Install and run from a Docker image (Linux & macOS)](#install-and-run-from-a-docker-image-linux--macos)
+- [Set up a multi-node cluster via Docker Compose (Linux & macOS)](#set-up-a-multi-node-cluster-via-docker-compose-linux--macos)
+- [Build from the source code (Linux & macOS)](#build-from-source-linux--macos)
 
 ### Use the pre-built library (Linux)
 
