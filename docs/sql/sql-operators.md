@@ -19,12 +19,12 @@ title: Operators
 
 | Operator | Description | Expression |
 | ----------- | ----------- | ----------- |
-| `=` | Equal <br /> TRUE if  | `expression = value` <br /> 1 = 1 → t <br /> '1' = 1 → t <br /> 'a' = 'b' → f <br /> (1, 0) = (1, 1) → f <br /> ('a', 'b') = ('a', 'b') → t <br />|
-| `<>` <br/> `!=` | Not equal | `expression <> value` or `expression != value` <br /> 1 <> 1 → f <br /> '1' != 1 → f <br /> 'a' != 'b' → t <br /> (1, 0) <> (1, 1) → t <br /> ('a', 'b') != ('a', 'b') → f|
-| `<` | Less than | `expression < value` <br /> 0 < 1 → t <br /> 1 < 1 → f|
-| `<=` | Less than or equal to | `expression <= value` <br /> 1 <= 1 → t <br /> 1 <= 0 → f |
-| `>` | Greater than | `expression > value` <br /> 1 > 0 → t <br /> 1 > 1 → f |
-| `>=` | Greater than or equal to | `expression >= value` <br /> 1 >= 1 → t <br /> 0 >= 1 → f |
+| `=` | Equal <br /> TRUE if  | `expression = value` <br /> 1 = 1 → t <br /> '1' = 1 → t <br /> 'a' = 'b' → f <br /> (1, 0) = (1, 1) → f <br /> ('a', 'b') = ('a', 'b') → t |
+| `<>` <br/> `!=` | Not equal | `expression <> value` or `expression != value` <br /> 1 &lt;&gt; 1 → f <br /> '1' != 1 → f <br /> 'a' != 'b' → t <br /> (1, 0) &lt;&gt; (1, 1) → t <br /> ('a', 'b') != ('a', 'b') → f|
+| `<` | Less than | `expression < value` <br /> 0 &lt; 1 → t <br /> 1 &lt; 1 → f|
+| `<=` | Less than or equal to | `expression <= value` <br /> 1 &lt;= 1 → t <br /> 1 &lt;= 0 → f |
+| `>` | Greater than | `expression > value` <br /> 1 &gt; 0 → t <br /> 1 &gt; 1 → f |
+| `>=` | Greater than or equal to | `expression >= value` <br /> 1 &gt;= 1 → t <br /> 0 &gt;= 1 → f |
 | `IS DISTINCT FROM` | Equal (null comparible) | `expression IS DISTINCT FROM value` <br /> 1 IS DISTINCT FROM NULL → t <br /> 1 IS DISTINCT FROM 1 → f  |
 | `IS NOT DISTINCT FROM` | Not equal (null comparible) | `expression IS NOT DISTINCT FROM value` <br /> 1 IS NOT DISTINCT FROM NULL → f <br /> |
 | `BETWEEN ... AND ...` | Between (inclusive range) | `expression BETWEEN min AND max` <br /> 1 BETWEEN 0 AND 1 → t <br /> 'c' BETWEEN 'a' AND 'b' → f |
