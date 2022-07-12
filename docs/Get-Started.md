@@ -62,9 +62,9 @@ docker run -it --pull=always -p 4566:4566 -p 5691:5691 ghcr.io/singularity-data/
 
 You can set up a full-feathered RisingWave cluster via Docker Compose. The cluster will be composed of multiple RisingWave components, including:
 
-* 1 Frontend,
+* 1 Frontend Node,
 * 1 Compute Node,
-* 1 MetaServer,
+* 1 Meta Node,
 * 1 Compactor Node
 
 In addition, it also rely on some third-party components, including:
