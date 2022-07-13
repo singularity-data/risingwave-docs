@@ -20,7 +20,7 @@ CREATE TABLE <table> (<col> <data_type> [, <col> <data_type>...])
 |-----------|-------------|
 |*table*    |The name of the table. If a schema name is given (for example, `CREATE TABLE <schema>.<table> ...`), then the table is created in the specified schema. Otherwise it is created in the current schema.|
 |*col*      |The name of a column.|
-|*data_type*|The data type of a column. With the `struct` data type, you can create a nested table. Elements in a nested table need to be enclosed with angle brackets ("<>"). |
+|*data_type*|The data type of a column. With the `struct` data type, you can create a nested table. Elements in a nested table need to be enclosed with angle brackets ("\<\>"). |
 |*storage_parameter*| Set options for the table. Supported options: <ul><li>appendonly<ul><li>`'appendonly' = true` specifies that only INSERT operations on the table are allowed. If you create a materialized view on an append-only table, the corresponding stream query plan will be optimized for the append-only workload.</li></ul></li></ul>|
 
 ## Examples
