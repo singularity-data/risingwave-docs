@@ -81,45 +81,45 @@ title: Operators
 
 | Function | Description | Example |
 | ----------- | ----------- | ----------- | 
-| `ABS(x)` | Returns the absolute value of *x*. | ABS(-3) → 3 |
-| `ROUND(x numeric, y int)` → numeric | Rounds *x* to *y* decimal places. *y* cannot be negative. | ROUND(1.23559, 2) → 1.24 |
-| `ROUND(numeric)` → numeric <br /> `ROUND(double precision)` → double precision | Rounds to nearest integer. | ROUND(1.23559) → 1 |
-| `FLOOR(numeric)` → numeric <br /> `FLOOR(double precision)` → double precision | Returns the nearest integer less than or equal to the argument. | FLOOR(1.23559) → 1 <br /> FLOOR(-1.23559) → -2 |
-| `CEIL(numeric)` → numeric <br /> `FLOOR(double precision)` → double precision | Returns the nearest integer greater than or equal to the argument. | CEIL(1.23559) → 2 <br /> CEIL(-1.23559) → -1 |
+| `ABS (x)` | Returns the absolute value of *x*. | ABS(-3) → 3 |
+| `ROUND (x numeric, y int)` → numeric | Rounds *x* to *y* decimal places. *y* cannot be negative. | ROUND(1.23559, 2) → 1.24 |
+| `ROUND (numeric)` → numeric <br /> `ROUND (double precision)` → double precision | Rounds to nearest integer. | ROUND(1.23559) → 1 |
+| `FLOOR (numeric)` → numeric <br /> `FLOOR (double precision)` → double precision | Returns the nearest integer less than or equal to the argument. | FLOOR(1.23559) → 1 <br /> FLOOR(-1.23559) → -2 |
+| `CEIL (numeric)` → numeric <br /> `FLOOR (double precision)` → double precision | Returns the nearest integer greater than or equal to the argument. | CEIL(1.23559) → 2 <br /> CEIL(-1.23559) → -1 |
 
 
 ## Aggregation functions
 
 |Function|Argument Type|Return Type|
 |---|---|---|
-|min|smallint, int, bigint, numeric, real, double precision, varchar|Same as argument type|
-|max|smallint, int, bigint, numeric, real, double precision, varchar|Same as argument type|
-|sum|smallint, int, bigint, numeric, real, double precision|bigint for smallint  or int arguments, numeric for bigint arguments, otherwise the same as the argument data type|
-|count|bool, smallint, int, bigint, numeric, real, double precision, varchar|bigint|
-|avg|	smallint, int, bigint, numeric, real, double precision|numeric for integer arguments; double precision for float point arguments|
+|`MIN()`|smallint, int, bigint, numeric, real, double precision, varchar|Same as argument type|
+|`MAX()`|smallint, int, bigint, numeric, real, double precision, varchar|Same as argument type|
+|`SUM()`|smallint, int, bigint, numeric, real, double precision|bigint for smallint  or int arguments, numeric for bigint arguments, otherwise the same as the argument data type| 
+|`COUNT()`|bool, smallint, int, bigint, numeric, real, double precision, varchar|bigint|
+|`AVG()`|	smallint, int, bigint, numeric, real, double precision|numeric for integer arguments; double precision for float point arguments|
 
 ## String functions
 
-|Function|Return Type|Description|Example|Result|
-|---|---|---|---|---|
-|replace ( string varchar, from varchar, to varchar )|varchar|Replaces all occurrences in string of substring from with substring to.|`replace('abcdefabcdef', 'cd', 'XX')`|`abXXefabXXef`|
-|trim ( string varchar )|varchar|Removes the longest string containing only spaces from the start and end of string.|`trim(' trim ')`	|`trim`|
-|ltrim ( string varchar )|varchar|Removes the longest string containing only spaces from the start of string.|`ltrim(' test')`|`test`|
-|rtrim ( string varchar ) |varchar|Removes the longest string containing only spaces from the end of string|`rtrim('test ')`|`test`|
-|substr ( string varchar, start integer [, count integer ] )|varchar|Extracts the substring of string starting at the start-th character, and extending for count characters if that is specified.| `substr('alphabet', 3)`; `substr('alphabet', 3, 2)`| `phabet`;`ph`|
-|upper ( varchar )|varchar|Converts the string to all upper case.|`upper('tom')`|`TOM`|
-|lower ( varchar )|varchar|Converts the string to all lower case.|`lower('TOM')`|`tom`|
-|position ( string varchar, substring varchar )|integer	|Returns first starting index of the specified substring within string, or zero if it is not present.|`position('high', 'ig')`|`2`|
-|length ( varchar )	|integer|Returns the number of characters in the string.|`length('jose')`|`4`|
-| concat_ws ( sep varchar, val1 any [, val2 any [, ...] ] ) | varchar | Concatenates strings with a separator. The first argument is used as the separator, and should not be `NULL`. Other `NULL` arguments are ignored. | `concat_ws(',', 'abcde', 2, NULL, 22)` | `abcde,2,22`  |
-|  split_part ( string varchar, delimiter varchar, n int )  | varchar | Splits string at occurrences of delimiter and returns the n'th field (counting from one), or when n is negative, returns the \|n\|'th-from-last field. When n is zero, returns a `InvalidParameterValue` error. When the input delimiter is an empty string, returns the input string if querying the first or last field. Otherwise, returns an empty string. | `split_part('abc~@~def~@~ghi', '~@~', 2)` | `def` |
+|Function|Description|Example|
+|---|---|---|
+|`REPLACE (string varchar, from varchar, to varchar)` → varchar|Replaces all occurrences in string of substring from with substring to.|`REPLACE('abcdefabcdef', 'cd', 'XX')` → `abXXefabXXef`|
+|`TRIM (string varchar)` → varchar|Removes the longest string containing only spaces from the start and end of string.|`TRIM(' cake   ')` → `cake`|
+|`LTRIM (string varchar)` → varchar|Removes the longest string containing only spaces from the start of string.|`LTRIM('   cake')` → `cake`|
+|`RTRIM (string varchar) `→ varchar|Removes the longest string containing only spaces from the end of string|`RTRIM('cake   ')` → `cake`|
+|`SUBSTR (string varchar, start integer [, count integer ])` → varchar|Extracts the substring of string starting at the start-th character, and extending for count characters if that is specified.| `SUBSTR('alphabet', 3)` → `phabet`; <br /> `SUBSTR('alphabet', 3, 2)` → `ph`|
+|`UPPER (varchar)` → varchar|Converts the string to all upper case.|`UPPER('tom')` → `TOM`|
+|`LOWER (varchar)` → varchar|Converts the string to all lower case.|`LOWER('TOM')` → `tom`|
+|`POSITION (string varchar, substring varchar)` → integer	|Returns first starting index of the specified substring within string, or zero if it is not present.|`POSITION('high', 'ig')` → `2`|
+|`LENGTH (varchar)` → integer|Returns the number of characters in the string.|`LENGTH('jose')` → `4`|
+|`CONCAT_WS (sep varchar, val1 any [, val2 any [, ...] ])` → varchar | Concatenates strings with a separator. The first argument is used as the separator, and should not be `NULL`. Other `NULL` arguments are ignored. | `CONCAT_WS(',', 'abcde', 2, NULL, 22)` → `abcde,2,22` |
+|`SPLIT_PART (string varchar, delimiter varchar, n int)` → varchar | Splits string at occurrences of delimiter and returns the n'th field (counting from one), or when n is negative, returns the \|n\|'th-from-last field. When n is zero, returns a `InvalidParameterValue` error. When the input delimiter is an empty string, returns the input string if querying the first or last field. Otherwise, returns an empty string. | `SPLIT_PART('abc~@~def~@~ghi', '~@~', 2)` → `def` |
 
 
 ## String matching operators
 
 ```sql
 string NOT LIKE pattern
-String LIKE pattern
+string LIKE pattern
 ```
 
 The `LIKE` expression returns true if the string matches the supplied pattern. The `NOT LIKE` expression returns false if `LIKE` returns true.
