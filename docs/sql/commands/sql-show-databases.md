@@ -12,3 +12,9 @@ Use the `SHOW DATABASES` command to show all databases.
 ```sql
 SHOW DATABASES;
 ```
+
+## Example
+
+```sql
+SHOW DATABASES;
+```
