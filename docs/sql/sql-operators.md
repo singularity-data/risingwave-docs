@@ -1,7 +1,7 @@
 ---
 id: sql-operators
 slug: /sql-operators
-title: Operators
+title: Operators and functions
 ---
 
 
@@ -10,11 +10,12 @@ title: Operators
 
 | Operator | Expression & Description |
 | ----------- | ----------- | 
-| `AND` | Logical AND. <br /> `boolean1 AND boolean2` <br /> TRUE if both *boolean1* and *boolean2* are TRUE. |
-| `OR` | Logical OR. <br /> `boolean1 OR boolean2` <br /> TRUE if either *boolean1* or *boolean2* is TRUE. |
-| `NOT` | Negates value. <br /> `NOT boolean` <br /> |
+| `AND` | `boolean1 AND boolean2` <br /> Logical AND. <br />  TRUE if both *boolean1* and *boolean2* are TRUE. |
+| `OR` | `boolean1 OR boolean2` <br /> Logical OR. <br /> TRUE if either *boolean1* or *boolean2* is TRUE. |
+| `NOT` | `NOT boolean` <br /> Negates value. <br /> |
 
 **Example**
+
 | NOT a | a | b | a AND b | a OR b |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
 | FALSE | TRUE | TRUE | TRUE | TRUE |
@@ -30,22 +31,22 @@ title: Operators
 
 | Operator | Expression & Description | Example |
 | ----------- | ----------- | ----------- |
-| `=` | Equal. <br /> `operand1 = operand2` <br /> TRUE if the operands separated by = have the same value. | 1 = 1 → t <br /> '1' = 1 → t <br /> 'a' = 'b' → f <br /> (1, 0) = (1, 1) → f <br /> ('a', 'b') = ('a', 'b') → t |
-| `<>` <br/> `!=` | Not equal. <br /> `operand1 <> operand2` or `operand1 != operand2` <br /> TRUE if the operands separated by &lt;&gt; or != have different values. | 1 &lt;&gt; 1 → f <br /> '1' != 1 → f <br /> 'a' != 'b' → t <br /> (1, 0) &lt;&gt; (1, 1) → t <br /> ('a', 'b') != ('a', 'b') → f|
-| `<` | Less than. <br /> `operand1 < operand2` <br /> TRUE if *operand1* is less than *operand2*. | 0 &lt; 1 → t <br /> 1 &lt; 1 → f|
-| `<=` | Less than or equal to. <br /> `operand1 <= operand2` <br /> TRUE if *operand1* is less than or equal to *operand2*. | 1 &lt;= 1 → t <br /> 1 &lt;= 0 → f |
-| `>` | Greater than. <br /> `operand1 > operand2` <br /> TRUE if *operand1* is greater than *operand2*. | 1 &gt; 0 → t <br /> 1 &gt; 1 → f |
-| `>=` | Greater than or equal to. <br /> `operand1 >= operand2` <br /> TRUE if *operand1* is greater than or equal to *operand2*. | 1 &gt;= 1 → t <br /> 0 &gt;= 1 → f |
-| `IS DISTINCT FROM` | Equal (null comparible). <br /> `operand1 IS DISTINCT FROM operand2` <br /> TRUE if *operand1* is not equal to *operand2*. | 1 IS DISTINCT FROM NULL → t <br /> 1 IS DISTINCT FROM 1 → f  |
-| `IS NOT DISTINCT FROM` | Not equal (null comparible). <br /> `operand1 IS NOT DISTINCT FROM operand2` <br /> TRUE if *operand1* is equal to *operand2*. | 1 IS NOT DISTINCT FROM NULL → f <br /> |
-| `BETWEEN ... AND ...` | Between (inclusive range). <br /> `operand BETWEEN min AND max` <br /> TRUE if the operand is greater than or equal to *min* and less than or equal to *max*. | 1 BETWEEN 0 AND 1 → t <br /> 'c' BETWEEN 'a' AND 'b' → f |
-| `NOT BETWEEN ... AND ...` | Not between (inclusive range). <br /> `operand NOT BETWEEN min AND max` <br /> TRUE if the operand is less than *min* and greater than *max*. | 1 NOT BETWEEN 0 AND 1 → f |
-| `IN()` | Whether a value is equal to any of the values you specify. <br /> `operand IN (value,...)` <br /> TRUE if the operand is equal to one of the specified expressions/values. | 1 IN (0,1,2,3) → t <br /> 'a' IN ('ab','b','c','d') → f|
-| `NOT IN()` | Whether a value is not equal to any of the values you specify. <br /> `operand NOT IN (value,...)` <br /> TRUE if the operand is not equal to any specified expressions/values. | 1 NOT IN (0,1,2,3) → f |
-| `IS TRUE` | Whether a boolean expression is true. <br /> `boolean IS TRUE` <br /> | true IS TRUE → t <br /> null::boolean IS TRUE → f |
-| `IS NOT TRUE` | Whether a boolean expression is false or unknown. <br /> `boolean IS TRUE` <br /> | true IS NOT TRUE → f <br /> null::boolean IS NOT TRUE → t |
-| `IS FALSE` | Whether a boolean expression is false. <br /> `boolean IS FALSE` <br /> | true IS FALSE → f <br /> null::boolean IS FALSE → f |
-| `IS NOT FALSE` | Whether a boolean expression is true or unknown. <br /> `boolean IS NOT FALSE` <br /> | true IS NOT FALSE → t <br /> null::boolean IS NOT FALSE → t |
+| `=` | `operand1 = operand2` <br /> Equal. <br /> TRUE if the operands separated by = have the same value. | 1 = 1 → t <br /> '1' = 1 → t <br /> 'a' = 'b' → f <br /> (1, 0) = (1, 1) → f <br /> ('a', 'b') = ('a', 'b') → t |
+| `<>` <br/> `!=` | `operand1 <> operand2` or `operand1 != operand2` <br /> Not equal. <br /> TRUE if the operands separated by &lt;&gt; or != have different values. | 1 &lt;&gt; 1 → f <br /> '1' != 1 → f <br /> 'a' != 'b' → t <br /> (1, 0) &lt;&gt; (1, 1) → t <br /> ('a', 'b') != ('a', 'b') → f|
+| `<` | `operand1 < operand2` <br /> Less than. <br /> TRUE if *operand1* is less than *operand2*. | 0 &lt; 1 → t <br /> 1 &lt; 1 → f|
+| `<=` | `operand1 <= operand2` <br /> Less than or equal to. <br /> TRUE if *operand1* is less than or equal to *operand2*. | 1 &lt;= 1 → t <br /> 1 &lt;= 0 → f |
+| `>` | `operand1 > operand2` <br /> Greater than. <br /> TRUE if *operand1* is greater than *operand2*. | 1 &gt; 0 → t <br /> 1 &gt; 1 → f |
+| `>=` | `operand1 >= operand2` <br /> Greater than or equal to. <br /> TRUE if *operand1* is greater than or equal to *operand2*. | 1 &gt;= 1 → t <br /> 0 &gt;= 1 → f |
+| `IS DISTINCT FROM` | `operand1 IS DISTINCT FROM operand2` <br /> Equal (null comparible). <br /> TRUE if *operand1* is not equal to *operand2*. | 1 IS DISTINCT FROM NULL → t <br /> 1 IS DISTINCT FROM 1 → f  |
+| `IS NOT DISTINCT FROM` | `operand1 IS NOT DISTINCT FROM operand2` <br />Not equal (null comparible). <br />  TRUE if *operand1* is equal to *operand2*. | 1 IS NOT DISTINCT FROM NULL → f <br /> |
+| `BETWEEN ... AND ...` | `operand BETWEEN min AND max` <br /> Between (inclusive range). <br /> TRUE if the operand is greater than or equal to *min* and less than or equal to *max*. | 1 BETWEEN 0 AND 1 → t <br /> 'c' BETWEEN 'a' AND 'b' → f |
+| `NOT BETWEEN ... AND ...` | `operand NOT BETWEEN min AND max` <br /> Not between (inclusive range). <br /> TRUE if the operand is less than *min* and greater than *max*. | 1 NOT BETWEEN 0 AND 1 → f |
+| `IN()` | `operand IN (value,...)` <br /> Whether a value is equal to any of the values you specify. <br /> TRUE if the operand is equal to one of the specified expressions/values. | 1 IN (0,1,2,3) → t <br /> 'a' IN ('ab','b','c','d') → f|
+| `NOT IN()` | `operand NOT IN (value,...)` <br /> Whether a value is not equal to any of the values you specify. <br /> TRUE if the operand is not equal to any specified expressions/values. | 1 NOT IN (0,1,2,3) → f |
+| `IS TRUE` | `boolean IS TRUE` <br /> Whether a boolean expression is true. <br /> | true IS TRUE → t <br /> null::boolean IS TRUE → f |
+| `IS NOT TRUE` | `boolean IS TRUE` <br /> Whether a boolean expression is false or unknown. <br /> | true IS NOT TRUE → f <br /> null::boolean IS NOT TRUE → t |
+| `IS FALSE` | `boolean IS FALSE` <br /> Whether a boolean expression is false. <br /> | true IS FALSE → f <br /> null::boolean IS FALSE → f |
+| `IS NOT FALSE` | `boolean IS NOT FALSE` <br /> Whether a boolean expression is true or unknown. <br /> | true IS NOT FALSE → t <br /> null::boolean IS NOT FALSE → t |
 | IS [NOT] NULL | Text | *** IS NULL causes a crash. Should we show this to users?  |
 
 ## Conditional expressions
@@ -58,24 +59,24 @@ title: Operators
 
 | Operator | Expression & Description | Example |
 | ----------- | ----------- | ----------- |
-| `+` | Addition. <br /> `operand1 + operand2` <br /> | 1 + 2 → 3 |
-| `-` | Subtraction. <br /> `operand1 - operand2` <br /> | 1 - 2 → -1 |
-| `-` | Negation. <br /> `- operand` <br /> | - (-1) → 1 |
-| `*` | Multiplication. <br /> `operand1 * operand2` <br /> | 2 * 3 → 6 |
-| `/` | Division (results are truncated for integers). <br /> `operand1 / operand2` <br /> | 3 / 2 → 1 <br /> 3.0 / 2 → 1.5 <br />  3 / 1.8 → 1.666... |
-| `%` | Remainder (valid for smallint/int/bigint/numeric). <br /> `operand1 * operand2` <br /> | 3 % 2 → 1 |
+| `+` | `operand1 + operand2` <br /> Addition. <br /> | 1 + 2 → 3 |
+| `-` | `operand1 - operand2` <br /> Subtraction. <br /> | 1 - 2 → -1 |
+| `-` | `- operand` <br /> Negation. <br /> | - (-1) → 1 |
+| `*` | `operand1 * operand2` <br /> Multiplication. <br /> | 2 * 3 → 6 |
+| `/` | `operand1 / operand2` <br /> Division (results are truncated for integers). <br /> | 3 / 2 → 1 <br /> 3.0 / 2 → 1.5 <br />  3 / 1.8 → 1.666... |
+| `%` | `operand1 * operand2` <br /> Remainder (valid for smallint/int/bigint/numeric). <br /> | 3 % 2 → 1 |
 
 
 ## Bit string operators
 
 | Operator | Expression & Description | Example |
 | ----------- | ----------- | ----------- |
-| `~` | Bitwise not. <br /> `~ operand` <br /> | ~ 1 → -2 |
-| `&` | Bitwise and. <br /> `operand1 & operand2` <br /> | 3 &amp; 5 → 1 |
-| &#124; | Bitwise or. <br /> operand1 &#124; operand2 <br /> | 3 &#124; 5 → 7 |
-| `#` | Bitwise xor. <br /> `operand1 # operand2` <br /> | 3 &num; 5 → 6 |
-| `<<` | Bitwise left shift. <br /> `operand1 << operand2` <br /> | 1 &lt;&lt; 2 → 4 |
-| `<<` | Bitwise right shift. <br /> `operand1 >> operand2` <br /> | 4 &lt;&lt; 2 → 1 |
+| `~` | `~ operand` <br /> Bitwise not. | ~ 1 → -2 |
+| `&` | `operand1 & operand2` <br /> Bitwise and. | 3 &amp; 5 → 1 |
+| &#124; | operand1 &#124; operand2 <br /> Bitwise or. | 3 &#124; 5 → 7 |
+| `#` | `operand1 # operand2` <br /> Bitwise xor. | 3 &num; 5 → 6 |
+| `<<` | `operand1 << operand2` <br /> Bitwise left shift. | 1 &lt;&lt; 2 → 4 |
+| `<<` | `operand1 >> operand2` <br /> Bitwise right shift. | 4 &lt;&lt; 2 → 1 |
 
 ## Mathematical functions
 
