@@ -46,3 +46,46 @@ Where `from_item` can be:
 |*window_type*              |The type of the time window function. Possible values are `HOP` and `TUMBLE`.|
 |*interval_expression*      |The interval expression, in the format of `INTERVAL '<interval>'`. For example: `INTERVAL '2 MINUTES'`. The standard SQL format, which places time units outside of quotation marks (for example, `INTERVAL '2' MINUTE`), is also supported. |
 
+## Example
+Below are the tables within the same schema that we will be writing queries from. 
+
+The table `taxi_trips` includes the columns `id`, `distance`, and `duration`, where `id` identifies each unique trip.
+```sql
+{
+  "id": VARCHAR,
+  "distance": DOUBLE PRECISION,
+  "duration": DOUBLE PRECISION
+}
+```
+
+The table `taxi` includes the columns `taxi_id` and `trip_id`, where `trip_id` and `id` in `taxi_trips` are matching fields.
+```sql
+{
+  "taxi_id": VARCHAR,
+  "trip_id": VARCHAR,
+}
+```
+
+The table `company` includes the columns `company_id` and `taxi_id`, where `taxi_id` and `taxi_id` in `taxi` are matching fields. 
+```sql
+{
+  "company_id": VARCHAR,
+  "taxi_id": VARCHAR,
+}
+```
+
+The following query selects the total distance and duration for each taxi from the company "Yellow Taxi".
+```sql
+SELECT 
+    taxi.taxi_id, 
+    sum(trips.distance) as total_distance, 
+    sum(trips.duration) as total_duration
+FROM taxi_trips as trips
+LEFT JOIN taxi ON trips.id = taxi.trip_id
+WHERE taxi_id IN
+    (SELECT taxi_id
+    FROM company_id
+    WHERE company_id = 'Yellow Taxi')
+GROUP BY taxi_id
+ORDER BY total_distance, total_duration;
+```
