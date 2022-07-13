@@ -18,22 +18,23 @@ This guide will help you get started with RisingWave. We will cover:
 
 You can run RisingWave in three ways:
 
-- Use the pre-built library (only for Linux)
-- Install and run from a Docker image (Linux & macOS)
-- Build from the source code (Linux & macOS)
+- [Use the pre-built library (Linux)](#use-the-pre-built-library-linux)
+- [Install and run from a Docker image (Linux & macOS)](#install-and-run-from-a-docker-image-linux--macos)
+- [Set up a multi-node cluster via Docker Compose (Linux & macOS)](#set-up-a-multi-node-cluster-via-docker-compose-linux--macos)
+- [Build from the source code (Linux & macOS)](#build-from-source-linux--macos)
 
 ### Use the pre-built library (Linux)
 
 1. Download the pre-built library.
  
     ```shell
-    wget https://github.com/singularity-data/risingwave/releases/download/v0.1.9/risingwave-v0.1.9-x86_64-unknown-linux.tar.gz
+    wget https://github.com/singularity-data/risingwave/releases/download/v0.1.10/risingwave-v0.1.10-x86_64-unknown-linux.tar.gz
     ```
 
 2. Unzip the library.
 
     ```shell
-    tar xvf risingwave-v0.1.9-x86_64-unknown-linux.tar.gz
+    tar xvf risingwave-v0.1.10-x86_64-unknown-linux.tar.gz
     ```
 
 3. Run RisingWave.
@@ -52,16 +53,44 @@ You can install and run RisingWave from a Docker image. Currently, only x86-64 p
 
 Ensure you have Docker intalled on your machine. For installation instructions, see [Install Docker](https://docs.docker.com/get-docker/).
 
-1. Download the docker container image of the latest nightly build of RisingWave. 
+Start RisingWave in single-binary playground mode
     
-    ```sh
-    docker pull ghcr.io/singularity-data/risingwave:latest
-    ```
+```sh
+docker run -it --pull=always -p 4566:4566 -p 5691:5691 ghcr.io/singularity-data/risingwave:v0.1.10 playground
+```
 
-2. Run RisingWave from the Docker image.
-    ```sh
-    docker run -it --network host ghcr.io/singularity-data/risingwave:latest playground
-    ```
+### Set up a multi-node cluster via Docker Compose (Linux & macOS)
+
+You can set up a full-feathered RisingWave cluster via Docker Compose. The cluster will be composed of multiple RisingWave components, including:
+
+* 1 Frontend Node,
+* 1 Compute Node,
+* 1 Meta Node,
+* 1 Compactor Node
+
+In addition, it also rely on some third-party components, including:
+
+* Grafana,
+* Etcd,
+* MinIO,
+* Prometheus,
+
+Therefore, eventually it will start 8 processes.
+
+To begin with, you need to install [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) in your environment. Note that Docker Compose is included in Docker Desktop for Windows and macOS. If you use Docker Desktop, ensure that it is running before launching the demo cluster.
+
+Then clone the [risingwave-demo](https://github.com/singularity-data/risingwave-demo) repository:
+
+```shell
+git clone https://github.com/singularity-data/risingwave-demo.git
+```
+
+Now navigate to the `docker` directory and start the cluster from the docker compose file.
+
+```shell
+cd docker
+docker-compose up -d
+```
 
 ### Build from source (Linux & macOS)
 
