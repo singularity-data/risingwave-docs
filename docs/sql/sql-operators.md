@@ -8,33 +8,44 @@ title: Operators
 
 ## Logical operators
 
-| Operator | Description | 
-| ----------- | ----------- |
-| AND | Text |
-| OR | Text |
-| NOT | Text |
+| Operator | Expression & Description |
+| ----------- | ----------- | 
+| `AND` | Logical AND. <br /> `boolean1 AND boolean2` <br /> TRUE if both *boolean1* and *boolean2* are TRUE. |
+| `OR` | Logical OR. <br /> `boolean1 OR boolean2` <br /> TRUE if either *boolean1* or *boolean2* is TRUE. |
+| `NOT` | Negates value. <br /> `NOT boolean` <br /> |
+
+**Example**
+| NOT a | a | b | a AND b | a OR b |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| FALSE | TRUE | TRUE | TRUE | TRUE |
+| FALSE | TRUE | FALSE | FALSE | TRUE |
+| FALSE | TRUE | NULL | NULL | TRUE |
+| TRUE | FALSE | FALSE | FALSE | FALSE |
+| TRUE | FALSE | NULL | FALSE | NULL |
+| NULL | NULL | NULL | NULL | NULL |
+
 
 
 ## Comparison operators
 
-| Operator | Description | Expression |
+| Operator | Expression & Description | Example |
 | ----------- | ----------- | ----------- |
-| `=` | Equal <br /> TRUE if  | `expression = value` <br /> <details><summary>Examples</summary><div>1 = 1 → t <br /> '1' = 1 → t <br /> 'a' = 'b' → f <br /> (1, 0) = (1, 1) → f <br /> ('a', 'b') = ('a', 'b') → t</div></details> |
-| `<>` <br/> `!=` | Not equal | `expression <> value` or `expression != value` <br /> 1 &lt;&gt; 1 → f <br /> '1' != 1 → f <br /> 'a' != 'b' → t <br /> (1, 0) &lt;&gt; (1, 1) → t <br /> ('a', 'b') != ('a', 'b') → f|
-| `<` | Less than | `expression < value` <br /> 0 &lt; 1 → t <br /> 1 &lt; 1 → f|
-| `<=` | Less than or equal to | `expression <= value` <br /> 1 &lt;= 1 → t <br /> 1 &lt;= 0 → f |
-| `>` | Greater than | `expression > value` <br /> 1 &gt; 0 → t <br /> 1 &gt; 1 → f |
-| `>=` | Greater than or equal to | `expression >= value` <br /> 1 &gt;= 1 → t <br /> 0 &gt;= 1 → f |
-| `IS DISTINCT FROM` | Equal (null comparible) | `expression IS DISTINCT FROM value` <br /> 1 IS DISTINCT FROM NULL → t <br /> 1 IS DISTINCT FROM 1 → f  |
-| `IS NOT DISTINCT FROM` | Not equal (null comparible) | `expression IS NOT DISTINCT FROM value` <br /> 1 IS NOT DISTINCT FROM NULL → f <br /> |
-| `BETWEEN ... AND ...` | Between (inclusive range) | `expression BETWEEN min AND max` <br /> 1 BETWEEN 0 AND 1 → t <br /> 'c' BETWEEN 'a' AND 'b' → f |
-| `NOT BETWEEN ... AND ...` | Not between (inclusive range) | `expression NOT BETWEEN min AND max` <br /> 1 NOT BETWEEN 0 AND 1 → f |
-| `IN()` | Whether a value is equal to any of the values you specify | `expression IN (value,...)` <br /> 1 IN (0,1,2,3) → t <br /> 'a' IN ('ab','b','c','d') → f|
-| `NOT IN()` | Whether a value is not equal to any of the values you specify | `expression NOT IN (value,...)` <br /> 1 NOT IN (0,1,2,3) → f |
-| `IS TRUE` | Text | `boolean IS TRUE` |
-| `IS NOT TRUE` | Text |  |
-| `IS FALSE` | Text |  |
-| `IS NOT FALSE` | Text |  |
+| `=` | Equal. <br /> `operand1 = operand2` <br /> TRUE if the operands separated by = have the same value. | 1 = 1 → t <br /> '1' = 1 → t <br /> 'a' = 'b' → f <br /> (1, 0) = (1, 1) → f <br /> ('a', 'b') = ('a', 'b') → t |
+| `<>` <br/> `!=` | Not equal. <br /> `operand1 <> operand2` or `operand1 != operand2` <br /> TRUE if the operands separated by &lt;&gt; or != have different values. | 1 &lt;&gt; 1 → f <br /> '1' != 1 → f <br /> 'a' != 'b' → t <br /> (1, 0) &lt;&gt; (1, 1) → t <br /> ('a', 'b') != ('a', 'b') → f|
+| `<` | Less than. <br /> `operand1 < operand2` <br /> TRUE if *operand1* is less than *operand2*. | 0 &lt; 1 → t <br /> 1 &lt; 1 → f|
+| `<=` | Less than or equal to. <br /> `operand1 <= operand2` <br /> TRUE if *operand1* is less than or equal to *operand2*. | 1 &lt;= 1 → t <br /> 1 &lt;= 0 → f |
+| `>` | Greater than. <br /> `operand1 > operand2` <br /> TRUE if *operand1* is greater than *operand2*. | 1 &gt; 0 → t <br /> 1 &gt; 1 → f |
+| `>=` | Greater than or equal to. <br /> `operand1 >= operand2` <br /> TRUE if *operand1* is greater than or equal to *operand2*. | 1 &gt;= 1 → t <br /> 0 &gt;= 1 → f |
+| `IS DISTINCT FROM` | Equal (null comparible). <br /> `operand1 IS DISTINCT FROM operand2` <br /> TRUE if *operand1* is not equal to *operand2*. | 1 IS DISTINCT FROM NULL → t <br /> 1 IS DISTINCT FROM 1 → f  |
+| `IS NOT DISTINCT FROM` | Not equal (null comparible). <br /> `operand1 IS NOT DISTINCT FROM operand2` <br /> TRUE if *operand1* is equal to *operand2*. | 1 IS NOT DISTINCT FROM NULL → f <br /> |
+| `BETWEEN ... AND ...` | Between (inclusive range). <br /> `operand BETWEEN min AND max` <br /> TRUE if the operand is greater than or equal to *min* and less than or equal to *max*. | 1 BETWEEN 0 AND 1 → t <br /> 'c' BETWEEN 'a' AND 'b' → f |
+| `NOT BETWEEN ... AND ...` | Not between (inclusive range). <br /> `operand NOT BETWEEN min AND max` <br /> TRUE if the operand is less than *min* and greater than *max*. | 1 NOT BETWEEN 0 AND 1 → f |
+| `IN()` | Whether a value is equal to any of the values you specify. <br /> `operand IN (value,...)` <br /> TRUE if the operand is equal to one of the specified expressions/values. | 1 IN (0,1,2,3) → t <br /> 'a' IN ('ab','b','c','d') → f|
+| `NOT IN()` | Whether a value is not equal to any of the values you specify. <br /> `operand NOT IN (value,...)` <br /> TRUE if the operand is not equal to any specified expressions/values. | 1 NOT IN (0,1,2,3) → f |
+| `IS TRUE` | Whether a boolean expression is true. <br /> `boolean IS TRUE` <br /> | true IS TRUE → t <br /> null::boolean IS TRUE → f |
+| `IS NOT TRUE` | Whether a boolean expression is false or unknown. <br /> `boolean IS TRUE` <br /> | true IS NOT TRUE → f <br /> null::boolean IS NOT TRUE → t |
+| `IS FALSE` | Whether a boolean expression is false. <br /> `boolean IS FALSE` <br /> | true IS FALSE → f <br /> null::boolean IS FALSE → f |
+| `IS NOT FALSE` | Whether a boolean expression is true or unknown. <br /> `boolean IS NOT FALSE` <br /> | true IS NOT FALSE → t <br /> null::boolean IS NOT FALSE → t |
 | IS [NOT] NULL | Text | *** IS NULL causes a crash. Should we show this to users?  |
 
 ## Conditional expressions
@@ -43,28 +54,38 @@ title: Operators
 * COALESCE(value [, ...]) returns the first non-null value
 * NULLIF(value1, value2) returns null if value1 == value2, otherwise returns value1
 
-## Mathematical functions and operators
+## Arithmetic operators
 
-* \- (negation)
-* \+ (addition)
-* \- (subtraction)
-* \* (multiplication)
-* / (division; results are truncated for integers)
-* % (remainder; valid for smallint/int/bigint/numeric)
-* ~ (bitwise not)
-* &amp; (bitwise and)
-* | (bitwise or)
-* &num; (bitwise xor)
-* &lt;&lt; (bitwise left shift)
-* &gt;&gt; (bitwise right shift)
-* ABS
-* ROUND(numeric, int) → numeric
-* ROUND(numeric) → numeric
-* ROUND(double precision) → double precision
-* FLOOR(numeric) → numeric
-* FLOOR(double precision) → double precision
-* CEIL(numeric) → numeric
-* CEIL(double precision) → double precision
+| Operator | Expression & Description | Example |
+| ----------- | ----------- | ----------- |
+| `+` | Addition. <br /> `operand1 + operand2` <br /> | 1 + 2 → 3 |
+| `-` | Subtraction. <br /> `operand1 - operand2` <br /> | 1 - 2 → -1 |
+| `-` | Negation. <br /> `- operand` <br /> | - (-1) → 1 |
+| `*` | Multiplication. <br /> `operand1 * operand2` <br /> | 2 * 3 → 6 |
+| `/` | Division (results are truncated for integers). <br /> `operand1 / operand2` <br /> | 3 / 2 → 1 <br /> 3.0 / 2 → 1.5 <br />  3 / 1.8 → 1.666... |
+| `%` | Remainder (valid for smallint/int/bigint/numeric). <br /> `operand1 * operand2` <br /> | 3 % 2 → 1 |
+
+
+## Bit string operators
+
+| Operator | Expression & Description | Example |
+| ----------- | ----------- | ----------- |
+| `~` | Bitwise not. <br /> `~ operand` <br /> | ~ 1 → -2 |
+| `&` | Bitwise and. <br /> `operand1 & operand2` <br /> | 3 &amp; 5 → 1 |
+| &#124; | Bitwise or. <br /> operand1 &#124; operand2 <br /> | 3 &#124; 5 → 7 |
+| `#` | Bitwise xor. <br /> `operand1 # operand2` <br /> | 3 &num; 5 → 6 |
+| `<<` | Bitwise left shift. <br /> `operand1 << operand2` <br /> | 1 &lt;&lt; 2 → 4 |
+| `<<` | Bitwise right shift. <br /> `operand1 >> operand2` <br /> | 4 &lt;&lt; 2 → 1 |
+
+## Mathematical functions
+
+| Function | Description | Example |
+| ----------- | ----------- | ----------- | 
+| `ABS(x)` | Returns the absolute value of *x*. | ABS(-3) → 3 |
+| `ROUND(x numeric, y int)` → numeric | Rounds *x* to *y* decimal places. *y* cannot be negative. | ROUND(1.23559, 2) → 1.24 |
+| `ROUND(numeric)` → numeric <br /> `ROUND(double precision)` → double precision | Rounds to nearest integer. | ROUND(1.23559) → 1 |
+| `FLOOR(numeric)` → numeric <br /> `FLOOR(double precision)` → double precision | Returns the nearest integer less than or equal to the argument. | FLOOR(1.23559) → 1 <br /> FLOOR(-1.23559) → -2 |
+| `CEIL(numeric)` → numeric <br /> `FLOOR(double precision)` → double precision | Returns the nearest integer greater than or equal to the argument. | CEIL(1.23559) → 2 <br /> CEIL(-1.23559) → -1 |
 
 
 ## Aggregation functions

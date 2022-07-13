@@ -83,7 +83,7 @@ const sidebars = {
     collapsible: true,
     collapsed: false,
     items: 
-    ['sql/sql-data-types', 'sql/sql-operators', 'sql/sql-functions', 
+    ['sql/sql-data-types', 'sql/sql-operators', 
       {
       type: 'category',
       label: 'Commands',
