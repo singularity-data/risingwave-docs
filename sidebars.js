@@ -83,7 +83,55 @@ const sidebars = {
     collapsible: true,
     collapsed: false,
     items: 
-    ['sql/sql-data-types', 'sql/sql-operators', 
+    ['sql/sql-data-types', 
+      {
+      type: 'category',
+      label: 'Functions and operators',
+      items: 
+        [
+          {
+            type: 'doc',
+            id: 'sql/functions-operators/sql-function-logical',
+            label: 'Logical',
+          },
+          {
+            type: 'doc',
+            id: 'sql/functions-operators/sql-function-comparison',
+            label: 'Comparison',
+          },
+          {
+            type: 'doc',
+            id: 'sql/functions-operators/sql-function-mathematical',
+            label: 'Mathematical',
+          },
+          {
+            type: 'doc',
+            id: 'sql/functions-operators/sql-function-bitstring',
+            label: 'Bit string',
+          },
+          {
+            type: 'doc',
+            id: 'sql/functions-operators/sql-function-string',
+            label: 'String',
+          },
+          {
+            type: 'doc',
+            id: 'sql/functions-operators/sql-function-datetime',
+            label: 'Date/time',
+          },
+          {
+            type: 'doc',
+            id: 'sql/functions-operators/sql-function-aggregate',
+            label: 'Aggregate',
+          },
+          {
+            type: 'doc',
+            id: 'sql/functions-operators/sql-function-conditional',
+            label: 'Conditional',
+          },
+        
+        ]
+        },
       {
       type: 'category',
       label: 'Commands',
