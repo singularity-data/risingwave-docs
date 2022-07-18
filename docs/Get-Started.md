@@ -16,7 +16,7 @@ This guide will help you get started with RisingWave. We will cover:
 
 ## Install and run RisingWave
 
-You can run RisingWave in three ways:
+You can run RisingWave in these ways:
 
 - [Use the pre-built library (Linux)](#use-the-pre-built-library-linux)
 - [Install and run from a Docker image (Linux & macOS)](#install-and-run-from-a-docker-image-linux--macos)
