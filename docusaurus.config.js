@@ -124,7 +124,6 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} RisingWave Community.`,
       },
       prism: {
-        theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
         additionalLanguages: ["sql"],
       },
@@ -158,4 +157,11 @@ const config = {
   ],
 };
 
-module.exports = config;
+async function createConfig() {
+  const lightTheme = (await import("./src/utils/prismLight.mjs")).default;
+  // @ts-expect-error: we know it exists, right
+  config.themeConfig.prism.theme = lightTheme;
+  return config;
+}
+
+module.exports = createConfig;
