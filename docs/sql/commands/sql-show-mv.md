@@ -1,6 +1,6 @@
 ---
 id: sql-show-materizalized-views
-title: SHOW MATERIALIZED-VIEWS
+title: SHOW MATERIALIZED VIEWS
 description: Show existing materialized views.
 slug: /sql-show-mv
 ---
