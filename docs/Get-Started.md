@@ -20,7 +20,7 @@ You can run RisingWave in these ways:
 
 - [Use the pre-built library (Linux)](#use-the-pre-built-library-linux)
 - [Install and run from a Docker image (Linux & macOS)](#install-and-run-from-a-docker-image-linux--macos)
-- [Set up a multi-node cluster via Docker Compose (Linux & macOS)](#set-up-a-multi-node-cluster-via-docker-compose-linux--macos)
+- [Set up a multi-node cluster via Docker (Linux & macOS)](#set-up-a-multi-node-cluster-via-docker-linux--macos)
 - [Build from the source code (Linux & macOS)](#build-from-source-linux--macos)
 
 ### Use the pre-built library (Linux)
@@ -51,17 +51,17 @@ You can run RisingWave in these ways:
 
 You can install and run RisingWave from a Docker image. Currently, only x86-64 platforms are supported.
 
-Ensure you have Docker intalled on your machine. For installation instructions, see [Install Docker](https://docs.docker.com/get-docker/).
+Ensure you have Docker Desktop installed on your machine. For installation instructions, see [Get Docker](https://docs.docker.com/get-docker/).
 
-Start RisingWave in single-binary playground mode
+Start RisingWave in single-binary playground mode:
     
 ```sh
 docker run -it --pull=always -p 4566:4566 -p 5691:5691 ghcr.io/singularity-data/risingwave:v0.1.10 playground
 ```
 
-### Set up a multi-node cluster via Docker Compose (Linux & macOS)
+### Set up a multi-node cluster via Docker (Linux & macOS)
 
-You can set up a full-feathered RisingWave cluster via Docker Compose. The cluster is composed of multiple RisingWave components, including:
+You can set up a full-feathered RisingWave cluster via Docker  Desktop. The cluster is composed of multiple RisingWave components, including:
 
 * A frontend node
 * A compute node
@@ -77,15 +77,15 @@ RisingWave also relies on these third-party components:
 
 Therefore, it will start 8 processes.
 
-As prerequisites, you need to install [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) in your environment. Note that Docker Compose is included in Docker Desktop for macOS. If you use Docker Desktop, ensure that it is running before launching the cluster.
+As prerequisites, you need to install [Docker Desktop](https://docs.docker.com/get-docker/) in your environment. Ensure that it is running before launching the cluster.
 
-Then clone the [risingwave-demo](https://github.com/singularity-data/risingwave-demo) repository:
+Then, clone the [risingwave-demo](https://github.com/singularity-data/risingwave-demo) repository:
 
 ```shell
 git clone https://github.com/singularity-data/risingwave-demo.git
 ```
 
-Now navigate to the `docker` directory and start the cluster from the docker compose file.
+Now navigate to the `docker` directory and start the cluster from the docker-compose file.
 
 ```shell
 cd docker
@@ -252,7 +252,7 @@ VALUES
     ('2', 6, 10);
 ```
 
-As soon as we insert the new record, the materialied view `mv_avg_speed` will be refreshed to re-calculate the results. Let us see if the results are updated.
+As soon as we insert the new record, the materialized view `mv_avg_speed` will be refreshed to re-calculate the results. Let us see if the results are updated.
 
 ```sql
 SELECT * FROM mv_avg_speed;
