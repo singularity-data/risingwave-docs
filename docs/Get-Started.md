@@ -68,7 +68,7 @@ You can set up a full-feathered RisingWave cluster via Docker Compose. The clust
 * A meta node
 * A compactor node
 
-RisingWave also relies on these third-party components:
+RisingWave also incorporates these third-party components:
 
 * Grafana
 * Etcd
