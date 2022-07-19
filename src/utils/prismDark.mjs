@@ -68,7 +68,8 @@ export default {
     {
       types: ["keyword"],
       style: {
-        color: "#508fd2",
+        color: "#6db7ff",
+        fontStyle: "normal",
       },
     },
     {
