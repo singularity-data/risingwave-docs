@@ -160,8 +160,8 @@ table thead th {
   thead tr th,
   tbody tr td {
     min-width: 8.14rem;
-    width: 50%;
-    max-width: 32rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   tbody {
