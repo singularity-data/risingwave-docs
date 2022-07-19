@@ -10,7 +10,7 @@ Use the `SELECT` command to retrieve rows from a table or materialized view. It 
 ## Syntax
 
 ```sql
-SELECT [ ALL | DISTINCT] [ * | <expression> [ AS <output_name> ] [, <expression> [ AS <output_name> ]...] ]
+SELECT [ ALL | DISTINCT ] [ * | <expression> [ AS <output_name> ] [, <expression> [ AS <output_name> ]...] ]
     [ FROM <from_item> [, <from_item> ...] ]
     [ WHERE <condition> ]
     [ GROUP BY <grouping_expression> [, <grouping_expression>... ]]
