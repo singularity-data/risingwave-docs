@@ -160,7 +160,7 @@ table thead th {
   thead tr th,
   tbody tr td {
     min-width: 10rem;
-    width: 100% !important;
+    width: 20%;
     max-width: 100%;
   }
 
@@ -178,13 +178,6 @@ table thead th {
   thead tr {
     overflow-x: hidden;
   }
-}
-
-thead tr th,
-tbody tr td {
-  min-width: 10rem;
-  width: 50%;
-  max-width: 100%;
 }
 
 table {
