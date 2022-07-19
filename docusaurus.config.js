@@ -124,7 +124,6 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} RisingWave Community.`,
       },
       prism: {
-        darkTheme: darkCodeTheme,
         additionalLanguages: ["sql"],
       },
       algolia: {
@@ -158,9 +157,12 @@ const config = {
 };
 
 async function createConfig() {
-  const lightTheme = (await import("./src/utils/prismLight.mjs")).default;
+  const customeLight = (await import("./src/utils/prismLight.mjs")).default;
+  const customDark = (await import("./src/utils/prismDark.mjs")).default;
   // @ts-expect-error: we know it exists, right
-  config.themeConfig.prism.theme = lightTheme;
+  config.themeConfig.prism.theme = customeLight;
+  // @ts-expect-error: we know it exists, right
+  config.themeConfig.prism.darkTheme = customDark;
   return config;
 }
 
