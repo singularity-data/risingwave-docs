@@ -48,7 +48,7 @@ export default {
       },
     },
     {
-      types: ["font-matter", "string", "attr-value"],
+      types: ["font-matter", "attr-value"],
       style: {
         color: "#393a34",
       },
@@ -99,6 +99,26 @@ export default {
       types: ["comment"],
       style: {
         color: "#6B6B6B",
+      },
+    },
+    {
+      types: ["custom"],
+      style: {
+        color: "#393a34",
+        fontStyle: "italic",
+      },
+    },
+    {
+      types: ["datatype"],
+      style: {
+        color: "#e19135",
+      },
+    },
+    {
+      types: ["string"],
+      style: {
+        color: "#393a34",
+        fontStyle: "italic",
       },
     },
   ],
