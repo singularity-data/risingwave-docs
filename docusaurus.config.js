@@ -157,10 +157,10 @@ const config = {
 };
 
 async function createConfig() {
-  const customeLight = (await import("./src/utils/prismLight.mjs")).default;
+  const customLight = (await import("./src/utils/prismLight.mjs")).default;
   const customDark = (await import("./src/utils/prismDark.mjs")).default;
   // @ts-expect-error: we know it exists, right
-  config.themeConfig.prism.theme = customeLight;
+  config.themeConfig.prism.theme = customLight;
   // @ts-expect-error: we know it exists, right
   config.themeConfig.prism.darkTheme = customDark;
   return config;
