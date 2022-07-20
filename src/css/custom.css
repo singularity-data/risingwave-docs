@@ -140,6 +140,7 @@ table thead th {
     max-width: 100%;
     position: relative;
     overflow: initial;
+    table-layout: fixed;
   }
 
   thead {
@@ -160,7 +161,7 @@ table thead th {
   thead tr th,
   tbody tr td {
     min-width: 10rem;
-    width: 20%;
+    width: 100%;
     max-width: 100%;
   }
 
