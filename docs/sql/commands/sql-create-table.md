@@ -16,7 +16,7 @@ CREATE TABLE <table> (<col> <data_type> [, <col> <data_type>...])
 
 ## Parameters
 
-| Parameter| Descriptiion|
+| Parameter| Description|
 |-----------|-------------|
 |*table*    |The name of the table. If a schema name is given (for example, `CREATE TABLE <schema>.<table> ...`), then the table is created in the specified schema. Otherwise it is created in the current schema.|
 |*col*      |The name of a column.|
