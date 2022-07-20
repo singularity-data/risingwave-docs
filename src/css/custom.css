@@ -161,7 +161,21 @@ table thead th {
   thead tr th,
   tbody tr td {
     min-width: 10rem;
-    width: 100%;
+    width: 20%;
+    max-width: 100%;
+  }
+
+  thead tr th:first-child,
+  tbody tr td:first-child {
+    min-width: 12rem;
+    width: 20%;
+    max-width: 100%;
+  }
+
+  thead tr th:nth-child(2),
+  tbody tr td:nth-child(2) {
+    min-width: 14rem;
+    width: 20%;
     max-width: 100%;
   }
 
