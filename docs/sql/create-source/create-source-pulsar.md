@@ -15,8 +15,8 @@ CREATE [MATERIALIZED] SOURCE [IF NOT EXISTS] source_name (
    column_name data_type, ...
 )
 WITH (
-   'connector'='pulsar',
-   'field_name'='value', ...
+   connector='pulsar',
+   field_name='value', ...
 )
 ROW FORMAT JSON | PROTOBUF MESSAGE 'main_message';
 ```
@@ -39,12 +39,12 @@ CREATE MATERIALIZED SOURCE IF NOT EXISTS source_abc (
    column2 integer,
 )
 WITH (
-   'connector'='pulsar',
-   'pulsar.topic'='demo_topic',
-   'pulsar.service.url'='pulsar://localhost:6650/',
-   'pulsar.admin.url'='http://localhost:8080',
-   'pulsar.scan.startup.mode'='latest',
-   'pulsar.time.offset'='140000000'
+   connector='pulsar',
+   pulsar.topic='demo_topic',
+   pulsar.service.url='pulsar://localhost:6650/',
+   pulsar.admin.url='http://localhost:8080',
+   pulsar.scan.startup.mode='latest',
+   pulsar.time.offset='140000000'
 )
 ROW FORMAT PROTOBUF MESSAGE 'FooMessage'
 ROW SCHEMA LOCATION 'https://demo_bucket_name.s3-us-west-2.amazonaws.com/demo.proto';

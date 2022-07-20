@@ -14,8 +14,8 @@ CREATE [MATERIALIZED] SOURCE [IF NOT EXISTS] source_name (
    column_name data_type,...
 )
 WITH (
-   'connector'='kafka',
-   'field_name'='value', ...
+   connector='kafka',
+   field_name='value', ...
 )
 ROW FORMAT JSON | PROTOBUF MESSAGE 'main_message'
 [ROW SCHEMA LOCATION 's3://path'];
@@ -40,12 +40,12 @@ CREATE MATERIALIZED SOURCE IF NOT EXISTS source_abc (
    column2 integer,
 )
 WITH (
-   'connector'='kafka',
-   'kafka.topic'='demo_topic',
-   'kafka.brokers'='172.10.1.1:9090,172.10.1.2:9090',
-   'kafka.scan.startup.mode'='latest',
-   'kafka.time.offset'='140000000',
-   'kafka.consumer.group'='demo_consumer_name'
+   connector='kafka',
+   kafka.topic='demo_topic',
+   kafka.brokers='172.10.1.1:9090,172.10.1.2:9090',
+   kafka.scan.startup.mode='latest',
+   kafka.time.offset='140000000',
+   kafka.consumer.group='demo_consumer_name'
 )
 ROW FORMAT JSON;
 ```

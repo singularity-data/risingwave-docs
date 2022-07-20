@@ -14,8 +14,8 @@ CREATE [MATERIALIZED] SOURCE [IF NOT EXISTS] source_name (
    column_name data_type, ...
 ) 
 WITH (
-   'connector'='kinesis',
-   'field_name'='value', ...
+   connector='kinesis',
+   field_name='value', ...
 ) 
 ROW FORMAT JSON | PROTOBUF MESSAGE 'main_message';
 ```
@@ -41,13 +41,13 @@ CREATE [MATERIALIZED] SOURCE [IF NOT EXISTS] source_name (
    column2 integer,
 ) 
 WITH (
-   'connector'='kinesis',
-   'kinesis.stream.name'='kafka',
-   'kinesis.stream.region'='user_test_topic',
-   'kinesis.endpoint'='172.10.1.1:9090,172.10.1.2:9090',
-   'kinesis.credentials.session_token'='AQoEXAMPLEH4aoAH0gNCAPyJxz4BlCFFxWNE1OPTgk5TthT+FvwqnKwRcOIfrRh3c/L To6UDdyJwOOvEVPvLXCrrrUtdnniCEXAMPLE/IvU1dYUg2RVAJBanLiHb4IgRmpRV3z rkuWJOgQs8IZZaIv2BXIa2R4OlgkBN9bkUDNCJiBeb/AXlzBBko7b15fjrBs2+cTQtp Z3CYWFXG8C5zqx37wnOE49mRl/+OtkIKGO7fAE',
-   'kinesis.assumerole.arn'='arn:aws-cn:iam::602389639824:role/demo_role',
-   'kinesis.assumerole.external_id'='demo_external_id'
+   connector='kinesis',
+   kinesis.stream.name='kafka',
+   kinesis.stream.region='user_test_topic',
+   kinesis.endpoint='172.10.1.1:9090,172.10.1.2:9090',
+   kinesis.credentials.session_token='AQoEXAMPLEH4aoAH0gNCAPyJxz4BlCFFxWNE1OPTgk5TthT+FvwqnKwRcOIfrRh3c/L To6UDdyJwOOvEVPvLXCrrrUtdnniCEXAMPLE/IvU1dYUg2RVAJBanLiHb4IgRmpRV3z rkuWJOgQs8IZZaIv2BXIa2R4OlgkBN9bkUDNCJiBeb/AXlzBBko7b15fjrBs2+cTQtp Z3CYWFXG8C5zqx37wnOE49mRl/+OtkIKGO7fAE',
+   kinesis.assumerole.arn='arn:aws-cn:iam::602389639824:role/demo_role',
+   kinesis.assumerole.external_id='demo_external_id'
 ) 
 ROW FORMAT JSON;
 ```

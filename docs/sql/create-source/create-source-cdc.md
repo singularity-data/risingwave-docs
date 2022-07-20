@@ -22,8 +22,8 @@ CREATE MATERIALIZED SOURCE [IF NOT EXISTS] source_name (
    PRIMARY KEY (column_1, column_2)
 ) 
 WITH (
-   'connector'='kafka',
-   'field_name'='value', ...
+   connector='kafka',
+   field_name='value', ...
 ) 
 ROW FORMAT DEBEZIUM JSON;
 ```
@@ -50,11 +50,11 @@ CREATE MATERIALIZED SOURCE [IF NOT EXISTS] source_name (
    PRIMARY KEY (column1)
 ) 
 WITH (
-   'connector'='kafka',
-   'kafka.topic'='user_test_topic',
-   'kafka.brokers'='172.10.1.1:9090,172.10.1.2:9090',
-   'kafka.scan.startup.mode'='earliest',
-   'kafka.consumer.group'='demo_consumer_name'
+   connector='kafka',
+   kafka.topic='user_test_topic',
+   kafka.brokers='172.10.1.1:9090,172.10.1.2:9090',
+   kafka.scan.startup.mode='earliest',
+   kafka.consumer.group='demo_consumer_name'
 ) 
 ROW FORMAT DEBEZIUM JSON;
 ```
