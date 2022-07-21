@@ -58,12 +58,12 @@ function HomepageHeader() {
       <ButtonGroup windoWidth={windowSize.width}>
         <Link to={`/docs/${siteMetadata.siteVersion}/intro`}>
           <Button variant="contained" sx={{ width: 200, margin: "5px", textTransform: "none" }}>
-            <Translate>Read Docs</Translate>
+            <Translate>Docs</Translate>
           </Button>
         </Link>
         <Link to={`https://playground.risingwave.dev/`}>
           <Button variant="outlined" sx={{ width: 200, margin: "5px", textTransform: "none" }}>
-            <Translate>Try Demo</Translate>
+            <Translate>Try it out</Translate>
           </Button>
         </Link>
       </ButtonGroup>
