@@ -58,7 +58,7 @@ This version was released on July 5, 2022.
 
 ### Assets
 
-* [risingwave-v0.1.8-x86_64-unknown-linux.tar.gz](https://github.com/singularity-data/risingwave/releases/download/v0.1.8/risingwave-v0.1.10-x86_64-unknown-linux.tar.gz)(Linux)
+* [risingwave-v0.1.10-x86_64-unknown-linux.tar.gz](https://github.com/singularity-data/risingwave/releases/download/v0.1.10/risingwave-v0.1.10-x86_64-unknown-linux.tar.gz)(Linux)
 * [Source code (zip)](https://github.com/singularity-data/risingwave/archive/refs/tags/v0.1.10.zip)
 * [Source code (tar.gz)](https://github.com/singularity-data/risingwave/archive/refs/tags/v0.1.10.tar.gz)
 
