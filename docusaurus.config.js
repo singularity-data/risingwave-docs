@@ -14,8 +14,6 @@ const config = {
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "RisingWave Community", // Usually your GitHub org/user name.
-  projectName: "RisingWave", // Usually your repo name.
 
   presets: [
     [
@@ -58,10 +56,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "RisingWave",
+        title: "",
         logo: {
           alt: "RisingWave Logo",
-          src: "img/logo.svg",
+          src: "img/logo-title.svg",
         },
         items: [
           // {
