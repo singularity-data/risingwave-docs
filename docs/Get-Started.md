@@ -49,7 +49,7 @@ You can run RisingWave in these ways:
 
 ### Install and run from a Docker image (Linux & macOS)
 
-You can install and run RisingWave from a Docker image. Currently, only x86-64 platforms are supported.
+You can install and run RisingWave from a Docker image.
 
 Ensure you have Docker Desktop installed on your machine. For installation instructions, see [Get Docker](https://docs.docker.com/get-docker/).
 
@@ -93,6 +93,8 @@ docker-compose up -d
 ```
 
 ### Build from source (Linux & macOS)
+
+You can build from source on both x64 and ARM64 systems (including macOS devices with Apple M1 chips).
 
 1. Download the source code of RisingWave.
 
