@@ -29,7 +29,7 @@ This version was released on July 5, 2022.
     * `octet_length()` and bit_length() for getting string length [#3526](https://github.com/singularity-data/risingwave/pull/3526)
     * `Row()` for constructing rows [#2914](https://github.com/singularity-data/risingwave/pull/2914) #3152 (https://github.com/singularity-data/risingwave/pull/3152)
     * `pg_typeof()` for getting data types of values [#3494](https://github.com/singularity-data/risingwave/pull/3494)
-    * `current_database()` for listing databases [#3650](https://github.com/singularity-data/risingwave/pull/3650)
+    * `current_database()` for getting the name of the current database in the session [#3650](https://github.com/singularity-data/risingwave/pull/3650)
     * `approx_count_distinct()` for distinct counting [#3121](https://github.com/singularity-data/risingwave/pull/3121)
     * `unnest()` for expanding nested tables to rows [#3017](https://github.com/singularity-data/risingwave/pull/3017) 
 * Support `count()`, `min()`, and `max()` functions on these data types: *interval*, *timestamp*, *varchar*, and *date*. [#3069](https://github.com/singularity-data/risingwave/pull/3069)
@@ -58,7 +58,7 @@ This version was released on July 5, 2022.
 
 ### Assets
 
-* [risingwave-v0.1.8-x86_64-unknown-linux.tar.gz](https://github.com/singularity-data/risingwave/releases/download/v0.1.8/risingwave-v0.1.10-x86_64-unknown-linux.tar.gz)(Linux)
+* [risingwave-v0.1.10-x86_64-unknown-linux.tar.gz](https://github.com/singularity-data/risingwave/releases/download/v0.1.10/risingwave-v0.1.10-x86_64-unknown-linux.tar.gz)(Linux)
 * [Source code (zip)](https://github.com/singularity-data/risingwave/archive/refs/tags/v0.1.10.zip)
 * [Source code (tar.gz)](https://github.com/singularity-data/risingwave/archive/refs/tags/v0.1.10.tar.gz)
 
