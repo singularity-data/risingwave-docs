@@ -94,7 +94,7 @@ docker-compose up -d
 
 ### Build from source (Linux & macOS)
 
-You can build from source on both x64 and ARM64 systems (including macOS devices with Apple M1 chips).
+You can build from source on both x86_64 and ARM64 systems (including macOS devices with Apple M1 chips).
 
 1. Download the source code of RisingWave.
 
