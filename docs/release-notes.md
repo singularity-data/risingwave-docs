@@ -27,7 +27,7 @@ This version was released on July 5, 2022.
     * `concat()` for concatenating strings [#3091](https://github.com/singularity-data/risingwave/pull/3091)
     * `repeat()` for repeating string [#3148](https://github.com/singularity-data/risingwave/pull/3148)
     * `octet_length()` and bit_length() for getting string length [#3526](https://github.com/singularity-data/risingwave/pull/3526)
-    * `Row()` for constructing rows [#2914](https://github.com/singularity-data/risingwave/pull/2914) #3152 (https://github.com/singularity-data/risingwave/pull/3152)
+    * `Row()` for constructing rows [#2914](https://github.com/singularity-data/risingwave/pull/2914) [#3152](https://github.com/singularity-data/risingwave/pull/3152)
     * `pg_typeof()` for getting data types of values [#3494](https://github.com/singularity-data/risingwave/pull/3494)
     * `current_database()` for getting the name of the current database in the session [#3650](https://github.com/singularity-data/risingwave/pull/3650)
     * `approx_count_distinct()` for distinct counting [#3121](https://github.com/singularity-data/risingwave/pull/3121)
@@ -71,7 +71,7 @@ This version was released on May 14, 2022.
 
 #### SQL features
 
-* Support SQL functions: `concat_ws()`, `abs()`, `round()`, `ceil()`, `floor()`. [#2589](https://github.com/singularity-data/risingwave/pull/2589), [#2531](https://github.com/singularity-data/risingwave/pull/2531), [#2716](https://github.com/singularity-data/risingwave/pull/2716)
+* Support SQL functions: `concat_ws()`, `abs()`, `round()`, `ceil()`, `floor()`. [#2589](https://github.com/singularity-data/risingwave/pull/2589) [#2531](https://github.com/singularity-data/risingwave/pull/2531) [#2716](https://github.com/singularity-data/risingwave/pull/2716)
 * Support casts from number types (*smallint*, *integer*, *bigint*, *numeric*, *real*, and *double precision*) to *varchar* using the `to_string` method. [#2522](https://github.com/singularity-data/risingwave/pull/2522)
 * Support creating a table with nested columns. [#2434](https://github.com/singularity-data/risingwave/pull/2434)
 * Support non-literals in the `IN` operator. [#2588](https://github.com/singularity-data/risingwave/pull/2588)
@@ -87,7 +87,7 @@ Support the Datagen Source Connector, which can be used to generate mock data fo
 #### Observability
 
 * Add metrics for these components in Grafana.
-    * Compaction and object-store  [#2573](https://github.com/singularity-data/risingwave/pull/2573), [#2761](https://github.com/singularity-data/risingwave/pull/2761)
+    * Compaction and object-store  [#2573](https://github.com/singularity-data/risingwave/pull/2573) [#2761](https://github.com/singularity-data/risingwave/pull/2761)
     * Iterator and cache [#2709](https://github.com/singularity-data/risingwave/pull/2709)
     * Streaming exchange service [#2906](https://github.com/singularity-data/risingwave/pull/2906)
 
@@ -96,8 +96,8 @@ Support the Datagen Source Connector, which can be used to generate mock data fo
 
 #### Deployment
 
-* RisingWave docker images support the playground mode in the bridge Docker networking mode. ([#2921](https://github.com/singularity-data/risingwave/pull/2921))
-* CA certificates are bundled into RisingWave docker images so that docker images can be used with S3. ([#2853](https://github.com/singularity-data/risingwave/pull/2853))
+* RisingWave docker images support the playground mode in the bridge Docker networking mode. [#2921](https://github.com/singularity-data/risingwave/pull/2921)
+* CA certificates are bundled into RisingWave docker images so that docker images can be used with S3. [#2853](https://github.com/singularity-data/risingwave/pull/2853)
 
 ### Assets
 
