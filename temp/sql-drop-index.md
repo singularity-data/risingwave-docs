@@ -18,8 +18,8 @@ DROP INDEX [<schema>.]<index>;
 
 |Parameter                  | Description           |
 |---------------------------|-----------------------|
-|*schema*                   |The schema of the index that you want to remove. You can use [`SHOW SCHEMAS`](sql-show-schemas.md) to get a list of all available schemas. If you don't specify a schema, the specified index in the default schema "public" will be removed.|
-|*index*                    |The name of the index to remove.|
+|*schema*                   |The schema of the index that you want to remove. <br /> You can use [`SHOW SCHEMAS`](sql-show-schemas.md) to get a list of all available schemas. If you don't specify a schema, the specified index in the default schema "public" will be removed.|
+|*index*                    |The name of the index to remove. <br/> You can use [`DESCRIBE`](sql-describe.md) to show the indexes of a table.|
 
 
 

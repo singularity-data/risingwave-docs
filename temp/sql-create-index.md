@@ -24,13 +24,28 @@ CREATE INDEX <index> ON <table>(<col>);
 
 ## Examples
 
-This statement creates an index on the `id` column in the `taxi_trips` table:
+The following statement creates an index on the `id` column in the `taxi_trips` table:
 
 ```sql
 CREATE INDEX id_index ON taxi_trips(id);
 ```
 
-This statement creates an index on the `ad_id` column in the `ad_ctr_5min` materialized view:
+To see the indexes of a table, run the `DESCRIBE` statement.
+
+```sql
+DESCRIBE taxi_trips;
+```
+```
+   Name   |   Type    
+----------+-----------
+ id       | Int32
+ distance | Float64
+ city     | Varchar
+ id_index | index(id)
+(4 rows)
+```
+
+The following statement creates an index on the `ad_id` column in the `ad_ctr_5min` materialized view:
 ```sql
 CREATE INDEX ad_id_index ON ad_ctr_5min(ad_id);
 ```
