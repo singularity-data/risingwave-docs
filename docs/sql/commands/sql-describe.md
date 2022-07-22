@@ -19,12 +19,12 @@ Use the `DESCRIBE` command to view columns in the specified table, source, or ma
 ## Syntax
 
 ```sql
-DESCRIBE <table>;
+DESCRIBE table_name;
 ```
 ## Parameters
 |Parameter or clause        | Description           |
 |---------------------------|-----------------------|
-|*table*                    |The name of the table, source, or materialized view from which the columns will be listed.|
+|*table_name*               |The table, source, or materialized view whose columns will be listed.|
 
 
 ## Example
