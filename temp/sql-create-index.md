@@ -11,16 +11,16 @@ Use the `CREATE INDEX` command to construct an index on a column of a table or m
 ## Syntax
 
 ```sql
-CREATE INDEX <index> ON <table>(<col>);
+CREATE INDEX index_name ON table_name(col_name);
 ```
 
 ## Parameters
 
 | Parameter| Descriptiion|
 |-----------|-------------|
-|*index*    |The name of the index to be created.|
-|*table*    |The name of the table or materialized view for which the index is created.|
-|*col*      |The name of the column on which the index is created.|
+|*index_name*    |The name of the index to be created.|
+|*table_name*    |The name of the table or materialized view for which the index is created.|
+|*col_name*      |The name of the column on which the index is created.|
 
 ## Examples
 

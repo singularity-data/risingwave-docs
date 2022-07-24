@@ -12,7 +12,7 @@ Before you can remove a source, you must use [DROP MATERIALIZED VIEW](sql-drop-m
 ## Syntax
 
 ```sql
-DROP SOURCE [<schema>.]<source>;
+DROP SOURCE [schema_name.]source_name;
 ```
 
 
@@ -20,8 +20,8 @@ DROP SOURCE [<schema>.]<source>;
 
 |Parameter                  | Description           |
 |---------------------------|-----------------------|
-|*schema*                   |The schema of the source that you want to remove. You can use [`SHOW SCHEMAS`](sql-show-schemas.md) to get a list of all available schemas. If you don't specify a schema, the specified source in the default schema "public" will be removed.|
-|*source*                   |The name of the source to remove.|
+|*schema_name*                   |The schema of the source that you want to remove. You can use [`SHOW SCHEMAS`](sql-show-schemas.md) to get a list of all available schemas. If you don't specify a schema, the specified source in the default schema "public" will be removed.|
+|*source_name*                   |The name of the source to remove.|
 
 
 

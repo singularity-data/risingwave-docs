@@ -10,7 +10,7 @@ Use the `EXPLAIN` command to show the execution plan of a statement.
 ## Syntax
 
 ```sql
-EXPLAIN <statement>;
+EXPLAIN statement;
 ```
 
 ## Parameters

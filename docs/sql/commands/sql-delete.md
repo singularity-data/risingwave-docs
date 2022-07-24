@@ -20,7 +20,7 @@ WHERE condition;
 |Parameter or clause        | Description           |
 |---------------------------|-----------------------|
 |*table_name*               |The table where you want to remove records.|
-|**WHERE** *condition*      |Specify which rows you want to remove using an expression that returns a boolean value. Rows for which this expression returns true will be removed. <br/> :::CAUTION  If you omit the WHERE clause, all rows of records in the table will be deleted but the table structure will be kept.:::|
+|**WHERE** *condition*      |Specify which rows you want to remove using an expression that returns a boolean value. Rows for which this expression returns true will be removed. <br/> If you omit the WHERE clause, all rows of records in the table will be deleted but the table structure will be kept.|
 
 
 ## Example

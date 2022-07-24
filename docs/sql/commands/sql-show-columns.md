@@ -10,12 +10,12 @@ Use the `SHOW COLUMNS` command to view columns in the specified table, source, o
 ## Syntax
 
 ```sql
-SHOW COLUMNS FROM <table>;
+SHOW COLUMNS FROM table_name;
 ```
 ## Parameters
 |Parameter or clause        | Description           |
 |---------------------------|-----------------------|
-|*table*                    |The name of the table, source, or materialized view from which the columns will be listed.|
+|*table_name*                    |The name of the table, source, or materialized view from which the columns will be listed.|
 
 
 ## Example

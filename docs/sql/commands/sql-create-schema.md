@@ -10,14 +10,14 @@ Use the `CREATE SCHEMA` command to create a new schema.
 ## Syntax
 
 ```sql
-CREATE SCHEMA [IF NOT EXISTS] [database.]<schema>;
+CREATE SCHEMA [IF NOT EXISTS] [database_name.]schema_name;
 ```
 ## Parameters
 |Parameter or clause        | Description           |
 |---------------------------|-----------------------|
-|*schema*                   |The name of the schema to be created.|
+|*schema_name*                   |The name of the schema to be created.|
 |<b>IF NOT EXISTS</b> clause      |Creates a schema if the schema name has not already been used. Otherwise throws an error.|
-|*database*                   |The name of the database for the schema to be created in. If not specified, the schema will be created in the default database "dev".|
+|*database_name*                 |The name of the database for the schema to be created in. If not specified, the schema will be created in the default database "dev".|
 
 ## Example
 ```sql

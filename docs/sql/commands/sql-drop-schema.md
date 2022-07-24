@@ -13,7 +13,7 @@ Before you can remove a schema, you must remove all its dependent objects (table
 ## Syntax
 
 ```sql
-DROP SCHEMA [ IF EXISTS ] [<database>.]<schema>;
+DROP SCHEMA [ IF EXISTS ] [database_name.]schema_name;
 ```
 
 

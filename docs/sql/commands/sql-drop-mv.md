@@ -12,7 +12,7 @@ Before you can remove a materialzied view, you must remove all its dependent mat
 ## Syntax
 
 ```sql
-DROP MATERIALIZED VIEW [<schema>.]<mv>;
+DROP MATERIALIZED VIEW [schema_name.]mv_name;
 ```
 
 
@@ -20,8 +20,8 @@ DROP MATERIALIZED VIEW [<schema>.]<mv>;
 
 |Parameter                  | Description           |
 |---------------------------|-----------------------|
-|*schema*                   |Specify the name of a schema to remove the materialized view in that schema. You can use [`SHOW SCHEMAS`](sql-show-schemas.md) to get a list of all available schemas. If you don't specify a schema, the specified materialized view in the default schema "public" will be removed.|
-|*mv*                       |The name of the materialized view to remove. You can use [`SHOW MATERIALIZED VIEWS`](sql-show-mv.md) to get a list of all available materialized views.|
+|*schema_name*                   |Specify the name of a schema to remove the materialized view in that schema. You can use [`SHOW SCHEMAS`](sql-show-schemas.md) to get a list of all available schemas. If you don't specify a schema, the specified materialized view in the default schema "public" will be removed.|
+|*mv_name*                       |The name of the materialized view to remove. You can use [`SHOW MATERIALIZED VIEWS`](sql-show-mv.md) to get a list of all available materialized views.|
 
 
 
