@@ -12,7 +12,7 @@ Before you can remove a table, you must remove all its dependent objects (indexe
 ## Syntax
 
 ```sql
-DROP TABLE [<schema>.]<table>;
+DROP TABLE [schema_name.]table_name;
 ```
 
 

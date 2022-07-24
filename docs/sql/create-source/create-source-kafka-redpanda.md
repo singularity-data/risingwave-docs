@@ -10,15 +10,15 @@ Use the SQL statement below to connect RisingWave to a Kafka/Redpanda broker.
 ## Syntax
 
 ```sql
-CREATE [MATERIALIZED] SOURCE [IF NOT EXISTS] source_name (
-   column_name data_type,...
+CREATE [ MATERIALIZED ] SOURCE [ IF NOT EXISTS ] source_name (
+   column_name data_type, ...
 )
 WITH (
    connector='kafka',
    field_name='value', ...
 )
 ROW FORMAT JSON | PROTOBUF MESSAGE 'main_message'
-[ROW SCHEMA LOCATION 's3://path'];
+[ ROW SCHEMA LOCATION 's3://path' ];
 ```
 ### `WITH` options
 

@@ -10,7 +10,7 @@ Use the `DROP INDEX` command to remove an index from a table or materialized vie
 ## Syntax
 
 ```sql
-DROP INDEX [<schema>.]<index>;
+DROP INDEX [ schema_name.]index_name;
 ```
 
 
@@ -18,8 +18,8 @@ DROP INDEX [<schema>.]<index>;
 
 |Parameter                  | Description           |
 |---------------------------|-----------------------|
-|*schema*                   |The schema of the index that you want to remove. <br /> You can use [`SHOW SCHEMAS`](sql-show-schemas.md) to get a list of all available schemas. If you don't specify a schema, the specified index in the default schema "public" will be removed.|
-|*index*                    |The name of the index to remove. <br/> You can use [`DESCRIBE`](sql-describe.md) to show the indexes of a table.|
+|*schema_name*                   |The schema of the index that you want to remove. <br /> You can use [`SHOW SCHEMAS`](sql-show-schemas.md) to get a list of all available schemas. If you don't specify a schema, the specified index in the default schema "public" will be removed.|
+|*index_name*                    |The name of the index to remove. <br/> You can use [`DESCRIBE`](sql-describe.md) to show the indexes of a table.|
 
 
 

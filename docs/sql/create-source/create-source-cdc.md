@@ -17,9 +17,9 @@ Currently, RisingWave only supports materialized CDC sources with primary keys, 
 ## Syntax
 
 ```sql
-CREATE MATERIALIZED SOURCE [IF NOT EXISTS] source_name (
-   column_name data_type [PRIMARY KEY], ...
-   PRIMARY KEY (column_1, column_2)
+CREATE MATERIALIZED SOURCE [ IF NOT EXISTS ] source_name (
+   column_name data_type [ PRIMARY KEY ], ...
+   PRIMARY KEY ( column_name, ... )
 ) 
 WITH (
    connector='kafka',
